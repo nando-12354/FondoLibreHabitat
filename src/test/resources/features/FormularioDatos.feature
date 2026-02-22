@@ -1,0 +1,293 @@
+#language: es
+Característica: FUNCIONALIDAD DEL FORMULARIO DE REGISTRO
+
+  #@regresion
+  Escenario: [CP34] Cliente no afiliado identificado con DNI / Usar la dirección de mi DNI
+    Dado que la web este disponible
+    Cuando seleccione el Tipo de Documento "DNI"
+    E ingrese el Numero de Documento "72174876"
+    Y seleccionar Acepto los terminos y comisiones asociados a la apertura y debitos para el fondo libre habitat mostrado aqui
+    Y seleccionar Autorizo el uso de mis datos personales para fines publicitarios conforme a la Politica de Privacidad
+    Y seleccionar Autorizo a AFP Habitat a compartir mis datos con Prudentialsaf SAC para fines informativos comerciales segun la Politica de Privacidad
+    Y dar clic en el boton Empezar a invertir
+    Entonces se mostrara un popup de "¿Tienes residencia fiscal fuera de Perú?"
+    Y seleccione el boton No tengo
+    Y se mostrara la pantalla de "Datos personales" con los siguientes campos
+      | Primer nombre    |
+      | Primer apellido  |
+      | Fecha de emisión |
+    Y seleccionar el primer nombre correcto del cliente "SLEDGE"
+    Y seleccionar el primer apellido correcto del cliente "LUYO"
+    Y seleccionar la fecha de emision correcta del DNI del cliente "22/11/2022"
+    Y dar clic en el boton Siguiente
+    Entonces mostrara el formulario "Datos personales" de llenado de los demas datos del cliente
+    Y seleccionar el pais de residencia ""
+    Y seleccionar la Nacionalidad ""
+    Y seleccionar la Fecha de nacimiento ""
+    Cuando seleccione Usar la direccion de mi DNI ""
+    Y seleccionar la Profesion ""
+    Y seleccionar el prefijo del celular ""
+    Y ingresar el Numero de celular ""
+    Y ingresar el Correo electronico ""
+    Y seleccionar el Tipo de trabajador ""
+    Y ingresar el Centro de labores ""
+    Y ingresar el Numero de RUC ""
+    Y seleccionar el Cargo ""
+    Y seleccionar el Ingreso promedio mensual ""
+    Y dar clic en el boton Siguiente
+    Entonces se mostrara la pantalla de "Datos de inversión"
+
+  #@regresion
+  Escenario: [CP35] Cliente no afiliado identificado con DNI / Ingreso de nueva dirección
+    Dado que la web este disponible
+    Cuando seleccione el Tipo de Documento "DNI"
+    E ingrese el Numero de Documento "72174876"
+    Y seleccionar Acepto los terminos y comisiones asociados a la apertura y debitos para el fondo libre habitat mostrado aqui
+    Y seleccionar Autorizo el uso de mis datos personales para fines publicitarios conforme a la Politica de Privacidad
+    Y seleccionar Autorizo a AFP Habitat a compartir mis datos con Prudentialsaf SAC para fines informativos comerciales segun la Politica de Privacidad
+    Y dar clic en el boton Empezar a invertir
+    Entonces se mostrara un popup de "¿Tienes residencia fiscal fuera de Perú?"
+    Y seleccione el boton No tengo
+    Y se mostrara la pantalla de "Datos personales" con los siguientes campos
+      | Primer nombre    |
+      | Primer apellido  |
+      | Fecha de emisión |
+    Y seleccionar el primer nombre correcto del cliente "SLEDGE"
+    Y seleccionar el primer apellido correcto del cliente "LUYO"
+    Y seleccionar la fecha de emision correcta del DNI del cliente "22/11/2022"
+    Y dar clic en el boton Siguiente
+    Entonces mostrara el formulario "Datos personales" de llenado de los demas datos del cliente
+    Y seleccionar el pais de residencia ""
+    Y seleccionar la Nacionalidad ""
+    Y seleccionar la Fecha de nacimiento ""
+    Cuando seleccione Ingresar una nueva direccion
+    Entonces seleccionar el Departamento ""
+    Y seleccionar la Provincia ""
+    Y seleccionar el Distrito ""
+    Y seleccionar el Tipo de via ""
+    Y ingresar la Nueva direccion ""
+    Y seleccionar la Profesion ""
+    Y seleccionar el prefijo del celular ""
+    Y ingresar el Numero de celular ""
+    Y ingresar el Correo electronico ""
+    Y seleccionar el Tipo de trabajador ""
+    Y ingresar el Centro de labores ""
+    Y ingresar el Numero de RUC ""
+    Y seleccionar el Cargo ""
+    Y seleccionar el Ingreso promedio mensual ""
+    Y dar clic en el boton Siguiente
+    Entonces se mostrara la pantalla de "Datos de inversión"
+
+  #@regresion
+  Escenario: [CP36] Cliente no afiliado identificado con DNI / Validación de tipo de trabajador dependiente
+    Dado que la web este disponible
+    Cuando seleccione el Tipo de Documento "DNI"
+    E ingrese el Numero de Documento "72174876"
+    Y seleccionar Acepto los terminos y comisiones asociados a la apertura y debitos para el fondo libre habitat mostrado aqui
+    Y seleccionar Autorizo el uso de mis datos personales para fines publicitarios conforme a la Politica de Privacidad
+    Y seleccionar Autorizo a AFP Habitat a compartir mis datos con Prudentialsaf SAC para fines informativos comerciales segun la Politica de Privacidad
+    Y dar clic en el boton Empezar a invertir
+    Entonces se mostrara un popup de "¿Tienes residencia fiscal fuera de Perú?"
+    Y seleccione el boton No tengo
+    Y se mostrara la pantalla de "Datos personales" con los siguientes campos
+      | Primer nombre    |
+      | Primer apellido  |
+      | Fecha de emisión |
+    Y seleccionar el primer nombre correcto del cliente "SLEDGE"
+    Y seleccionar el primer apellido correcto del cliente "LUYO"
+    Y seleccionar la fecha de emision correcta del DNI del cliente "22/11/2022"
+    Y dar clic en el boton Siguiente
+    Entonces mostrara el formulario "Datos personales" de llenado de los demas datos del cliente
+    Y seleccionar el pais de residencia ""
+    Y seleccionar la Nacionalidad ""
+    Y seleccionar la Fecha de nacimiento ""
+    Cuando seleccione Usar la direccion de mi DNI ""
+    Y seleccionar la Profesion ""
+    Y seleccionar el prefijo del celular ""
+    Y ingresar el Numero de celular ""
+    Y ingresar el Correo electronico ""
+    Y seleccionar el Tipo de trabajador "Dependiente"
+    Y ingresar el Centro de labores ""
+    Y ingresar el Numero de RUC ""
+    Y seleccionar el Cargo ""
+    Y seleccionar el Ingreso promedio mensual ""
+    Y dar clic en el boton Siguiente
+    Entonces se mostrara la pantalla de "Datos de inversión"
+
+  #@regresion
+  Escenario: [CP37] Cliente no afiliado identificado con DNI / Validación de tipo de trabajador no dependiente
+    Dado que la web este disponible
+    Cuando seleccione el Tipo de Documento "DNI"
+    E ingrese el Numero de Documento "72174876"
+    Y seleccionar Acepto los terminos y comisiones asociados a la apertura y debitos para el fondo libre habitat mostrado aqui
+    Y seleccionar Autorizo el uso de mis datos personales para fines publicitarios conforme a la Politica de Privacidad
+    Y seleccionar Autorizo a AFP Habitat a compartir mis datos con Prudentialsaf SAC para fines informativos comerciales segun la Politica de Privacidad
+    Y dar clic en el boton Empezar a invertir
+    Entonces se mostrara un popup de "¿Tienes residencia fiscal fuera de Perú?"
+    Y seleccione el boton No tengo
+    Y se mostrara la pantalla de "Datos personales" con los siguientes campos
+      | Primer nombre    |
+      | Primer apellido  |
+      | Fecha de emisión |
+    Y seleccionar el primer nombre correcto del cliente "SLEDGE"
+    Y seleccionar el primer apellido correcto del cliente "LUYO"
+    Y seleccionar la fecha de emision correcta del DNI del cliente "22/11/2022"
+    Y dar clic en el boton Siguiente
+    Entonces mostrara el formulario "Datos personales" de llenado de los demas datos del cliente
+    Y seleccionar el pais de residencia ""
+    Y seleccionar la Nacionalidad ""
+    Y seleccionar la Fecha de nacimiento ""
+    Cuando seleccione Usar la direccion de mi DNI ""
+    Y seleccionar la Profesion ""
+    Y seleccionar el prefijo del celular ""
+    Y ingresar el Numero de celular ""
+    Y ingresar el Correo electronico ""
+    Y seleccionar el Tipo de trabajador "Jubilado"
+    Y ingresar el Numero de RUC ""
+    Y seleccionar el Cargo ""
+    Y seleccionar el Ingreso promedio mensual ""
+    Y dar clic en el boton Siguiente
+    Entonces se mostrara la pantalla de "Datos de inversión"
+
+  #@regresion
+  Escenario: [CP38] Cliente no afiliado identificado con DNI / Validar ingreso promedio mensual opcional por tipo trabajador dependiente e independiente
+    Dado que la web este disponible
+    Cuando seleccione el Tipo de Documento "DNI"
+    E ingrese el Numero de Documento "72174876"
+    Y seleccionar Acepto los terminos y comisiones asociados a la apertura y debitos para el fondo libre habitat mostrado aqui
+    Y seleccionar Autorizo el uso de mis datos personales para fines publicitarios conforme a la Politica de Privacidad
+    Y seleccionar Autorizo a AFP Habitat a compartir mis datos con Prudentialsaf SAC para fines informativos comerciales segun la Politica de Privacidad
+    Y dar clic en el boton Empezar a invertir
+    Entonces se mostrara un popup de "¿Tienes residencia fiscal fuera de Perú?"
+    Y seleccione el boton No tengo
+    Y se mostrara la pantalla de "Datos personales" con los siguientes campos
+      | Primer nombre    |
+      | Primer apellido  |
+      | Fecha de emisión |
+    Y seleccionar el primer nombre correcto del cliente "SLEDGE"
+    Y seleccionar el primer apellido correcto del cliente "LUYO"
+    Y seleccionar la fecha de emision correcta del DNI del cliente "22/11/2022"
+    Y dar clic en el boton Siguiente
+    Entonces mostrara el formulario "Datos personales" de llenado de los demas datos del cliente
+    Y seleccionar el pais de residencia ""
+    Y seleccionar la Nacionalidad ""
+    Y seleccionar la Fecha de nacimiento ""
+    Cuando seleccione Usar la direccion de mi DNI ""
+    Y seleccionar la Profesion ""
+    Y seleccionar el prefijo del celular ""
+    Y ingresar el Numero de celular ""
+    Y ingresar el Correo electronico ""
+    Y seleccionar el Tipo de trabajador "Independiente"
+    Y ingresar el Centro de labores ""
+    Y ingresar el Numero de RUC ""
+    Y seleccionar el Cargo ""
+    Y seleccionar el Ingreso promedio mensual "NO INGRESAR NADA"
+    Y dar clic en el boton Siguiente
+    Entonces se mostrara la pantalla de "Datos de inversión"
+
+  #@regresion
+  Escenario: [CP47] Cliente no afiliado identificado con Pasaporte / Validación de tipo de trabajador dependiente
+    Dado que la web este disponible
+    Cuando seleccione el Tipo de Documento "Pasaporte"
+    E ingrese el Numero de Documento "H305188"
+    Y seleccionar Acepto los terminos y comisiones asociados a la apertura y debitos para el fondo libre habitat mostrado aqui
+    Y seleccionar Autorizo el uso de mis datos personales para fines publicitarios conforme a la Politica de Privacidad
+    Y seleccionar Autorizo a AFP Habitat a compartir mis datos con Prudentialsaf SAC para fines informativos comerciales segun la Politica de Privacidad
+    Y dar clic en el boton Empezar a invertir
+    Entonces se mostrara un popup de "¿Tienes residencia fiscal fuera de Perú?"
+    Y seleccione el boton No tengo
+    Entonces mostrara el formulario "Datos personales" de llenado de los demas datos del cliente
+    E ingresar el Primer nombre ""
+    E ingresar el Segundo nombre ""
+    Y seleccionar la Nacionalidad ""
+    Y seleccionar el pais de residencia ""
+    Y seleccionar la Fecha de nacimiento ""
+    Y seleccionar el Sexo ""
+    Y seleccionar el Estado civil ""
+    Y seleccionar el Departamento ""
+    Y seleccionar la Provincia ""
+    Y seleccionar el Distrito ""
+    Y seleccionar el Tipo de vía ""
+    Y ingresar la Direccion ""
+    Y seleccionar la Profesion ""
+    Y seleccionar el prefijo del celular ""
+    Y ingresar el Numero de celular ""
+    Y ingresar el Correo electronico ""
+    Y seleccionar el Tipo de trabajador "Dependiente"
+    Y ingresar el Centro de labores ""
+    Y ingresar el Numero de RUC ""
+    Y seleccionar el Cargo ""
+    Y seleccionar el Ingreso promedio mensual ""
+    Y dar clic en el boton Siguiente
+    Entonces se mostrara la pantalla de "Datos de inversión"
+
+  #@regresion
+  Escenario: [CP48] Cliente no afiliado identificado con Pasaporte / Validación de tipo de trabajador no dependiente
+    Dado que la web este disponible
+    Cuando seleccione el Tipo de Documento "Pasaporte"
+    E ingrese el Numero de Documento "H305188"
+    Y seleccionar Acepto los terminos y comisiones asociados a la apertura y debitos para el fondo libre habitat mostrado aqui
+    Y seleccionar Autorizo el uso de mis datos personales para fines publicitarios conforme a la Politica de Privacidad
+    Y seleccionar Autorizo a AFP Habitat a compartir mis datos con Prudentialsaf SAC para fines informativos comerciales segun la Politica de Privacidad
+    Y dar clic en el boton Empezar a invertir
+    Entonces se mostrara un popup de "¿Tienes residencia fiscal fuera de Perú?"
+    Y seleccione el boton No tengo
+    Entonces mostrara el formulario "Datos personales" de llenado de los demas datos del cliente
+    E ingresar el Primer nombre ""
+    E ingresar el Segundo nombre ""
+    Y seleccionar la Nacionalidad ""
+    Y seleccionar el pais de residencia ""
+    Y seleccionar la Fecha de nacimiento ""
+    Y seleccionar el Sexo ""
+    Y seleccionar el Estado civil ""
+    Y seleccionar el Departamento ""
+    Y seleccionar la Provincia ""
+    Y seleccionar el Distrito ""
+    Y seleccionar el Tipo de vía ""
+    Y ingresar la Direccion ""
+    Y seleccionar la Profesion ""
+    Y seleccionar el prefijo del celular ""
+    Y ingresar el Numero de celular ""
+    Y ingresar el Correo electronico ""
+    Y seleccionar el Tipo de trabajador "Jubilado"
+    Y ingresar el Numero de RUC ""
+    Y seleccionar el Cargo ""
+    Y seleccionar el Ingreso promedio mensual ""
+    Y dar clic en el boton Siguiente
+    Entonces se mostrara la pantalla de "Datos de inversión"
+
+  #@regresion
+  Escenario: [CP49] Cliente no afiliado identificado con Pasaporte / Validar ingreso promedio mensual opcional por tipo trabajador dependiente e independiente
+    Dado que la web este disponible
+    Cuando seleccione el Tipo de Documento "Pasaporte"
+    E ingrese el Numero de Documento "H305188"
+    Y seleccionar Acepto los terminos y comisiones asociados a la apertura y debitos para el fondo libre habitat mostrado aqui
+    Y seleccionar Autorizo el uso de mis datos personales para fines publicitarios conforme a la Politica de Privacidad
+    Y seleccionar Autorizo a AFP Habitat a compartir mis datos con Prudentialsaf SAC para fines informativos comerciales segun la Politica de Privacidad
+    Y dar clic en el boton Empezar a invertir
+    Entonces se mostrara un popup de "¿Tienes residencia fiscal fuera de Perú?"
+    Y seleccione el boton No tengo
+    Entonces mostrara el formulario "Datos personales" de llenado de los demas datos del cliente
+    E ingresar el Primer nombre ""
+    E ingresar el Segundo nombre ""
+    Y seleccionar la Nacionalidad ""
+    Y seleccionar el pais de residencia ""
+    Y seleccionar la Fecha de nacimiento ""
+    Y seleccionar el Sexo ""
+    Y seleccionar el Estado civil ""
+    Y seleccionar el Departamento ""
+    Y seleccionar la Provincia ""
+    Y seleccionar el Distrito ""
+    Y seleccionar el Tipo de vía ""
+    Y ingresar la Direccion ""
+    Y seleccionar la Profesion ""
+    Y seleccionar el prefijo del celular ""
+    Y ingresar el Numero de celular ""
+    Y ingresar el Correo electronico ""
+    Y seleccionar el Tipo de trabajador "Independiente"
+    Y ingresar el Centro de labores ""
+    Y ingresar el Numero de RUC ""
+    Y seleccionar el Cargo ""
+    Y seleccionar el Ingreso promedio mensual "NO INGRESAR NADA"
+    Y dar clic en el boton Siguiente
+    Entonces se mostrara la pantalla de "Datos de inversión"

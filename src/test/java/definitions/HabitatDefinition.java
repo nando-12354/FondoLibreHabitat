@@ -1,0 +1,14 @@
+package definitions;
+
+import io.cucumber.java.es.Dado;
+
+import static definitions.hooks.driver;
+
+public class HabitatDefinition {
+
+    @Dado("que la web este disponible")
+    public void queLaWebEsteDisponible() {
+        driver.get("http://localhost:3000/");
+        //hooks.word.agregarPasoConEnlace("Que la web esté disponible: ", "https://apolodesa01.afphabitat.com.pe");
+    }
+}
