@@ -139,25 +139,25 @@ Característica: FUNCIONALIDAD DE PANTALLA DE FONDO E INVERSIÓN
     Entonces se mostrara un popup de "¿Tienes residencia fiscal fuera de Perú?"
     Y seleccione el boton No tengo
     Y se mostrara la pantalla de "Datos personales" con los siguientes campos
-      | Primer nombre    |
-      | Primer apellido  |
-      | Fecha de emisión |
+      | Selecciona tu primer nombre    |
+      | Selecciona tu primer apellido  |
+      | Fecha de emisión de tu DNI |
     Y seleccionar el primer nombre correcto del cliente "SLEDGE"
     Y seleccionar el primer apellido correcto del cliente "LUYO"
-    Y seleccionar la fecha de emision correcta del DNI del cliente "22/11/2022"
+    Y seleccionar la Fecha de emision correcta del DNI del cliente "22/11/2022"
     Y dar clic en el boton Siguiente
     Entonces mostrara el formulario "Datos personales" de llenado de los demas datos del cliente
-    Y seleccionar el pais de residencia ""
-    Y seleccionar la Nacionalidad ""
-    Y seleccionar la Fecha de nacimiento ""
-    Cuando seleccione Usar la direccion de mi DNI ""
+    Y seleccionar el Pais de residencia "Perú"
+    Y seleccionar la Nacionalidad "Perú"
+    Y seleccionar la Fecha de nacimiento "06/06/1996"
+    Cuando seleccione Usar la direccion de mi DNI
     Y seleccionar la Profesion ""
-    Y seleccionar el prefijo del celular ""
-    Y ingresar el Numero de celular ""
-    Y ingresar el Correo electronico ""
+    Y seleccionar el Prefijo del celular "51"
+    Y ingresar el Numero de celular "987456321"
+    Y ingresar el Correo electronico "ndflex12354@gmail.com"
     Y seleccionar el Tipo de trabajador "Independiente"
-    Y ingresar el Centro de labores ""
-    Y ingresar el Numero de RUC ""
+    Y ingresar el Centro de labores "GYS"
+    Y ingresar el Numero de RUC "20987654125"
     Y seleccionar el Cargo ""
     Y seleccionar el Ingreso promedio mensual "NO INGRESAR NADA"
     Y dar clic en el boton Siguiente
