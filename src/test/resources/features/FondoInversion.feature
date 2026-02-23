@@ -139,9 +139,9 @@ Característica: FUNCIONALIDAD DE PANTALLA DE FONDO E INVERSIÓN
     Entonces se mostrara un popup de "¿Tienes residencia fiscal fuera de Perú?"
     Y seleccione el boton No tengo
     Y se mostrara la pantalla de "Datos personales" con los siguientes campos
-      | Selecciona tu primer nombre    |
-      | Selecciona tu primer apellido  |
-      | Fecha de emisión de tu DNI |
+      | Selecciona tu primer nombre   |
+      | Selecciona tu primer apellido |
+      | Fecha de emisión de tu DNI    |
     Y seleccionar el primer nombre correcto del cliente "SLEDGE"
     Y seleccionar el primer apellido correcto del cliente "LUYO"
     Y seleccionar la Fecha de emision correcta del DNI del cliente "22/11/2022"
@@ -166,7 +166,7 @@ Característica: FUNCIONALIDAD DE PANTALLA DE FONDO E INVERSIÓN
     Y ingresar el Monto a invertir "15000"
     Y seleccionar la Frecuencia de inversion
     Y dar clic en el boton Aceptar y firmar
-    Entonces se mostrara un popup de "Confirma tu solicitud"
+    Entonces se mostrara una pantalla de "Confirma tu solicitud"
     Y dar clic en el boton Confirmar solicitud
 
   #@regresion

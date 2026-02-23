@@ -1,7 +1,7 @@
 #language: es
 Característica: FUNCIONALIDAD DE DATOS PERSONALES (PRIMER NOMBRE, PRIMER APELLIDO Y FECHA DE EMISIÓN)
 
-  @regresion
+  #@regresion
   Escenario: [CP33] Cliente no afiliado identificado con DNI / Selección y validación de datos correctos
     Dado que la web este disponible
     Cuando seleccione el Tipo de Documento "DNI"

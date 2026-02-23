@@ -64,24 +64,9 @@ public class DatosPersonalesPage extends util {
     public void validarCamposPantalla(DataTable tabla) {
         List<String> campos = tabla.asList(String.class);
         for (String campo : campos) {
-            By locator = By.xpath(
-                    "//h2[contains(@class,'onboarding-page__section-title') and normalize-space()='"
-                            + campo + "']"
-            );
+            By locator = By.xpath("//h2[contains(@class,'onboarding-page__section-title') and normalize-space()='" + campo + "']");
             WebElement elemento = driver.findElement(locator);
             Assert.assertTrue("No se encontró el campo: " + campo, elemento.isDisplayed());
         }
-    }
-    public void seleccionarFechaNacimiento(String fecha) {
-        By locator = By.xpath("//input[@type='date']");
-        WebElement campoFecha = driver.findElement(locator);
-        campoFecha.clear();
-        campoFecha.sendKeys(convertirFormatoFecha(fecha));
-    }
-    private String convertirFormatoFecha(String fecha) {
-        DateTimeFormatter formatoEntrada = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        DateTimeFormatter formatoSalida = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        LocalDate fechaConvertida = LocalDate.parse(fecha, formatoEntrada);
-        return fechaConvertida.format(formatoSalida);
     }
 }

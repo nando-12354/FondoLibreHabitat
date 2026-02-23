@@ -1,5 +1,9 @@
 package pageobjects;
 
+import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -38,5 +42,19 @@ public class FondoPage extends util {
             }
         }
         throw new RuntimeException("No hay fondos disponibles para seleccionar");
+    }
+    public void validarNombreFondo(String fondo) {
+        boolean fondoValido = false;
+        String xpath = "//div[text()='" + fondo + "']";
+
+        try {
+            WebElement fondoElemento = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+            if (fondoElemento.isDisplayed() && fondoElemento.getText().equals(fondo.trim())) {
+                fondoValido = true;
+            }
+        } catch (TimeoutException | NoSuchElementException e) {
+
+        }
+        Assert.assertTrue("El nombre del fondo: " + fondo.trim() + " no es igual o no se encontró.", fondoValido);
     }
 }

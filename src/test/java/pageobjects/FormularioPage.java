@@ -1,11 +1,15 @@
 package pageobjects;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import support.util;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class FormularioPage extends util {
     @FindBy(xpath = "//input[@placeholder='Ingrese primer nombre']")
@@ -58,7 +62,6 @@ public class FormularioPage extends util {
     public FormularioPage() {
         PageFactory.initElements(driver,this);
     }
-
     public void ingresarPrimerNombre(String primerNombre) {
         wait.until(ExpectedConditions.visibilityOf(txtPrimerNombre));
         txtPrimerNombre.sendKeys(primerNombre);
@@ -91,7 +94,6 @@ public class FormularioPage extends util {
         wait.until(ExpectedConditions.visibilityOf(txtRuc));
         txtRuc.sendKeys(ruc);
     }
-
     public void seleccionarNacionalidad(String nacionalidad) {
         wait.until(ExpectedConditions.visibilityOf(cmbNacionalidad));
         Select select = new Select(cmbNacionalidad);
@@ -101,6 +103,12 @@ public class FormularioPage extends util {
         wait.until(ExpectedConditions.visibilityOf(cmbPaisResidencia));
         Select select = new Select(cmbPaisResidencia);
         select.selectByVisibleText(residencia);
+    }
+    public void seleccionarFechaNacimiento(String fecha) {
+        By locator = By.xpath("//input[@type='date']");
+        WebElement campoFecha = driver.findElement(locator);
+        campoFecha.clear();
+        campoFecha.sendKeys(convertirFormatoFecha(fecha));
     }
     public void seleccionarSexo(String sexo) {
         wait.until(ExpectedConditions.visibilityOf(cmbSexo));
@@ -151,5 +159,11 @@ public class FormularioPage extends util {
         wait.until(ExpectedConditions.visibilityOf(cmbIngresoPromedioMensual));
         Select select = new Select(cmbIngresoPromedioMensual);
         select.selectByVisibleText(ingreso);
+    }
+    private String convertirFormatoFecha(String fecha) {
+        DateTimeFormatter formatoEntrada = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        DateTimeFormatter formatoSalida = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDate fechaConvertida = LocalDate.parse(fecha, formatoEntrada);
+        return fechaConvertida.format(formatoSalida);
     }
 }
