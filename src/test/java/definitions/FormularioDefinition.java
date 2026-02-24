@@ -1,6 +1,8 @@
 package definitions;
 
 import io.cucumber.java.PendingException;
+import io.cucumber.java.es.Cuando;
+import io.cucumber.java.es.E;
 import io.cucumber.java.es.Y;
 import pageobjects.FormularioPage;
 import support.Captura;
@@ -73,6 +75,102 @@ public class FormularioDefinition {
     @Y("seleccionar el Ingreso promedio mensual {string}")
     public void seleccionarElIngresoPromedioMensual(String ingreso) {
         formulario.seleccionarIngresoPromedioMensual(ingreso);
+        screenshot.capturarPaso(driver, "Screenshot");
+    }
+
+    @Y("ingresar la Nacionalidad {string}")
+    public void ingresarLaNacionalidad(String nacionalidad) {
+        formulario.ingresarNacionalidad(nacionalidad);
+        screenshot.capturarPaso(driver, "Screenshot");
+    }
+
+    @Cuando("seleccione Usar la direccion de mi DNI")
+    public void seleccioneUsarLaDireccionDeMiDNI() {
+        formulario.seleccionarUsarDireccionDni();
+        screenshot.capturarPaso(driver, "Screenshot");
+    }
+
+    @Y("seleccionar el Prefijo del celular {string}")
+    public void seleccionarElPrefijoDelCelular(String prefijo) {
+        formulario.seleccionarPrefijoCelular(prefijo);
+        screenshot.capturarPaso(driver, "Screenshot");
+    }
+
+    @Y("ingresar el Centro de labores {string}")
+    public void ingresarElCentroDeLabores(String centroLabores) {
+        formulario.ingresarCentroLabores(centroLabores);
+        screenshot.capturarPaso(driver, "Screenshot");
+    }
+
+    @E("ingresar el Primer nombre {string}")
+    public void ingresarElPrimerNombre(String primerNombre) {
+        formulario.ingresarPrimerNombre(primerNombre);
+        screenshot.capturarPaso(driver, "Screenshot");
+    }
+
+    @E("ingresar el Segundo nombre {string}")
+    public void ingresarElSegundoNombre(String segundoNombre) {
+        formulario.ingresarSegundoNombre(segundoNombre);
+        screenshot.capturarPaso(driver, "Screenshot");
+    }
+
+    @Y("seleccionar el Sexo {string}")
+    public void seleccionarElSexo(String genero) {
+        formulario.seleccionarSexo(genero);
+        screenshot.capturarPaso(driver, "Screenshot");
+    }
+
+    @Y("seleccionar el Estado civil {string}")
+    public void seleccionarElEstadoCivil(String estadoCivil) {
+        formulario.seleccionarEstadoCivil(estadoCivil);
+        screenshot.capturarPaso(driver, "Screenshot");
+    }
+
+    @Y("seleccionar el Departamento {string}")
+    public void seleccionarElDepartamento(String departamento) {
+        formulario.seleccionarDepartamento(departamento);
+        screenshot.capturarPaso(driver, "Screenshot");
+    }
+
+    @Y("seleccionar la Provincia {string}")
+    public void seleccionarLaProvincia(String provincia) {
+        formulario.seleccionarProvincia(provincia);
+        screenshot.capturarPaso(driver, "Screenshot");
+    }
+
+    @Y("seleccionar el Distrito {string}")
+    public void seleccionarElDistrito(String distrito) {
+        formulario.seleccionarDistrito(distrito);
+        screenshot.capturarPaso(driver, "Screenshot");
+    }
+
+    @Y("seleccionar el Tipo de via {string}")
+    public void seleccionarElTipoDeVia(String tipoVia) {
+        formulario.seleccionarTipoVia(tipoVia);
+        screenshot.capturarPaso(driver, "Screenshot");
+    }
+
+    @Y("ingresar la Direccion {string}")
+    public void ingresarLaDireccion(String direccion) {
+        formulario.ingresarDireccion(direccion);
+        screenshot.capturarPaso(driver, "Screenshot");
+    }
+
+    @Cuando("seleccione Ingresar una nueva direccion")
+    public void seleccioneIngresarUnaNuevaDireccion() {
+        formulario.seleccionarNuevaDireccion();
+        screenshot.capturarPaso(driver, "Screenshot");
+    }
+
+    @Y("ingresar la Nueva direccion {string}")
+    public void ingresarLaNuevaDireccion(String direccion) {
+        formulario.ingresarDireccionManual(direccion);
+        screenshot.capturarPaso(driver, "Screenshot");
+    }
+
+    @Y("ingresar el Ingreso promedio mensual {string}")
+    public void ingresarElIngresoPromedioMensual(String promedio) {
+        formulario.ingresarIngresoPromedioMensual(promedio);
         screenshot.capturarPaso(driver, "Screenshot");
     }
 }

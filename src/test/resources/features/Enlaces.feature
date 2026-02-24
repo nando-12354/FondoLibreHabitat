@@ -28,5 +28,3 @@ Característica: FUNCIONALIDAD DE LA REDIRECCIÓN DE ENLACES
     Cuando se muestre la Pantalla principal "Invierte de forma simple y segura con el respaldo de AFP Habitat."
     Entonces validar "Autorizo a AFP Habitat a compartir mis datos con Prudentialsaf S.A.C. para fines informativos/comerciales, según la Política de Privacidad"
     Y dar clic en el enlace Politica de Privacidad de Autorizacion para Compartir Datos
-
-

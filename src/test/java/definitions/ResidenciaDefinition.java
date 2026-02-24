@@ -3,6 +3,7 @@ package definitions;
 import io.cucumber.java.es.Entonces;
 import io.cucumber.java.es.Y;
 import pageobjects.BotonPage;
+import pageobjects.FondoPage;
 import pageobjects.IdentificacionPage;
 import pageobjects.ResidenciaPage;
 import support.Captura;
@@ -14,12 +15,14 @@ public class ResidenciaDefinition {
     ResidenciaPage residencia;
     IdentificacionPage identificacion;
     Captura screenshot;
+    FondoPage fondo;
 
     public ResidenciaDefinition() {
         boton = new BotonPage();
         residencia = new ResidenciaPage();
         identificacion = new IdentificacionPage();
         screenshot = new Captura();
+        fondo = new FondoPage();
     }
 
     @Y("seleccionar el boton Si tengo")
@@ -52,7 +55,9 @@ public class ResidenciaDefinition {
     }
 
     @Entonces("se mostrara la pantalla de {string}")
-    public void seMostraraLaPantallaDe(String arg0) {
-
+    public void seMostraraLaPantallaDe(String datosInversion) throws InterruptedException {
+        Thread.sleep(3000);
+        fondo.validarPasoFondoInversion(datosInversion);
+        screenshot.capturarPaso(driver, "Screenshot");
     }
 }

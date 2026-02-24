@@ -1,6 +1,7 @@
 package pageobjects;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -12,52 +13,38 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
 public class FormularioPage extends util {
-    @FindBy(xpath = "//input[@placeholder='Ingrese primer nombre']")
-    protected WebElement txtPrimerNombre;
-    @FindBy(xpath = "//input[@placeholder='Ingrese segundo nombre']")
-    protected WebElement txtSegundoNombre;
-    @FindBy(xpath = "//input[@placeholder='Ingrese primer apellido']")
-    protected WebElement txtPrimerApellido;
-    @FindBy(xpath = "//input[@placeholder='Ingrese segundo apellido']")
-    protected WebElement txtSegundoApellido;
-    @FindBy(xpath = "//input[@placeholder='Ej: Av. Larco 1234, Dpto. 501']")
-    protected WebElement txtDireccion;
-    @FindBy(xpath = "//input[@type='tel']")
-    protected WebElement txtCelular;
-    @FindBy(xpath = "//input[@type='email']")
-    protected WebElement txtCorreo;
-    @FindBy(xpath = "//input[@placeholder='20123456789']")
-    protected WebElement txtRuc;
+    @FindBy(xpath = "//input[@placeholder='Ingrese primer nombre']") protected WebElement txtPrimerNombre;
+    @FindBy(xpath = "//input[@placeholder='Ingrese segundo nombre']") protected WebElement txtSegundoNombre;
+    @FindBy(xpath = "//input[@placeholder='Ingrese primer apellido']") protected WebElement txtPrimerApellido;
+    @FindBy(xpath = "//input[@placeholder='Ingrese segundo apellido']") protected WebElement txtSegundoApellido;
+    @FindBy(xpath = "//label[contains(text(),'Dirección')]/following::input[1]") protected WebElement txtDireccion;
+    @FindBy(xpath = "//label[contains(text(),'Número de celular')]/following::input[1]") protected WebElement txtCelular;
+    @FindBy(xpath = "//label[contains(text(),'Correo electrónico')]/following::input[1]") protected WebElement txtCorreo;
+    @FindBy(xpath = "//label[contains(text(),'RUC')]/following::input[1]") protected WebElement txtRuc;
 
-    @FindBy(xpath = "//span[contains(text(),'No tengo segundo nombre')]")
-    protected WebElement chkNoSegundoNombre;
-    @FindBy(xpath = "//span[contains(text(),'No tengo segundo apellido')]")
-    protected WebElement chkNoSegundoApellido;
+    @FindBy(xpath = "//span[contains(text(),'No tengo segundo nombre')]") protected WebElement chkNoSegundoNombre;
+    @FindBy(xpath = "//span[contains(text(),'No tengo segundo apellido')]") protected WebElement chkNoSegundoApellido;
 
-    @FindBy(xpath = "//label[contains(text(),'Nacionalidad')]/following::select[1]")
-    protected WebElement cmbNacionalidad;
-    @FindBy(xpath = "//label[contains(text(),'País de residencia')]/following::select[1]")
-    protected WebElement cmbPaisResidencia;
-    @FindBy(xpath = "//label[contains(text(),'Sexo')]/following::select[1]")
-    protected WebElement cmbSexo;
-    @FindBy(xpath = "//label[contains(text(),'Estado civil')]/following::select[1]")
-    protected WebElement cmbEstadoCivil;
-    @FindBy(xpath = "//label[contains(text(),'Departamento')]/following::select[1]")
-    protected WebElement cmbDepartamento;
-    @FindBy(xpath = "//label[contains(text(),'Provincia')]/following::select[1]")
-    protected WebElement cmbProvincia;
-    @FindBy(xpath = "//label[contains(text(),'Distrito')]/following::select[1]")
-    protected WebElement cmbDistrito;
-    @FindBy(xpath = "//label[contains(text(),'Tipo de vía')]/following::select[1]")
-    protected WebElement cmbTipoVia;
-    @FindBy(xpath = "//label[contains(text(),'Profesión')]/following::select[1]")
-    protected WebElement cmbProfesion;
-    @FindBy(xpath = "//label[contains(text(),'Tipo de trabajador')]/following::select[1]")
-    protected WebElement cmbTipoTrabajador;
-    @FindBy(xpath = "//label[contains(text(),'Cargo')]/following::select[1]")
-    protected WebElement cmbCargo;
-    @FindBy(xpath = "//label[contains(text(),'Ingreso promedio mensual')]/following::select[1]")
-    protected WebElement cmbIngresoPromedioMensual;
+    @FindBy(xpath = "//label[contains(text(),'Nacionalidad')]/following::select[1]") protected WebElement cmbNacionalidad;
+    @FindBy(xpath = "//label[contains(text(),'País de residencia')]/following::select[1]") protected WebElement cmbPaisResidencia;
+    @FindBy(xpath = "//label[contains(text(),'Sexo')]/following::select[1]") protected WebElement cmbSexo;
+    @FindBy(xpath = "//label[contains(text(),'Estado civil')]/following::select[1]") protected WebElement cmbEstadoCivil;
+    @FindBy(xpath = "//label[contains(text(),'Departamento')]/following::select[1]") protected WebElement cmbDepartamento;
+    @FindBy(xpath = "//label[contains(text(),'Provincia')]/following::select[1]") protected WebElement cmbProvincia;
+    @FindBy(xpath = "//label[contains(text(),'Distrito')]/following::select[1]") protected WebElement cmbDistrito;
+    @FindBy(xpath = "//label[contains(text(),'Tipo de vía')]/following::select[1]") protected WebElement cmbTipoVia;
+    @FindBy(xpath = "//label[contains(text(),'Profesión')]/following::select[1]") protected WebElement cmbProfesion;
+    @FindBy(xpath = "//label[contains(text(),'Tipo de trabajador')]/following::select[1]") protected WebElement cmbTipoTrabajador;
+    @FindBy(xpath = "//label[contains(text(),'Cargo')]/following::select[1]") protected WebElement cmbCargo;
+    @FindBy(xpath = "//label[contains(text(),'Ingreso promedio mensual')]/following::select[1]") protected WebElement cmbIngresoPromedioMensual;
+    @FindBy(xpath = "//label[contains(text(),'Ingreso promedio mensual')]/following::input[1]") protected WebElement txtIngresoPromedioMensual;
+    @FindBy(xpath = "//label[contains(text(),'Número de celular')]/following::select[1]") protected WebElement cmbPrefijoCelular;
+    @FindBy(xpath = "//label[contains(text(),'Dirección')]/following::input[1]") protected WebElement txtDireccionManual;
+
+    @FindBy(xpath = "//input[@placeholder='Peruana']") protected WebElement txtNacionalidad;
+    @FindBy(xpath = "//input[@placeholder='Escribe el centro de labores']") protected WebElement txtCentroLabores;
+    @FindBy(xpath = "(//input[@type='radio'])[1]") protected WebElement rdUsarDireccionDni;
+    @FindBy(xpath = "(//input[@type='radio'])[2]") protected WebElement rdNuevaDireccion;
 
     public FormularioPage() {
         PageFactory.initElements(driver,this);
@@ -105,10 +92,10 @@ public class FormularioPage extends util {
         select.selectByVisibleText(residencia);
     }
     public void seleccionarFechaNacimiento(String fecha) {
-        By locator = By.xpath("//input[@type='date']");
-        WebElement campoFecha = driver.findElement(locator);
-        campoFecha.clear();
-        campoFecha.sendKeys(convertirFormatoFecha(fecha));
+        WebElement campoFecha = driver.findElement(By.xpath("//input[@type='date']"));
+        String fechaFormateada = convertirFormatoFecha(fecha);
+        JavascriptExecutor js = (JavascriptExecutor) driver;
+        js.executeScript("arguments[0].value = arguments[1];", campoFecha, fechaFormateada);
     }
     public void seleccionarSexo(String sexo) {
         wait.until(ExpectedConditions.visibilityOf(cmbSexo));
@@ -160,10 +147,39 @@ public class FormularioPage extends util {
         Select select = new Select(cmbIngresoPromedioMensual);
         select.selectByVisibleText(ingreso);
     }
+    public void seleccionarPrefijoCelular(String prefijo) {
+        wait.until(ExpectedConditions.visibilityOf(cmbPrefijoCelular));
+        Select select = new Select(cmbPrefijoCelular);
+        select.selectByVisibleText(prefijo);
+    }
+    public void ingresarNacionalidad(String nacionalidad) {
+        wait.until(ExpectedConditions.visibilityOf(txtNacionalidad));
+        txtNacionalidad.sendKeys(nacionalidad);
+    }
+    public void ingresarCentroLabores(String labores) {
+        wait.until(ExpectedConditions.visibilityOf(txtCentroLabores));
+        txtCentroLabores.sendKeys(labores);
+    }
+    public void seleccionarUsarDireccionDni() {
+        wait.until(ExpectedConditions.visibilityOf(rdUsarDireccionDni));
+        rdUsarDireccionDni.click();
+    }
+    public void seleccionarNuevaDireccion() {
+        wait.until(ExpectedConditions.visibilityOf(rdNuevaDireccion));
+        rdNuevaDireccion.click();
+    }
+    public void ingresarDireccionManual(String direccion) {
+        wait.until(ExpectedConditions.visibilityOf(txtDireccionManual));
+        txtDireccionManual.sendKeys(direccion);
+    }
+    public void ingresarIngresoPromedioMensual(String promedio) {
+        wait.until(ExpectedConditions.visibilityOf(txtIngresoPromedioMensual));
+        txtIngresoPromedioMensual.sendKeys(promedio);
+    }
     private String convertirFormatoFecha(String fecha) {
-        DateTimeFormatter formatoEntrada = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        DateTimeFormatter formatoSalida = DateTimeFormatter.ofPattern("yyyy-MM-dd");
-        LocalDate fechaConvertida = LocalDate.parse(fecha, formatoEntrada);
-        return fechaConvertida.format(formatoSalida);
+        DateTimeFormatter entrada = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        DateTimeFormatter salida = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+        LocalDate fechaParseada = LocalDate.parse(fecha, entrada);
+        return fechaParseada.format(salida);
     }
 }
