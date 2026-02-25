@@ -7,7 +7,7 @@ Característica: FUNCIONALIDAD DE LA PANTALLA DATOS DE INVERSIÓN
     Cuando seleccione el Tipo de Documento "DNI"
     E ingrese el Numero de Documento "35181065"
     E ingrese la clave web del cliente "1234"
-    Y da clic en el boton Empezar a invertir
+    Y dar clic en el boton Empezar a invertir
     Entonces se mostrara un popup de "¿Tienes residencia fiscal fuera de Perú?"
     Y seleccione el boton No tengo
     Entonces se mostrara la pantalla de "Datos de inversión"
@@ -20,14 +20,14 @@ Característica: FUNCIONALIDAD DE LA PANTALLA DATOS DE INVERSIÓN
     Cuando seleccione el Tipo de Documento "DNI"
     E ingrese el Numero de Documento "35181065"
     E ingrese la clave web del cliente "1234"
-    Y da clic en el boton Empezar a invertir
+    Y dar clic en el boton Empezar a invertir
     Entonces se mostrara un popup de "¿Tienes residencia fiscal fuera de Perú?"
     Y seleccione el boton No tengo
     Entonces se mostrara la pantalla de "Datos de inversión"
     Y validar el Monto disponible del cliente
     Y validar el Tipo de fondo del cliente
     E ingresar el Monto a invertir "2000"
-    Y seleccionar la Frecuencia de inversion "Única"
+    Y seleccionar la Frecuencia de inversion Unica
     Y dar clic en el boton Aceptar y firmar
     Entonces se mostrara un popup de "Confirma tu solicitud"
 
@@ -37,14 +37,14 @@ Característica: FUNCIONALIDAD DE LA PANTALLA DATOS DE INVERSIÓN
     Cuando seleccione el Tipo de Documento "DNI"
     E ingrese el Numero de Documento "35181065"
     E ingrese la clave web del cliente "1234"
-    Y da clic en el boton Empezar a invertir
+    Y dar clic en el boton Empezar a invertir
     Entonces se mostrara un popup de "¿Tienes residencia fiscal fuera de Perú?"
     Y seleccione el boton No tengo
     Entonces se mostrara la pantalla de "Datos de inversión"
     Y validar el Monto disponible del cliente
     Y validar el Tipo de fondo del cliente
     E ingresar el Monto a invertir "2000"
-    Y seleccionar la Frecuencia de inversion "Única"
+    Y seleccionar la Frecuencia de inversion Unica
     Y dar clic en el boton Aceptar y firmar
     Entonces se mostrara un popup de "Confirma tu solicitud"
     Y dar clic en el boton Confirmar solicitud
@@ -60,14 +60,14 @@ Característica: FUNCIONALIDAD DE LA PANTALLA DATOS DE INVERSIÓN
     Cuando seleccione el Tipo de Documento "DNI"
     E ingrese el Numero de Documento "35181065"
     E ingrese la clave web del cliente "1234"
-    Y da clic en el boton Empezar a invertir
+    Y dar clic en el boton Empezar a invertir
     Entonces se mostrara un popup de "¿Tienes residencia fiscal fuera de Perú?"
     Y seleccione el boton No tengo
     Entonces se mostrara la pantalla de "Datos de inversión"
     Y validar el Monto disponible del cliente
     Y validar el Tipo de fondo del cliente
     E ingresar el Monto a invertir "2000"
-    Y seleccionar la Frecuencia de inversion "Única"
+    Y seleccionar la Frecuencia de inversion Unica
     Y dar clic en el boton Aceptar y firmar
     Entonces se mostrara un popup de "Confirma tu solicitud"
     Y dar clic en el boton Confirmar solicitud
@@ -90,14 +90,14 @@ Característica: FUNCIONALIDAD DE LA PANTALLA DATOS DE INVERSIÓN
     Cuando seleccione el Tipo de Documento "DNI"
     E ingrese el Numero de Documento "35181065"
     E ingrese la clave web del cliente "1234"
-    Y da clic en el boton Empezar a invertir
+    Y dar clic en el boton Empezar a invertir
     Entonces se mostrara un popup de "¿Tienes residencia fiscal fuera de Perú?"
     Y seleccione el boton No tengo
     Entonces se mostrara la pantalla de "Datos de inversión"
     Y validar el Monto disponible del cliente
     Y validar el Tipo de fondo del cliente
     E ingresar el Monto a invertir "2000"
-    Y seleccionar la Frecuencia de inversion "Única"
+    Y seleccionar la Frecuencia de inversion Unica
     Y dar clic en el boton Aceptar y firmar
     Entonces se mostrara un popup de "Confirma tu solicitud"
     Y dar clic en el boton Confirmar solicitud
@@ -122,14 +122,14 @@ Característica: FUNCIONALIDAD DE LA PANTALLA DATOS DE INVERSIÓN
     Cuando seleccione el Tipo de Documento "DNI"
     E ingrese el Numero de Documento "35181065"
     E ingrese la clave web del cliente "1234"
-    Y da clic en el boton Empezar a invertir
+    Y dar clic en el boton Empezar a invertir
     Entonces se mostrara un popup de "¿Tienes residencia fiscal fuera de Perú?"
     Y seleccione el boton No tengo
     Entonces se mostrara la pantalla de "Datos de inversión"
     Y validar el Monto disponible del cliente
     Y validar el Tipo de fondo del cliente
     E ingresar el Monto a invertir "2000"
-    Y seleccionar la Frecuencia de inversion "Única"
+    Y seleccionar la Frecuencia de inversion Unica
     Y dar clic en el boton Aceptar y firmar
     Entonces se mostrara un popup de "Confirma tu solicitud"
     Y dar clic en el boton Confirmar solicitud

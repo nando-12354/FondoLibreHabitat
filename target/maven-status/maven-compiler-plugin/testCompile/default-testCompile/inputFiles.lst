@@ -6,6 +6,7 @@ D:\PROYECTOS GYS\HABITAT FONDO LIBRE\Codigo\HabitatTest2026\src\test\java\defini
 D:\PROYECTOS GYS\HABITAT FONDO LIBRE\Codigo\HabitatTest2026\src\test\java\definitions\HabitatDefinition.java
 D:\PROYECTOS GYS\HABITAT FONDO LIBRE\Codigo\HabitatTest2026\src\test\java\definitions\hooks.java
 D:\PROYECTOS GYS\HABITAT FONDO LIBRE\Codigo\HabitatTest2026\src\test\java\definitions\IdentificacionDefinition.java
+D:\PROYECTOS GYS\HABITAT FONDO LIBRE\Codigo\HabitatTest2026\src\test\java\definitions\OrigenFondoDefinition.java
 D:\PROYECTOS GYS\HABITAT FONDO LIBRE\Codigo\HabitatTest2026\src\test\java\definitions\ResidenciaDefinition.java
 D:\PROYECTOS GYS\HABITAT FONDO LIBRE\Codigo\HabitatTest2026\src\test\java\pageobjects\BotonPage.java
 D:\PROYECTOS GYS\HABITAT FONDO LIBRE\Codigo\HabitatTest2026\src\test\java\pageobjects\capturaWordPage.java
@@ -15,6 +16,7 @@ D:\PROYECTOS GYS\HABITAT FONDO LIBRE\Codigo\HabitatTest2026\src\test\java\pageob
 D:\PROYECTOS GYS\HABITAT FONDO LIBRE\Codigo\HabitatTest2026\src\test\java\pageobjects\FondoPage.java
 D:\PROYECTOS GYS\HABITAT FONDO LIBRE\Codigo\HabitatTest2026\src\test\java\pageobjects\FormularioPage.java
 D:\PROYECTOS GYS\HABITAT FONDO LIBRE\Codigo\HabitatTest2026\src\test\java\pageobjects\IdentificacionPage.java
+D:\PROYECTOS GYS\HABITAT FONDO LIBRE\Codigo\HabitatTest2026\src\test\java\pageobjects\OrigenFondoPage.java
 D:\PROYECTOS GYS\HABITAT FONDO LIBRE\Codigo\HabitatTest2026\src\test\java\pageobjects\ResidenciaPage.java
 D:\PROYECTOS GYS\HABITAT FONDO LIBRE\Codigo\HabitatTest2026\src\test\java\support\Captura.java
 D:\PROYECTOS GYS\HABITAT FONDO LIBRE\Codigo\HabitatTest2026\src\test\java\support\Conexion.java

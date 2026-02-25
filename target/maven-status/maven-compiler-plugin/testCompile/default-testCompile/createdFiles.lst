@@ -1,3 +1,4 @@
+definitions\OrigenFondoDefinition.class
 pageobjects\EnlacesPage.class
 definitions\ResidenciaDefinition.class
 pageobjects\DatosPersonalesPage.class
@@ -7,6 +8,7 @@ pageobjects\ConfirmaSolicitudPage.class
 pageobjects\FormularioPage.class
 definitions\HabitatDefinition.class
 definitions\FormularioDefinition.class
+pageobjects\OrigenFondoPage.class
 pageobjects\BotonPage.class
 pageobjects\FondoPage.class
 definitions\DatosPersonalesDefinition.class

@@ -13,23 +13,23 @@ Característica: FUNCIONALIDAD DE MODAL DECLARACIÓN DE ORIGEN DE FONDOS
     Y seleccione el boton No tengo
     Y se mostrara la pantalla "Datos de inversión"
     Y validar el Monto disponible del cliente
-    Y Validar el Tipo de fondo del cliente
-    E Ingresar el Monto a invertir mayor a "25000"
+    Y validar el Tipo de fondo del cliente
+    E ingresar el Monto a invertir mayor a "25001"
     Cuando se muestre un popup de "Declaración de origen de fondos"
-    Entonces seleccionar el origen de los fondos
-    E ingresar el Centro de labores ""
-    Y seleccionar el Tipo de trabajador ""
-    E ingresar el Cargo ""
-    E ingresar el Tiempo de servicio ""
-    Y seleccionar el Tiempo ""
-    Y seleccionar el rango de Ingreso promedio mensual ""
-    Y seleccionar el Departamento ""
-    Y seleccionar la Provincia ""
-    Y seleccionar el Distrito ""
-    Y seleccionar el Tipo de via ""
-    E ingresar la Dirección ""
+    Entonces seleccionar el Origen de los fondos "Pago de haberes"
+    E ingresar el Centro de labores "GYS"
+    Y seleccionar el Tipo de trabajador "Dependiente"
+    E ingresar el Cargo "ABOGADO"
+    E ingresar el Tiempo de servicio "Años"
+    Y seleccionar el Tiempo "3"
+    Y seleccionar el Rango de Ingreso promedio mensual "De S/ 3,001 hasta S/ 5,000"
+    Y seleccionar el Departamento "LIMA"
+    Y seleccionar la Provincia "CAÑETE"
+    Y seleccionar el Distrito "IMPERIAL"
+    Y seleccionar el Tipo de via "Avenida"
+    E ingresar la Direccion "Av. 28 de Julio 1234"
     Y dar clic en el boton Aceptar del popup
-    Y seleccionar la Frecuencia de inversion ""
+    Y seleccionar la Frecuencia de inversion Unica
     Y dar clic en el boton Aceptar y firmar
     Entonces se mostrara un popup de "Confirma tu solicitud"
 
@@ -45,20 +45,20 @@ Característica: FUNCIONALIDAD DE MODAL DECLARACIÓN DE ORIGEN DE FONDOS
     Y seleccione el boton No tengo
     Y se mostrara la pantalla "Datos de inversión"
     Y seleccionar un Fondo a invertir "Fondo 1 - Conservador"
-    E Ingresar el Monto a invertir mayor a "25000"
+    E ingresar el Monto a invertir mayor a "25000"
     Cuando se muestre un popup de "Declaración de origen de fondos"
-    Entonces seleccionar el origen de los fondos
-    E ingresar el Centro de labores ""
-    Y seleccionar el Tipo de trabajador ""
-    E ingresar el Cargo ""
-    E ingresar el Tiempo de servicio ""
-    Y seleccionar el Tiempo ""
-    Y seleccionar el rango de Ingreso promedio mensual ""
-    Y seleccionar el Departamento ""
-    Y seleccionar la Provincia ""
-    Y seleccionar el Distrito ""
-    Y seleccionar el Tipo de via ""
-    E ingresar la Dirección ""
+    Entonces seleccionar el Origen de los fondos "Pago de haberes"
+    E ingresar el Centro de labores "GYS"
+    Y seleccionar el Tipo de trabajador "Dependiente"
+    E ingresar el Cargo "ABOGADO"
+    E ingresar el Tiempo de servicio "Años"
+    Y seleccionar el Tiempo "3"
+    Y seleccionar el Rango de Ingreso promedio mensual "De S/ 3,001 hasta S/ 5,000"
+    Y seleccionar el Departamento "LIMA"
+    Y seleccionar la Provincia "CAÑETE"
+    Y seleccionar el Distrito "IMPERIAL"
+    Y seleccionar el Tipo de via "Avenida"
+    E ingresar la Direccion "Av. 28 de Julio 1234"
     Y dar clic en el boton Aceptar del popup
     Y seleccionar la Frecuencia de inversion ""
     Y dar clic en el boton Aceptar y firmar
@@ -84,22 +84,22 @@ Característica: FUNCIONALIDAD DE MODAL DECLARACIÓN DE ORIGEN DE FONDOS
     Y seleccionar un Fondo a cambiar "Fondo 1 - Conservador"
     Y dar clic en el boton Aplicar cambios
     Y validar el nuevo Fondo a invertir
-    E Ingresar el Monto a invertir mayor a "25000"
+    E ingresar el Monto a invertir mayor a "25000"
     Cuando se muestre un popup de "Declaración de origen de fondos"
-    Entonces seleccionar el origen de los fondos
-    E ingresar el Centro de labores ""
-    Y seleccionar el Tipo de trabajador ""
-    E ingresar el Cargo ""
-    E ingresar el Tiempo de servicio ""
-    Y seleccionar el Tiempo ""
-    Y seleccionar el rango de Ingreso promedio mensual ""
-    Y seleccionar el Departamento ""
-    Y seleccionar la Provincia ""
-    Y seleccionar el Distrito ""
-    Y seleccionar el Tipo de via ""
-    E ingresar la Dirección ""
+    Entonces seleccionar el Origen de los fondos "Pago de haberes"
+    E ingresar el Centro de labores "GYS"
+    Y seleccionar el Tipo de trabajador "Dependiente"
+    E ingresar el Cargo "ABOGADO"
+    E ingresar el Tiempo de servicio "Años"
+    Y seleccionar el Tiempo "3"
+    Y seleccionar el Rango de Ingreso promedio mensual "De S/ 3,001 hasta S/ 5,000"
+    Y seleccionar el Departamento "LIMA"
+    Y seleccionar la Provincia "CAÑETE"
+    Y seleccionar el Distrito "IMPERIAL"
+    Y seleccionar el Tipo de via "Avenida"
+    E ingresar la Direccion "Av. 28 de Julio 1234"
     Y dar clic en el boton Aceptar del popup
-    Y seleccionar la Frecuencia de inversion ""
+    Y seleccionar la Frecuencia de inversion Unica
     Y dar clic en el boton Aceptar y firmar
     Entonces se mostrara un popup de "Confirma tu solicitud"
 
@@ -144,20 +144,20 @@ Característica: FUNCIONALIDAD DE MODAL DECLARACIÓN DE ORIGEN DE FONDOS
     Y seleccionar un Fondo a invertir "Fondo 1 - Conservador"
     E ingresar el Monto a invertir mayor a "25000"
     Cuando se muestre un popup de "Declaración de origen de fondos"
-    Entonces seleccionar el origen de los fondos
-    E ingresar el Centro de labores ""
-    Y seleccionar el Tipo de trabajador ""
-    E ingresar el Cargo ""
-    E ingresar el Tiempo de servicio ""
-    Y seleccionar el Tiempo ""
-    Y seleccionar el rango de Ingreso promedio mensual ""
-    Y seleccionar el Departamento ""
-    Y seleccionar la Provincia ""
-    Y seleccionar el Distrito ""
-    Y seleccionar el Tipo de via ""
-    E ingresar la Dirección ""
+    Entonces seleccionar el Origen de los fondos "Pago de haberes"
+    E ingresar el Centro de labores "GYS"
+    Y seleccionar el Tipo de trabajador "Dependiente"
+    E ingresar el Cargo "ABOGADO"
+    E ingresar el Tiempo de servicio "Años"
+    Y seleccionar el Tiempo "3"
+    Y seleccionar el Rango de Ingreso promedio mensual "De S/ 3,001 hasta S/ 5,000"
+    Y seleccionar el Departamento "LIMA"
+    Y seleccionar la Provincia "CAÑETE"
+    Y seleccionar el Distrito "IMPERIAL"
+    Y seleccionar el Tipo de via "Avenida"
+    E ingresar la Direccion "Av. 28 de Julio 1234"
     Y dar clic en el boton Aceptar del popup
-    Y seleccionar la Frecuencia de inversion
+    Y seleccionar la Frecuencia de inversion Unica
     Y dar clic en el boton Aceptar y firmar
     Entonces se mostrara un popup de "Confirma tu solicitud"
     Y dar clic en el boton Confirmar solicitud
@@ -200,20 +200,20 @@ Característica: FUNCIONALIDAD DE MODAL DECLARACIÓN DE ORIGEN DE FONDOS
     Y seleccionar un Fondo a invertir "Fondo 1 - Conservador"
     E ingresar el Monto a invertir mayor a "25000"
     Cuando se muestre un popup de "Declaración de origen de fondos"
-    Entonces seleccionar el origen de los fondos
-    E ingresar el Centro de labores ""
-    Y seleccionar el Tipo de trabajador ""
-    E ingresar el Cargo ""
-    E ingresar el Tiempo de servicio ""
-    Y seleccionar el Tiempo ""
-    Y seleccionar el rango de Ingreso promedio mensual ""
-    Y seleccionar el Departamento ""
-    Y seleccionar la Provincia ""
-    Y seleccionar el Distrito ""
-    Y seleccionar el Tipo de via ""
-    E ingresar la Dirección ""
+    Entonces seleccionar el Origen de los fondos "Pago de haberes"
+    E ingresar el Centro de labores "GYS"
+    Y seleccionar el Tipo de trabajador "Dependiente"
+    E ingresar el Cargo "ABOGADO"
+    E ingresar el Tiempo de servicio "Años"
+    Y seleccionar el Tiempo "3"
+    Y seleccionar el Rango de Ingreso promedio mensual "De S/ 3,001 hasta S/ 5,000"
+    Y seleccionar el Departamento "LIMA"
+    Y seleccionar la Provincia "CAÑETE"
+    Y seleccionar el Distrito "IMPERIAL"
+    Y seleccionar el Tipo de via "Avenida"
+    E ingresar la Direccion "Av. 28 de Julio 1234"
     Y dar clic en el boton Aceptar del popup
-    Y seleccionar la Frecuencia de inversión
+    Y seleccionar la Frecuencia de inversion Unica
     Y dar clic en el boton Aceptar y firmar
     Entonces se mostrara un popup de "Confirma tu solicitud"
     Y dar clic en el boton Confirmar solicitud
