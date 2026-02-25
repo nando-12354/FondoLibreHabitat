@@ -13,9 +13,9 @@ Característica: FUNCIONALIDAD DE MODAL CONFIRMA TU SOLICITUD
     Y seleccione el boton No tengo
     Y se mostrara la pantalla "Datos de inversión"
     Y validar el Monto disponible del cliente
-    Y Validar el Tipo de fondo del cliente
-    E Ingresar el Monto a invertir "20000"
-    Y seleccionar la Frecuencia de inversion
+    Y validar el Tipo de fondo del cliente
+    E ingresar el Monto a invertir "20000"
+    Y seleccionar la Frecuencia de inversion Unica
     Y dar clic en el boton Aceptar y firmar
     Entonces se mostrara un popup de "Confirma tu solicitud"
     Y dar clic en el boton Confirmar solicitud
@@ -37,8 +37,8 @@ Característica: FUNCIONALIDAD DE MODAL CONFIRMA TU SOLICITUD
     Y seleccione el boton No tengo
     Y se mostrara la pantalla "Datos de inversión"
     Y seleccionar un Fondo a invertir "Fondo 1 - Conservador"
-    E Ingresar el Monto a invertir "20000"
-    Y seleccionar la Frecuencia de inversion
+    E ingresar el Monto a invertir "20000"
+    Y seleccionar la Frecuencia de inversion Unica
     Y dar clic en el boton Aceptar y firmar
     Entonces se mostrara un popup de "Confirma tu solicitud"
     Y dar clic en el boton Confirmar solicitud
@@ -68,8 +68,8 @@ Característica: FUNCIONALIDAD DE MODAL CONFIRMA TU SOLICITUD
     Y seleccionar un Fondo a cambiar "Fondo 1 - Conservador"
     Y dar clic en el boton Aplicar cambios
     Y validar el nuevo Fondo a invertir
-    E Ingresar el Monto a invertir "20000"
-    Y seleccionar la Frecuencia de inversion
+    E ingresar el Monto a invertir "20000"
+    Y seleccionar la Frecuencia de inversion Unica
     Y dar clic en el boton Aceptar y firmar
     Entonces se mostrara un popup de "Confirma tu solicitud"
     Y dar clic en el boton Confirmar solicitud
@@ -99,27 +99,27 @@ Característica: FUNCIONALIDAD DE MODAL CONFIRMA TU SOLICITUD
       | Fecha de emisión |
     Y seleccionar el primer nombre correcto del cliente "SLEDGE"
     Y seleccionar el primer apellido correcto del cliente "LUYO"
-    Y seleccionar la fecha de emision correcta del DNI del cliente "22/11/2022"
+    Y seleccionar la Fecha de emision correcta del DNI del cliente "22/11/2022"
     Y dar clic en el boton Siguiente
     Entonces mostrara el formulario "Datos personales" de llenado de los demas datos del cliente
-    Y seleccionar el pais de residencia ""
-    Y seleccionar la Nacionalidad ""
-    Y seleccionar la Fecha de nacimiento ""
-    Cuando seleccione Usar la direccion de mi DNI ""
-    Y seleccionar la Profesion ""
-    Y seleccionar el prefijo del celular ""
-    Y ingresar el Numero de celular ""
-    Y ingresar el Correo electronico ""
-    Y seleccionar el Tipo de trabajador "Independiente"
-    Y ingresar el Centro de labores ""
-    Y ingresar el Numero de RUC ""
-    Y seleccionar el Cargo ""
-    Y seleccionar el Ingreso promedio mensual "NO INGRESAR NADA"
+    Y seleccionar el Pais de residencia "Perú"
+    E ingresar la Nacionalidad "Peruana"
+    Y seleccionar la Fecha de nacimiento "11/07/1998"
+    Cuando seleccione Usar la direccion de mi DNI
+    Y seleccionar la Profesion "ABOGADO"
+    Y seleccionar el Prefijo del celular "51"
+    Y ingresar el Numero de celular "974123658"
+    Y ingresar el Correo electronico "fernando.luyo@gestionysistemas.com"
+    Y seleccionar el Tipo de trabajador "Dependiente"
+    Y ingresar el Centro de labores "GYS"
+    Y ingresar el Numero de RUC "20852369741"
+    Y seleccionar el Cargo "Comerciante"
+    Y seleccionar el Ingreso promedio mensual ""
     Y dar clic en el boton Siguiente
     Entonces se mostrara la pantalla de "Datos de inversión"
     Y seleccionar un Fondo a invertir "Fondo 1 - Conservador"
     Y ingresar el Monto a invertir "15000"
-    Y seleccionar la Frecuencia de inversion
+    Y seleccionar la Frecuencia de inversion Unica
     Y dar clic en el boton Aceptar y firmar
     Entonces se mostrara un popup de "Confirma tu solicitud"
     Y dar clic en el boton Confirmar solicitud
@@ -137,32 +137,32 @@ Característica: FUNCIONALIDAD DE MODAL CONFIRMA TU SOLICITUD
     Entonces se mostrara un popup de "¿Tienes residencia fiscal fuera de Perú?"
     Y seleccione el boton No tengo
     Entonces mostrara el formulario "Datos personales" de llenado de los demas datos del cliente
-    E ingresar el Primer nombre ""
-    E ingresar el Segundo nombre ""
-    Y seleccionar la Nacionalidad ""
-    Y seleccionar el pais de residencia ""
-    Y seleccionar la Fecha de nacimiento ""
-    Y seleccionar el Sexo ""
-    Y seleccionar el Estado civil ""
-    Y seleccionar el Departamento ""
-    Y seleccionar la Provincia ""
-    Y seleccionar el Distrito ""
-    Y seleccionar el Tipo de vía ""
-    Y ingresar la Direccion ""
-    Y seleccionar la Profesion ""
-    Y seleccionar el prefijo del celular ""
-    Y ingresar el Numero de celular ""
-    Y ingresar el Correo electronico ""
+    E ingresar el Primer nombre "FERNANFLOO"
+    E ingresar el Segundo nombre "LUIS"
+    E ingresar la Nacionalidad "Peruana"
+    Y seleccionar el Pais de residencia "Perú"
+    Y seleccionar la Fecha de nacimiento "11/07/1998"
+    Y seleccionar el Sexo "Masculino"
+    Y seleccionar el Estado civil "Casado"
+    Y seleccionar el Departamento "LIMA"
+    Y seleccionar la Provincia "CAÑETE"
+    Y seleccionar el Distrito "IMPERIAL"
+    Y seleccionar el Tipo de via "Avenida"
+    Y ingresar la Direccion "Av. Los Eucaliptos 123"
+    Y seleccionar la Profesion "ABOGADO"
+    Y seleccionar el Prefijo del celular "51"
+    Y ingresar el Numero de celular "974123658"
+    Y ingresar el Correo electronico "fernando.luyo@gestionysistemas.com"
     Y seleccionar el Tipo de trabajador "Independiente"
-    Y ingresar el Centro de labores ""
-    Y ingresar el Numero de RUC ""
-    Y seleccionar el Cargo ""
-    Y seleccionar el Ingreso promedio mensual ""
+    Y ingresar el Centro de labores "GYS"
+    Y ingresar el Numero de RUC "20741896578"
+    Y seleccionar el Cargo "Comerciante"
+    Y seleccionar el Ingreso promedio mensual "600000"
     Y dar clic en el boton Siguiente
     Entonces se mostrara la pantalla de "Datos de inversión"
     Y seleccionar un Fondo a invertir "Fondo 1 - Conservador"
     E ingresar el Monto a invertir "9000"
-    Y seleccionar la Frecuencia de inversión
+    Y seleccionar la Frecuencia de inversion Unica
     Y dar clic en el boton Aceptar y firmar
     Entonces se mostrara un popup de "Confirma tu solicitud"
     Y dar clic en el boton Confirmar solicitud

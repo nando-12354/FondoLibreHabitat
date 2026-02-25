@@ -16,6 +16,7 @@ public class BotonPage extends util {
     @FindBy(xpath = "//button[text()='Volver']") protected WebElement btnVolver;
     @FindBy(xpath = "//button[text()='Siguiente']") protected WebElement btnSiguiente;
     @FindBy(xpath = "//button[text()='Continuar']") protected WebElement btnContinuar;
+    @FindBy(xpath = "//button[text()='Aceptar']") protected WebElement btnAceptar;
     @FindBy(xpath = "//button[text()='Confirmar solicitud']") protected WebElement btnConfirmarSolicitud;
 
     public BotonPage() {
@@ -56,5 +57,9 @@ public class BotonPage extends util {
     public void clicBotonConfirmarSolicitud(){
         wait.until(ExpectedConditions.elementToBeClickable(btnConfirmarSolicitud));
         btnConfirmarSolicitud.click();
+    }
+    public void clicBotonAceptar(){
+        wait.until(ExpectedConditions.elementToBeClickable(btnAceptar));
+        btnAceptar.click();
     }
 }
