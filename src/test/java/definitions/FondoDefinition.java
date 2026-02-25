@@ -104,4 +104,16 @@ public class FondoDefinition {
         hooks.escenarioActual.log("Tipo de fondo: " + fondoActual);
         screenshot.capturarPaso(driver, "Screenshot");
     }
+
+    @Y("dar clic en el boton Cambiar tipo de fondo")
+    public void darClicEnElBotonCambiarTipoDeFondo() {
+        boton.clicBotonCambiarTipoFondo();
+        screenshot.capturarPaso(driver, "Screenshot");
+    }
+
+    @Y("dar clic en el boton Aplicar cambios")
+    public void darClicEnElBotonAplicarCambios() {
+        boton.clicBotonApicarCambio();
+        screenshot.capturarPaso(driver, "Screenshot");
+    }
 }

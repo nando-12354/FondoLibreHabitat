@@ -18,6 +18,8 @@ public class BotonPage extends util {
     @FindBy(xpath = "//button[text()='Continuar']") protected WebElement btnContinuar;
     @FindBy(xpath = "//button[text()='Aceptar']") protected WebElement btnAceptar;
     @FindBy(xpath = "//button[text()='Confirmar solicitud']") protected WebElement btnConfirmarSolicitud;
+    @FindBy(xpath = "//button[text()='Cambiar tipo fondo']") protected WebElement btnCambiarTipoFondo;
+    @FindBy(xpath = "//button[text()='Aplicar cambio']") protected WebElement btnAplicarCambio;
 
     public BotonPage() {
         PageFactory.initElements(driver,this);
@@ -61,5 +63,13 @@ public class BotonPage extends util {
     public void clicBotonAceptar(){
         wait.until(ExpectedConditions.elementToBeClickable(btnAceptar));
         btnAceptar.click();
+    }
+    public void clicBotonCambiarTipoFondo(){
+        wait.until(ExpectedConditions.elementToBeClickable(btnCambiarTipoFondo));
+        btnCambiarTipoFondo.click();
+    }
+    public void clicBotonApicarCambio(){
+        wait.until(ExpectedConditions.elementToBeClickable(btnAplicarCambio));
+        btnAplicarCambio.click();
     }
 }
