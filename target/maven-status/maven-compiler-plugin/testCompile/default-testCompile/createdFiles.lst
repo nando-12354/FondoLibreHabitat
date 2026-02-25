@@ -1,0 +1,16 @@
+pageobjects\EnlacesPage.class
+definitions\ResidenciaDefinition.class
+pageobjects\DatosPersonalesPage.class
+pageobjects\ResidenciaPage.class
+pageobjects\IdentificacionPage.class
+pageobjects\ConfirmaSolicitudPage.class
+pageobjects\FormularioPage.class
+definitions\HabitatDefinition.class
+definitions\FormularioDefinition.class
+pageobjects\BotonPage.class
+pageobjects\FondoPage.class
+definitions\DatosPersonalesDefinition.class
+definitions\IdentificacionDefinition.class
+definitions\FondoDefinition.class
+definitions\ConfirmaSolicitudDefinition.class
+definitions\EnlacesDefinition.class
