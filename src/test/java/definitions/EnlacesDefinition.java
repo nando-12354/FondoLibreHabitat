@@ -56,4 +56,14 @@ public class EnlacesDefinition {
         enlace.clicEnlaceTerminosComisiones();
         screenshot.capturarPaso(driver, "Screenshot");
     }
+
+    @Y("se mostrara una nueva ventana con las Politicas de Privacidad")
+    public void seMostraraUnaNuevaVentanaConLasPoliticasDePrivacidad() {
+        enlace.manejarNuevaVentana();
+    }
+
+    @Y("se mostrara una nueva ventana con los Terminos y Comisiones")
+    public void seMostraraUnaNuevaVentanaConLosTerminosYComisiones() {
+        enlace.manejarNuevaVentana();
+    }
 }

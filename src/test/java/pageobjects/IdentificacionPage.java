@@ -18,8 +18,9 @@ public class IdentificacionPage extends util {
     @FindBy(xpath = "//span[contains(text(),'Autorizo el uso de mis datos personales')]") protected WebElement chkDatosPersonales;
     @FindBy(xpath = "//span[contains(text(),'compartir mis datos')]") protected WebElement chkCompartirDatos;
     @FindBy(xpath = "//input[@type='password']") protected WebElement btnClaveWeb;
-    @FindBy(xpath = "//section[contains(@class,'login-page__hero')]") private WebElement tituloPrincipal;
-    @FindBy(xpath = "//label[text()='Clave web']") private WebElement lblClaveWeb;
+    @FindBy(xpath = "//section[contains(@class,'login-page__hero')]") protected WebElement tituloPrincipal;
+    @FindBy(xpath = "//label[text()='Clave web']") protected WebElement lblClaveWeb;
+    private By tituloPrincipalLocator = By.xpath("//section[contains(@class,'login-page__hero')]");
 
     public IdentificacionPage() {
         PageFactory.initElements(driver,this);
@@ -53,11 +54,10 @@ public class IdentificacionPage extends util {
         btnClaveWeb.sendKeys(clave);
     }
     public void validarPantallaPrincipal(String textoEsperado) {
-        wait.until(ExpectedConditions.visibilityOf(tituloPrincipal));
-        String textoReal = tituloPrincipal.getText()
-                .replace("\n", " ")
-                .trim();
-        Assert.assertEquals(textoReal, textoEsperado);
+        WebElement titulo = wait.until(ExpectedConditions.visibilityOfElementLocated(tituloPrincipalLocator));
+        String textoReal = titulo.getText().replaceAll("\\s+", " ").trim();
+        String esperadoNormalizado = textoEsperado.replaceAll("\\s+", " ").trim();
+        Assert.assertEquals("El título principal no coincide.", esperadoNormalizado, textoReal);
     }
     public void validarLabel(String label) {
         boolean labelValido = false;

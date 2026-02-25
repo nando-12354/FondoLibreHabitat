@@ -86,6 +86,7 @@ public class util extends hooks {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
+                Captura.capturarPaso(driver, "Screenshot");
                 driver.close();
                 break;
             }
