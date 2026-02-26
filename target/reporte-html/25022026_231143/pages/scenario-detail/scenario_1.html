@@ -1,0 +1,1260 @@
+
+    <!--
+    Copyright 2019 trivago N.V.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+    -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <base href="../..">
+    <head title="Reporte de pruebas web - Scenario Detail">
+        <title>Reporte de pruebas web - Scenario Detail</title>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta http-equiv="Content-Security-Policy" content="default-src *  data: blob: 'unsafe-inline' 'unsafe-eval';
+script-src * data: blob: 'unsafe-inline' 'unsafe-eval';
+connect-src * data: blob: 'unsafe-inline';
+img-src * data: blob: 'unsafe-inline';
+frame-src * data: blob: ;
+style-src * data: blob: 'unsafe-inline';
+font-src * data: blob: 'unsafe-inline';"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Reporte de pruebas web">
+<meta name="author" content="Cluecumber Report Plugin version 2.9.4">
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="css/datatables.min.css">
+<link rel="stylesheet" href="css/dataTables.bootstrap4.min.css">
+<link rel="stylesheet" href="css/jquery.fancybox.min.css"/>
+<link rel="stylesheet" href="css/cluecumber.css" type="text/css">
+<link rel="stylesheet" href="css/cluecumber-custom.css"/>
+<link rel="stylesheet" href="css/cluecumber-additional.css"/>
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/datatables.min.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/Chart.bundle.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+            // Data tables
+            $('.renderAsDataTable').on('draw.dt', function () {
+                $('[data-toggle="tooltip"]').tooltip();
+            }).DataTable({
+                "oLanguage": {
+                    "sSearch": "Search:"
+                },
+                "pageLength": 25,
+                "responsive": true
+            });
+
+            $('.collapse').on('shown.bs.collapse', function (e) {
+                $(e.target).find("iframe").each(function (index, iframe) {
+                    resizeIframe(iframe);
+                })
+            });
+
+            // Lightbox
+            $("a.grouped_elements").fancybox();
+
+            // Tool tips
+            $('[data-toggle="tooltip"]').tooltip();
+
+            // Chart
+            var canvas = document.getElementById('chart-area');
+            var ctx = canvas.getContext("2d");
+            var chart = new Chart(ctx, {
+  "data": {
+    "labels": [
+      "definitions.hooks.setUp(io.cucumber.java.Scenario)",
+      "que la web este disponible",
+      "seleccione el Tipo de Documento \"DNI\"",
+      "ingrese el Numero de Documento \"35181065\"",
+      "se muestre un campo nuevo de ingreso \"Clave web\"",
+      "ingresar la Clave web \"1234\"",
+      "dar clic en el boton Empezar a invertir",
+      "se mostrara un popup de \"¿Tienes residencia fiscal fuera de Perú?\"",
+      "seleccione el boton No tengo",
+      "se mostrara la pantalla \"Datos de inversión\"",
+      "validar el Monto disponible del cliente",
+      "validar el Tipo de fondo del cliente",
+      "ingresar el Monto a invertir mayor a \"25001\"",
+      "seleccionar la Frecuencia de inversion Unica",
+      "dar clic en el boton Continuar",
+      "se muestre un popup de \"Declaración de origen de fondos\"",
+      "seleccionar el Origen de los fondos \"Pago de haberes\"",
+      "ingresar el Centro de labores \"GYS\"",
+      "seleccionar el Tipo de trabajador \"Dependiente\"",
+      "ingresar el Cargo \"ABOGADO\"",
+      "ingresar el Tiempo de servicio \"Años\"",
+      "seleccionar el Tiempo \"3\"",
+      "seleccionar el Rango de Ingreso promedio mensual \"De S/ 3,001 hasta S/ 5,000\"",
+      "seleccionar el Departamento \"LIMA\"",
+      "seleccionar la Provincia \"CAÑETE\"",
+      "seleccionar el Distrito \"IMPERIAL\"",
+      "seleccionar el Tipo de via \"Avenida\"",
+      "ingresar la Direccion \"Av. 28 de Julio 1234\"",
+      "dar clic en el boton Aceptar del popup",
+      "seleccionar la Frecuencia de inversion Unica",
+      "dar clic en el boton Aceptar y firmar",
+      "se mostrara un popup de \"Confirma tu solicitud\"",
+      "definitions.hooks.tearDown(io.cucumber.java.Scenario)"
+    ],
+    "datasets": [
+      {
+        "data": [
+          1.809,
+          0.29,
+          1.887,
+          5.284,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "backgroundColor": [
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)"
+        ],
+        "label": "passed",
+        "stack": "complete"
+      },
+      {
+        "data": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          3.657,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.053
+        ],
+        "backgroundColor": [
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)"
+        ],
+        "label": "failed",
+        "stack": "complete"
+      },
+      {
+        "data": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.009,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "backgroundColor": [
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)"
+        ],
+        "label": "skipped",
+        "stack": "complete"
+      }
+    ]
+  },
+  "options": {
+    "scales": {
+      "xAxes": [
+        {
+          "ticks": {
+            "min": 0,
+            "stepSize": 0.0,
+            "display": false
+          },
+          "stacked": true,
+          "scaleLabel": {
+            "display": true,
+            "labelString": "Steps"
+          },
+          "stepSize": 0.0
+        }
+      ],
+      "yAxes": [
+        {
+          "ticks": {
+            "min": 0,
+            "stepSize": 5.284,
+            "display": true
+          },
+          "stacked": true,
+          "scaleLabel": {
+            "display": true,
+            "labelString": "Step Runtime (seconds)"
+          },
+          "stepSize": 0.0
+        }
+      ]
+    },
+    "events": [
+      "click",
+      "mousemove"
+    ]
+  },
+  "type": "bar"
+});
+
+            var original;
+            if (chart.config.type === "pie") {
+                original = Chart.defaults.pie.legend.onClick;
+            } else {
+                original = Chart.defaults.global.legend.onClick;
+            }
+
+            chart.options.onClick = function (evt, elements) {
+                if (chart.config.type !== "pie") return;
+                chartArea = elements[0];
+                if (chartArea === undefined) return;
+                chartArea.hidden = !chartArea.hidden;
+                chart.update();
+                toggleVisibilityByStatus(chartArea._model.label, !chartArea.hidden)
+            };
+
+            chart.options.legend.onClick = function (evt, label) {
+                original.call(this, evt, label);
+                toggleVisibilityByStatus(label.text, label.hidden);
+            };
+
+            function toggleVisibilityByStatus(statusText, show) {
+                var card = $("#card_" + statusText);
+                if (card !== undefined) {
+                    if (show) {
+                        card.show();
+                    } else {
+                        card.hide();
+                    }
+                }
+
+                var row = $(".table-row-" + statusText);
+                if (row !== undefined) {
+                    if (show) {
+                        row.show();
+                    } else {
+                        row.hide();
+                    }
+                }
+            }
+
+
+            if (true) {
+                $(".btn-outline-secondary[data-cluecumber-item='before-after-hooks-button']").click();
+            }
+            if (true) {
+                $(".btn-outline-secondary[data-cluecumber-item='step-hooks-button']").click();
+            }
+            if (true) {
+                $(".btn-outline-secondary[data-cluecumber-item='doc-strings-button']").click();
+            }
+        }
+    );
+
+    function resizeIframe(iframe) {
+        iframe.style.height = (iframe.contentWindow.document.body.scrollHeight + 25) + 'px';
+    }
+</script>    </head>
+    <body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                        <a class="nav-link " href="pages/scenario-summary.html">All Scenarios</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link " href="pages/scenario-sequence.html">Scenario Sequence</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link " href="pages/tag-summary.html">All Tags</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link " href="pages/step-summary.html">All Steps</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link " href="pages/feature-summary.html">All Features</a>
+                </li>
+            </ul>
+            <span class="text-light">2026-02-25 23:12:01</span>
+        </div>
+    </nav>
+    <main role="main" class="container">
+        <div class="cluecumber-template">
+            <div class="pb-2 mt-4 mb-2">
+                    <h5>
+                            <a href="pages/feature-scenarios/feature_0.html">FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT</a>
+                        <span class="small">file:src/test/resources/features/Escenarios.feature</span>
+                    </h5>
+                    <h3>[CP12] Cliente afiliado con cuenta y saldo / Declaración de origen de fondos por monto de inversión mayor a S/25,000.00</h3>
+            </div>
+
+
+    <div class="row" id="scenario-detail">
+    <div class="col-sm-6  h-auto" data-cluecumber-item="card">
+        <div class="card h-100">
+                <div class="card-header">Step Results</div>
+            <div class="card-body">
+    <div id="canvas-holder" class="w-100 text-center" style="min-height: 15rem;" data-cluecumber-item="chart">
+        <canvas id="chart-area" class="w-100"></canvas>
+    </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3  h-auto" data-cluecumber-item="card">
+        <div class="card h-100">
+                <div class="card-header">Scenario Info</div>
+            <div class="card-body">
+                <li class="list-group-item">Started on:<br>2026-02-25 23:11:46</li>
+                <li class="list-group-item">Ended on:<br>2026-02-25 23:11:59</li>
+            <li class="list-group-item">Test Runtime:<br>0m 12s 992ms</li>
+            <li class="list-group-item">
+                    <a href="pages/tag-scenarios/tag_regresion.html">@regresion</a>            </li>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3  h-auto" data-cluecumber-item="card">
+        <div class="card h-100">
+                <div class="card-header">Step Summary</div>
+            <div class="card-body">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    31         Steps
+
+                </li>
+                <li class="list-group-item">
+                    3 passed     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+
+                    <br>
+                    1 failed     <i class="color-failed cluecumber-icon icon-failed" data-toggle="tooltip"
+       title="failed"><span style="display:none">failed</span></i>
+
+                    <br>
+                    27 skipped     <i class="color-skipped cluecumber-icon icon-skipped" data-toggle="tooltip"
+       title="skipped"><span style="display:none">skipped</span></i>
+
+                </li>
+            </ul>
+                <button class="btn btn-outline-secondary btn-block collapsed" type="button" data-toggle="collapse"
+                        aria-expanded="true" data-cluecumber-item="before-after-hooks-button"
+                        data-target=".scenarioHook">Scenario Hooks with content
+                </button>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <ul class="list-group list-group-flush">
+
+
+    <div class="col-sm-12  h-auto" data-cluecumber-item="card">
+        <div class="card h-100">
+                <div class="card-header">Steps</div>
+            <div class="card-body">
+                <li class="list-group-item">
+
+
+                        <div class="row row_passed table-row-passed">
+                            <div class="col-9 text-left">
+                                <span class="text-left">1.</span>
+                                <span data-toggle="tooltip" title="definitions.HabitatDefinition.queLaWebEsteDisponible()">
+                                    <a href="pages/step-scenarios/step_1552970578.html"><span
+                                                class="keyword">Dado </span> que la web este disponible</a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 290ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row row_passed table-row-passed">
+                            <div class="col-9 text-left">
+                                <span class="text-left">2.</span>
+                                <span data-toggle="tooltip" title="definitions.IdentificacionDefinition.seleccioneElTipoDeDocumento(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_01985463971.html"><span
+                                                class="keyword">Cuando </span> seleccione el Tipo de Documento <span class="parameter">"DNI"</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 01s 887ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                            </div>
+
+            <div class="row w-100 p-3 m-0 scenarioAttachment">
+                <div class="w-100 p-1 m-0 border-bottom small text-left">
+                    <a class="btn-link" data-toggle="collapse" href="#expandable1771486148" role="button"
+                       aria-expanded="false" aria-controls="expandable1771486148">Toggle</a> |
+                        Screenshot:_DNI (PNG attachment)
+                </div>
+                <div class="w-100 text-left m-auto">
+                    <div class="w-100 text-left m-auto collapse " id="expandable1771486148">
+                            <a class="grouped_elements" rel="images" href="attachments/attachment001.png">
+                                <img src="attachments/attachment001.png" class="embedded-image"
+                                     style="max-width: 45%; border: grey solid 1px; margin: 10px;"
+                                     alt="Attachment attachment001.png"/>
+                            </a>
+                    </div>
+                </div>
+            </div>
+                        </div>
+
+
+                        <div class="row row_passed table-row-passed">
+                            <div class="col-9 text-left">
+                                <span class="text-left">3.</span>
+                                <span data-toggle="tooltip" title="definitions.IdentificacionDefinition.ingreseElNumeroDeDocumento(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_698501138.html"><span
+                                                class="keyword">E </span> ingrese el Numero de Documento <span class="parameter">"35181065"</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 05s 284ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                            </div>
+
+            <div class="row w-100 p-3 m-0 scenarioAttachment">
+                <div class="w-100 p-1 m-0 border-bottom small text-left">
+                    <a class="btn-link" data-toggle="collapse" href="#expandable100380224" role="button"
+                       aria-expanded="false" aria-controls="expandable100380224">Toggle</a> |
+                        Screenshot:_35181065 (PNG attachment)
+                </div>
+                <div class="w-100 text-left m-auto">
+                    <div class="w-100 text-left m-auto collapse " id="expandable100380224">
+                            <a class="grouped_elements" rel="images" href="attachments/attachment002.png">
+                                <img src="attachments/attachment002.png" class="embedded-image"
+                                     style="max-width: 45%; border: grey solid 1px; margin: 10px;"
+                                     alt="Attachment attachment002.png"/>
+                            </a>
+                    </div>
+                </div>
+            </div>
+                        </div>
+
+
+                        <div class="row row_failed table-row-failed">
+                            <div class="col-9 text-left">
+                                <span class="text-left">4.</span>
+                                <span data-toggle="tooltip" title="definitions.IdentificacionDefinition.seMuestreUnCampoNuevoDeIngreso(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_932571352.html"><span
+                                                class="keyword">Cuando </span> se muestre un campo nuevo de ingreso <span class="parameter">"Clave web"</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 03s 657ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-failed cluecumber-icon icon-failed" data-toggle="tooltip"
+       title="failed"><span style="display:none">failed</span></i>
+                            </div>
+
+        <div class="row w-100 p-3 m-0 scenarioErrorMessage">
+            <div class="w-100 text-left border border-danger">
+                <pre class="text-danger small p-2">org.openqa.selenium.NoSuchSessionException: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=145.0.7632.117)
+Build info: version: '4.32.0', revision: 'd17c8aa950'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9aa96a567face167c9e1691e298e0d1c, findElement {value=//label[text()='Clave web'], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.117, chrome: {chromedriverVersion: 145.0.7632.76 (ee36f024f43a..., userDataDir: C:\Users\Nando\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60144}, goog:processID: 13380, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60144/devtoo..., se:cdpVersion: 145.0.7632.117, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9aa96a567face167c9e1691e298e0d1c
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:368)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:362)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:194)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:190)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	at pageobjects.IdentificacionPage.validarLabel(IdentificacionPage.java:67)
+	at definitions.IdentificacionDefinition.seMuestreUnCampoNuevoDeIngreso(IdentificacionDefinition.java:84)
+	at &#212;&#163;&#162;.se muestre un campo nuevo de ingreso &#34;Clave web&#34;(<a href='file:///D:/PROYECTOS%20GYS/HABITAT%20FONDO%20LIBRE/Codigo/HabitatTest2026/src/test/resources/features/Escenarios.feature:140)' target='_blank'>file:///D:/PROYECTOS%20GYS/HABITAT%20FONDO%20LIBRE/Codigo/HabitatTest2026/src/test/resources/features/Escenarios.feature:140)</a>
+</pre>
+            </div>
+        </div>
+                        </div>
+
+
+                        <div class="row row_skipped table-row-skipped">
+                            <div class="col-9 text-left">
+                                <span class="text-left">5.</span>
+                                <span data-toggle="tooltip" title="definitions.IdentificacionDefinition.ingresarLaClaveWeb(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_0245535014.html"><span
+                                                class="keyword">Entonces </span> ingresar la Clave web <span class="parameter">"1234"</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 000ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-skipped cluecumber-icon icon-skipped" data-toggle="tooltip"
+       title="skipped"><span style="display:none">skipped</span></i>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row row_skipped table-row-skipped">
+                            <div class="col-9 text-left">
+                                <span class="text-left">6.</span>
+                                <span data-toggle="tooltip" title="definitions.IdentificacionDefinition.darClicEnElBotonEmpezarAInvertir()">
+                                    <a href="pages/step-scenarios/step_1987969918.html"><span
+                                                class="keyword">Y </span> dar clic en el boton Empezar a invertir</a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 000ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-skipped cluecumber-icon icon-skipped" data-toggle="tooltip"
+       title="skipped"><span style="display:none">skipped</span></i>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row row_skipped table-row-skipped">
+                            <div class="col-9 text-left">
+                                <span class="text-left">7.</span>
+                                <span data-toggle="tooltip" title="definitions.IdentificacionDefinition.seMostraraUnPopupDe(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_1158345966.html"><span
+                                                class="keyword">Entonces </span> se mostrara un popup de <span class="parameter">"¿Tienes residencia fiscal fuera de Perú?"</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 000ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-skipped cluecumber-icon icon-skipped" data-toggle="tooltip"
+       title="skipped"><span style="display:none">skipped</span></i>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row row_skipped table-row-skipped">
+                            <div class="col-9 text-left">
+                                <span class="text-left">8.</span>
+                                <span data-toggle="tooltip" title="definitions.ResidenciaDefinition.seleccioneElBotonNoTengo()">
+                                    <a href="pages/step-scenarios/step_1534155619.html"><span
+                                                class="keyword">Y </span> seleccione el boton No tengo</a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 000ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-skipped cluecumber-icon icon-skipped" data-toggle="tooltip"
+       title="skipped"><span style="display:none">skipped</span></i>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row row_skipped table-row-skipped">
+                            <div class="col-9 text-left">
+                                <span class="text-left">9.</span>
+                                <span data-toggle="tooltip" title="definitions.FondoDefinition.seMostraraLaPantalla(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_427321235.html"><span
+                                                class="keyword">Y </span> se mostrara la pantalla <span class="parameter">"Datos de inversión"</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 000ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-skipped cluecumber-icon icon-skipped" data-toggle="tooltip"
+       title="skipped"><span style="display:none">skipped</span></i>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row row_skipped table-row-skipped">
+                            <div class="col-9 text-left">
+                                <span class="text-left">10.</span>
+                                <span data-toggle="tooltip" title="definitions.FondoDefinition.validarElMontoDisponibleDelCliente()">
+                                    <a href="pages/step-scenarios/step_1618854062.html"><span
+                                                class="keyword">Y </span> validar el Monto disponible del cliente</a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 000ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-skipped cluecumber-icon icon-skipped" data-toggle="tooltip"
+       title="skipped"><span style="display:none">skipped</span></i>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row row_skipped table-row-skipped">
+                            <div class="col-9 text-left">
+                                <span class="text-left">11.</span>
+                                <span data-toggle="tooltip" title="definitions.FondoDefinition.validarElTipoDeFondoDelCliente()">
+                                    <a href="pages/step-scenarios/step_2135535407.html"><span
+                                                class="keyword">Y </span> validar el Tipo de fondo del cliente</a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 000ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-skipped cluecumber-icon icon-skipped" data-toggle="tooltip"
+       title="skipped"><span style="display:none">skipped</span></i>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row row_skipped table-row-skipped">
+                            <div class="col-9 text-left">
+                                <span class="text-left">12.</span>
+                                <span data-toggle="tooltip" title="definitions.OrigenFondoDefinition.ingresarElMontoAInvertirMayorA(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_01144383834.html"><span
+                                                class="keyword">E </span> ingresar el Monto a invertir mayor a <span class="parameter">"25001"</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 000ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-skipped cluecumber-icon icon-skipped" data-toggle="tooltip"
+       title="skipped"><span style="display:none">skipped</span></i>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row row_skipped table-row-skipped">
+                            <div class="col-9 text-left">
+                                <span class="text-left">13.</span>
+                                <span data-toggle="tooltip" title="definitions.FondoDefinition.seleccionarLaFrecuenciaDeInversionUnica()">
+                                    <a href="pages/step-scenarios/step_01963177075.html"><span
+                                                class="keyword">Y </span> seleccionar la Frecuencia de inversion Unica</a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 000ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-skipped cluecumber-icon icon-skipped" data-toggle="tooltip"
+       title="skipped"><span style="display:none">skipped</span></i>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row row_skipped table-row-skipped">
+                            <div class="col-9 text-left">
+                                <span class="text-left">14.</span>
+                                <span data-toggle="tooltip" title="definitions.FondoDefinition.darClicEnElBotonContinuar()">
+                                    <a href="pages/step-scenarios/step_01090433480.html"><span
+                                                class="keyword">Y </span> dar clic en el boton Continuar</a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 000ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-skipped cluecumber-icon icon-skipped" data-toggle="tooltip"
+       title="skipped"><span style="display:none">skipped</span></i>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row row_skipped table-row-skipped">
+                            <div class="col-9 text-left">
+                                <span class="text-left">15.</span>
+                                <span data-toggle="tooltip" title="definitions.OrigenFondoDefinition.seMuestreUnPopupDe(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_1588478483.html"><span
+                                                class="keyword">Cuando </span> se muestre un popup de <span class="parameter">"Declaración de origen de fondos"</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 000ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-skipped cluecumber-icon icon-skipped" data-toggle="tooltip"
+       title="skipped"><span style="display:none">skipped</span></i>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row row_skipped table-row-skipped">
+                            <div class="col-9 text-left">
+                                <span class="text-left">16.</span>
+                                <span data-toggle="tooltip" title="definitions.OrigenFondoDefinition.seleccionarElOrigenDeLosFondos(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_01378081519.html"><span
+                                                class="keyword">Entonces </span> seleccionar el Origen de los fondos <span class="parameter">"Pago de haberes"</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 000ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-skipped cluecumber-icon icon-skipped" data-toggle="tooltip"
+       title="skipped"><span style="display:none">skipped</span></i>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row row_skipped table-row-skipped">
+                            <div class="col-9 text-left">
+                                <span class="text-left">17.</span>
+                                <span data-toggle="tooltip" title="definitions.FormularioDefinition.ingresarElCentroDeLabores(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_0441628478.html"><span
+                                                class="keyword">E </span> ingresar el Centro de labores <span class="parameter">"GYS"</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 000ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-skipped cluecumber-icon icon-skipped" data-toggle="tooltip"
+       title="skipped"><span style="display:none">skipped</span></i>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row row_skipped table-row-skipped">
+                            <div class="col-9 text-left">
+                                <span class="text-left">18.</span>
+                                <span data-toggle="tooltip" title="definitions.FormularioDefinition.seleccionarElTipoDeTrabajador(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_373255992.html"><span
+                                                class="keyword">Y </span> seleccionar el Tipo de trabajador <span class="parameter">"Dependiente"</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 000ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-skipped cluecumber-icon icon-skipped" data-toggle="tooltip"
+       title="skipped"><span style="display:none">skipped</span></i>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row row_skipped table-row-skipped">
+                            <div class="col-9 text-left">
+                                <span class="text-left">19.</span>
+                                <span data-toggle="tooltip" title="definitions.OrigenFondoDefinition.ingresarElCargo(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_033339842.html"><span
+                                                class="keyword">E </span> ingresar el Cargo <span class="parameter">"ABOGADO"</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 000ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-skipped cluecumber-icon icon-skipped" data-toggle="tooltip"
+       title="skipped"><span style="display:none">skipped</span></i>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row row_skipped table-row-skipped">
+                            <div class="col-9 text-left">
+                                <span class="text-left">20.</span>
+                                <span data-toggle="tooltip" title="definitions.OrigenFondoDefinition.ingresarElTiempoDeServicio(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_01175453113.html"><span
+                                                class="keyword">E </span> ingresar el Tiempo de servicio <span class="parameter">"Años"</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 000ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-skipped cluecumber-icon icon-skipped" data-toggle="tooltip"
+       title="skipped"><span style="display:none">skipped</span></i>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row row_skipped table-row-skipped">
+                            <div class="col-9 text-left">
+                                <span class="text-left">21.</span>
+                                <span data-toggle="tooltip" title="definitions.OrigenFondoDefinition.seleccionarElTiempo(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_0874803383.html"><span
+                                                class="keyword">Y </span> seleccionar el Tiempo <span class="parameter">"3"</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 000ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-skipped cluecumber-icon icon-skipped" data-toggle="tooltip"
+       title="skipped"><span style="display:none">skipped</span></i>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row row_skipped table-row-skipped">
+                            <div class="col-9 text-left">
+                                <span class="text-left">22.</span>
+                                <span data-toggle="tooltip" title="definitions.OrigenFondoDefinition.seleccionarElRangoDeIngresoPromedioMensual(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_077957986.html"><span
+                                                class="keyword">Y </span> seleccionar el Rango de Ingreso promedio mensual <span class="parameter">"De S/ 3,001 hasta S/ 5,000"</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 000ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-skipped cluecumber-icon icon-skipped" data-toggle="tooltip"
+       title="skipped"><span style="display:none">skipped</span></i>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row row_skipped table-row-skipped">
+                            <div class="col-9 text-left">
+                                <span class="text-left">23.</span>
+                                <span data-toggle="tooltip" title="definitions.FormularioDefinition.seleccionarElDepartamento(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_1412806777.html"><span
+                                                class="keyword">Y </span> seleccionar el Departamento <span class="parameter">"LIMA"</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 000ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-skipped cluecumber-icon icon-skipped" data-toggle="tooltip"
+       title="skipped"><span style="display:none">skipped</span></i>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row row_skipped table-row-skipped">
+                            <div class="col-9 text-left">
+                                <span class="text-left">24.</span>
+                                <span data-toggle="tooltip" title="definitions.FormularioDefinition.seleccionarLaProvincia(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_02012737440.html"><span
+                                                class="keyword">Y </span> seleccionar la Provincia <span class="parameter">"CAÑETE"</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 000ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-skipped cluecumber-icon icon-skipped" data-toggle="tooltip"
+       title="skipped"><span style="display:none">skipped</span></i>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row row_skipped table-row-skipped">
+                            <div class="col-9 text-left">
+                                <span class="text-left">25.</span>
+                                <span data-toggle="tooltip" title="definitions.FormularioDefinition.seleccionarElDistrito(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_1197941261.html"><span
+                                                class="keyword">Y </span> seleccionar el Distrito <span class="parameter">"IMPERIAL"</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 000ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-skipped cluecumber-icon icon-skipped" data-toggle="tooltip"
+       title="skipped"><span style="display:none">skipped</span></i>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row row_skipped table-row-skipped">
+                            <div class="col-9 text-left">
+                                <span class="text-left">26.</span>
+                                <span data-toggle="tooltip" title="definitions.FormularioDefinition.seleccionarElTipoDeVia(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_485929018.html"><span
+                                                class="keyword">Y </span> seleccionar el Tipo de via <span class="parameter">"Avenida"</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 009ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-skipped cluecumber-icon icon-skipped" data-toggle="tooltip"
+       title="skipped"><span style="display:none">skipped</span></i>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row row_skipped table-row-skipped">
+                            <div class="col-9 text-left">
+                                <span class="text-left">27.</span>
+                                <span data-toggle="tooltip" title="definitions.FormularioDefinition.ingresarLaDireccion(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_1939126508.html"><span
+                                                class="keyword">E </span> ingresar la Direccion <span class="parameter">"Av. 28 de Julio 1234"</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 000ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-skipped cluecumber-icon icon-skipped" data-toggle="tooltip"
+       title="skipped"><span style="display:none">skipped</span></i>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row row_skipped table-row-skipped">
+                            <div class="col-9 text-left">
+                                <span class="text-left">28.</span>
+                                <span data-toggle="tooltip" title="definitions.OrigenFondoDefinition.darClicEnElBotonAceptarDelPopup()">
+                                    <a href="pages/step-scenarios/step_554274168.html"><span
+                                                class="keyword">Y </span> dar clic en el boton Aceptar del popup</a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 000ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-skipped cluecumber-icon icon-skipped" data-toggle="tooltip"
+       title="skipped"><span style="display:none">skipped</span></i>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row row_skipped table-row-skipped">
+                            <div class="col-9 text-left">
+                                <span class="text-left">29.</span>
+                                <span data-toggle="tooltip" title="definitions.FondoDefinition.seleccionarLaFrecuenciaDeInversionUnica()">
+                                    <a href="pages/step-scenarios/step_01963177075.html"><span
+                                                class="keyword">Y </span> seleccionar la Frecuencia de inversion Unica</a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 000ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-skipped cluecumber-icon icon-skipped" data-toggle="tooltip"
+       title="skipped"><span style="display:none">skipped</span></i>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row row_skipped table-row-skipped">
+                            <div class="col-9 text-left">
+                                <span class="text-left">30.</span>
+                                <span data-toggle="tooltip" title="definitions.FondoDefinition.darClicEnElBotonAceptarYFirmar()">
+                                    <a href="pages/step-scenarios/step_1988744071.html"><span
+                                                class="keyword">Y </span> dar clic en el boton Aceptar y firmar</a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 000ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-skipped cluecumber-icon icon-skipped" data-toggle="tooltip"
+       title="skipped"><span style="display:none">skipped</span></i>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row row_skipped table-row-skipped">
+                            <div class="col-9 text-left">
+                                <span class="text-left">31.</span>
+                                <span data-toggle="tooltip" title="definitions.IdentificacionDefinition.seMostraraUnPopupDe(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_1158345966.html"><span
+                                                class="keyword">Entonces </span> se mostrara un popup de <span class="parameter">"Confirma tu solicitud"</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 000ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-skipped cluecumber-icon icon-skipped" data-toggle="tooltip"
+       title="skipped"><span style="display:none">skipped</span></i>
+                            </div>
+
+                        </div>
+                </li>
+            </div>
+        </div>
+    </div>
+
+            <div class="scenarioHook collapse">
+    <div class="col-sm-12  h-auto" data-cluecumber-item="card">
+        <div class="card h-100">
+                <div class="card-header">After Hooks</div>
+            <div class="card-body">
+                    <li class="list-group-item">
+                                <div class="row row_failed table-row-failed">
+                                    <div class="col-9 text-left">
+                                        <span class="text-left">1.</span>
+                                        <i>definitions.hooks.tearDown(io.cucumber.java.Scenario)</i>
+                                    </div>
+                                    <div class="col-2 text-left small">
+                                        0m 00s 053ms
+                                    </div>
+                                    <div class="col-1 text-right">
+    <i class="color-failed cluecumber-icon icon-failed" data-toggle="tooltip"
+       title="failed"><span style="display:none">failed</span></i>
+                                    </div>
+        <div class="row w-100 p-3 m-0 scenarioErrorMessage">
+            <div class="w-100 text-left border border-danger">
+                <pre class="text-danger small p-2">org.openqa.selenium.NoSuchSessionException: invalid session id
+Build info: version: '4.32.0', revision: 'd17c8aa950'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.1'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [9aa96a567face167c9e1691e298e0d1c, deleteAllCookies {}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 145.0.7632.117, chrome: {chromedriverVersion: 145.0.7632.76 (ee36f024f43a..., userDataDir: C:\Users\Nando\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60144}, goog:processID: 13380, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60144/devtoo..., se:cdpVersion: 145.0.7632.117, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 9aa96a567face167c9e1691e298e0d1c
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:545)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:622)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions.deleteAllCookies(RemoteWebDriver.java:885)
+	at definitions.hooks.tearDown(hooks.java:53)
+</pre>
+            </div>
+        </div>
+                                </div>
+                    </li>
+            </div>
+        </div>
+    </div>
+            </div>
+    </ul>
+        </div>
+    </main>
+
+<footer class="footer navbar-dark">
+    <div class="container-fluid">
+        <span><a href="https://github.com/trivago/cluecumber-report-plugin" target="_blank" class="text-white">Cluecumber Report Plugin version 2.9.4</a> - Report generated on 2026-02-25 23:12:01.</span>
+    </div>
+</footer>    </body>
+    </html>
+

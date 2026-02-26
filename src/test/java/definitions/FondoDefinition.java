@@ -72,7 +72,8 @@ public class FondoDefinition {
 
     @Y("dar clic en el boton Aceptar y firmar")
     public void darClicEnElBotonAceptarYFirmar() {
-
+        boton.clicBotonAceptarFirmarContinuar();
+        screenshot.capturarPaso(driver, "Screenshot");
     }
 
     @Y("dar clic en el boton Continuar")

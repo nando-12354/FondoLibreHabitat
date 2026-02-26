@@ -19,6 +19,7 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Y dar clic en el boton Empezar a invertir
     Y se mostrara un popup de "¿Tienes residencia fiscal fuera de Perú?"
 
+    # Se necesita un cliente afiliado con CE para validar
   #@regresion
   Escenario: [CP03] Validar cliente afiliado con CE
     Dado que la web este disponible
@@ -29,6 +30,7 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Y dar clic en el boton Empezar a invertir
     Y se mostrara un popup de "¿Tienes residencia fiscal fuera de Perú?"
 
+    # Se necesita un cliente afiliado con Pasaporte para validar
   #@regresion
   Escenario: [CP04] Validar cliente afiliado con Pasaporte
     Dado que la web este disponible
@@ -54,7 +56,7 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
   Escenario: [CP06] Validar cliente no afiliado con CE perteneciente al SPP
     Dado que la web este disponible
     Cuando seleccione el Tipo de Documento "C.E."
-    E ingrese el Numero de Documento "193817953"
+    E ingrese el Numero de Documento "456623132"
     Y seleccionar Acepto los terminos y comisiones asociados a la apertura y debitos para el fondo libre habitat mostrado aqui
     Y seleccionar Autorizo el uso de mis datos personales para fines publicitarios conforme a la Politica de Privacidad
     Y seleccionar Autorizo a AFP Habitat a compartir mis datos con Prudentialsaf SAC para fines informativos comerciales segun la Politica de Privacidad
@@ -65,14 +67,14 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
   Escenario: [CP07] Validar cliente no afiliado con Pasaporte perteneciente al SPP
     Dado que la web este disponible
     Cuando seleccione el Tipo de Documento "Pasaporte"
-    E ingrese el Numero de Documento "H305188"
+    E ingrese el Numero de Documento "H582365"
     Y seleccionar Acepto los terminos y comisiones asociados a la apertura y debitos para el fondo libre habitat mostrado aqui
     Y seleccionar Autorizo el uso de mis datos personales para fines publicitarios conforme a la Politica de Privacidad
     Y seleccionar Autorizo a AFP Habitat a compartir mis datos con Prudentialsaf SAC para fines informativos comerciales segun la Politica de Privacidad
     Y dar clic en el boton Empezar a invertir
     Entonces se mostrara un popup de "¿Tienes residencia fiscal fuera de Perú?"
 
-    #@regresion
+  #@regresion
   Escenario: [CP08] Si tengo residencia fiscal fuera del Perú (Botón Cerrar)
     Dado que la web este disponible
     Cuando seleccione el Tipo de Documento "DNI"
@@ -87,6 +89,7 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Entonces dar clic en el boton Cerrar del popup
     Y se debe actualizar la web y retornar a la Pantalla principal "Invierte de forma simple y segura con el respaldo de AFP Habitat."
 
+  # Observado (No funciona aun el boton)
   #@regresion
   Escenario: [CP09] Si tengo residencia fiscal fuera del Perú (Botón Descargar)
     Dado que la web este disponible
@@ -115,7 +118,7 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Y seleccione el boton No tengo
     Entonces se mostrara la pantalla de "Datos personales"
 
-    #@regresion
+  #@regresion
   Escenario: [CP11] Cliente afiliado con cuenta y saldo / Validar los Datos de inversión del cliente
     Dado que la web este disponible
     Cuando seleccione el Tipo de Documento "DNI"
@@ -129,6 +132,7 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Y validar el Monto disponible del cliente
     Y validar el Tipo de fondo del cliente
 
+    # PENDIENTE DE VALIDAR HASTA MAÑANA
   #@regresion
   Escenario: [CP12] Cliente afiliado con cuenta y saldo / Declaración de origen de fondos por monto de inversión mayor a S/25,000.00
     Dado que la web este disponible
@@ -143,6 +147,8 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Y validar el Monto disponible del cliente
     Y validar el Tipo de fondo del cliente
     E ingresar el Monto a invertir mayor a "25001"
+    Y seleccionar la Frecuencia de inversion Unica
+    Y dar clic en el boton Continuar
     Cuando se muestre un popup de "Declaración de origen de fondos"
     Entonces seleccionar el Origen de los fondos "Pago de haberes"
     E ingresar el Centro de labores "GYS"
@@ -161,6 +167,7 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Y dar clic en el boton Aceptar y firmar
     Entonces se mostrara un popup de "Confirma tu solicitud"
 
+    # PENDIENTE DE VALIDAR HASTA MAÑANA
   #@regresion
   Escenario: [CP13] Cliente afiliado con cuenta y saldo / Aceptar y firmar inversión
     Dado que la web este disponible
@@ -179,6 +186,7 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Y dar clic en el boton Continuar
     Entonces se mostrara un popup de "Confirma tu solicitud"
 
+    # Observado (Flujo esta mal)
   #@regresion
   Escenario: [CP14] Cliente afiliado con cuenta y saldo / Confirmar solicitud
     Dado que la web este disponible
@@ -203,6 +211,7 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Y dar clic en el boton Confirmar operacion
     Entonces se mostrara un popup de "Pago web"
 
+    # El sistema no llega a este escenario aun
   #@regresion
   Escenario: [CP15] Cliente afiliado con cuenta y saldo / Pago web con Niubiz
     Dado que la web este disponible
@@ -215,9 +224,9 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Y seleccione el boton No tengo
     Y se mostrara la pantalla "Datos de inversión"
     Y validar el Monto disponible del cliente
-    Y Validar el Tipo de fondo del cliente
-    E Ingresar el Monto a invertir "20000"
-    Y seleccionar la Frecuencia de inversion
+    Y validar el Tipo de fondo del cliente
+    E ingresar el Monto a invertir "20000"
+    Y seleccionar la Frecuencia de inversion Unica
     Y dar clic en el boton Aceptar y firmar
     Entonces se mostrara un popup de "Confirma tu solicitud"
     Y dar clic en el boton Confirmar solicitud
@@ -234,6 +243,7 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     E ingresar el Correo del cliente
     Y dar clic en el boton "Pagar"
 
+    # El sistema no llega a este escenario aun
   #@regresion
   Escenario: [CP16] Cliente afiliado con cuenta y saldo / Solicitud de inversión exitoso
     Dado que la web este disponible
@@ -246,9 +256,9 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Y seleccione el boton No tengo
     Y se mostrara la pantalla "Datos de inversión"
     Y validar el Monto disponible del cliente
-    Y Validar el Tipo de fondo del cliente
-    E Ingresar el Monto a invertir "20000"
-    Y seleccionar la Frecuencia de inversion
+    Y validar el Tipo de fondo del cliente
+    E ingresar el Monto a invertir "20000"
+    Y seleccionar la Frecuencia de inversion Unica
     Y dar clic en el boton Aceptar y firmar
     Entonces se mostrara un popup de "Confirma tu solicitud"
     Y dar clic en el boton Confirmar solicitud
@@ -267,6 +277,7 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Y se mostrara una pantalla "Tu solicitud de inversión fue registrada correctamente"
     Y validar el Numero de solicitud generado junto a la Constancia de pago
 
+    # El sistema no llega a este escenario aun
   #@regresion
   Escenario: [CP17] Cliente afiliado con cuenta y saldo / Descarga de constancia de pago
     Dado que la web este disponible
@@ -279,9 +290,9 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Y seleccione el boton No tengo
     Y se mostrara la pantalla "Datos de inversión"
     Y validar el Monto disponible del cliente
-    Y Validar el Tipo de fondo del cliente
-    E Ingresar el Monto a invertir "20000"
-    Y seleccionar la Frecuencia de inversion
+    Y validar el Tipo de fondo del cliente
+    E ingresar el Monto a invertir "20000"
+    Y seleccionar la Frecuencia de inversion Unica
     Y dar clic en el boton Aceptar y firmar
     Entonces se mostrara un popup de "Confirma tu solicitud"
     Y dar clic en el boton Confirmar solicitud
@@ -306,7 +317,7 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
   Escenario: [CP18] Cliente afiliado sin cuenta sin saldo / Selección de fondo a invertir
     Dado que la web este disponible
     Cuando seleccione el Tipo de Documento "DNI"
-    E ingrese el Numero de Documento "35181065"
+    E ingrese el Numero de Documento "16330665"
     Cuando se muestre un campo nuevo de ingreso "Clave web"
     Entonces ingresar la Clave web "1234"
     Y dar clic en el boton Empezar a invertir
@@ -320,11 +331,12 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Entonces se mostrara un popup de "Confirma tu solicitud"
     Y dar clic en el boton Confirmar solicitud
 
+    # Validado OK
   #@regresion
   Escenario: [CP19] Cliente afiliado sin cuenta sin saldo / Declaración de origen de fondos por monto de inversión mayor a S/25,000.00
     Dado que la web este disponible
     Cuando seleccione el Tipo de Documento "DNI"
-    E ingrese el Numero de Documento "35181065"
+    E ingrese el Numero de Documento "16330665"
     Cuando se muestre un campo nuevo de ingreso "Clave web"
     Entonces ingresar la Clave web "1234"
     Y dar clic en el boton Empezar a invertir
@@ -332,14 +344,16 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Y seleccione el boton No tengo
     Y se mostrara la pantalla "Datos de inversión"
     Y seleccionar un Fondo a invertir "Fondo 1 - Conservador"
-    E ingresar el Monto a invertir mayor a "25000"
+    E ingresar el Monto a invertir mayor a "51000"
+    Y seleccionar la Frecuencia de inversion Unica
+    Y dar clic en el boton Aceptar y firmar
     Cuando se muestre un popup de "Declaración de origen de fondos"
     Entonces seleccionar el Origen de los fondos "Pago de haberes"
     E ingresar el Centro de labores "GYS"
     Y seleccionar el Tipo de trabajador "Dependiente"
     E ingresar el Cargo "ABOGADO"
-    E ingresar el Tiempo de servicio "Años"
-    Y seleccionar el Tiempo "3"
+    E ingresar el Tiempo de servicio "3"
+    Y seleccionar el Tiempo "Años"
     Y seleccionar el Rango de Ingreso promedio mensual "De S/ 3,001 hasta S/ 5,000"
     Y seleccionar el Departamento "LIMA"
     Y seleccionar la Provincia "CAÑETE"
@@ -347,15 +361,14 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Y seleccionar el Tipo de via "Avenida"
     E ingresar la Direccion "Av. 28 de Julio 1234"
     Y dar clic en el boton Aceptar del popup
-    Y seleccionar la Frecuencia de inversion ""
-    Y dar clic en el boton Aceptar y firmar
     Entonces se mostrara un popup de "Confirma tu solicitud"
 
+    # Validado OK
   #@regresion
   Escenario: [CP20] Cliente afiliado sin cuenta sin saldo / Aceptar y firmar inversión
     Dado que la web este disponible
     Cuando seleccione el Tipo de Documento "DNI"
-    E ingrese el Numero de Documento "35181065"
+    E ingrese el Numero de Documento "16330665"
     Cuando se muestre un campo nuevo de ingreso "Clave web"
     Entonces ingresar la Clave web "1234"
     Y dar clic en el boton Empezar a invertir
@@ -363,16 +376,17 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Y seleccione el boton No tengo
     Y se mostrara la pantalla "Datos de inversión"
     Y seleccionar un Fondo a invertir "Fondo 1 - Conservador"
-    E ingresar el Monto a invertir "20000"
+    E ingresar el Monto a invertir "12000"
     Y seleccionar la Frecuencia de inversion Unica
     Y dar clic en el boton Aceptar y firmar
     Entonces se mostrara un popup de "Confirma tu solicitud"
 
+    # No llega a este flujo
   #@regresion
   Escenario: [CP21] Cliente afiliado sin cuenta sin saldo / Confirmar solicitud
     Dado que la web este disponible
     Cuando seleccione el Tipo de Documento "DNI"
-    E ingrese el Numero de Documento "35181065"
+    E ingrese el Numero de Documento "16330665"
     Cuando se muestre un campo nuevo de ingreso "Clave web"
     Entonces ingresar la Clave web "1234"
     Y dar clic en el boton Empezar a invertir
@@ -391,11 +405,12 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Y dar clic en el boton Confirmar operacion
     Entonces se mostrara un popup de "Pago web"
 
+    # No llega a este flujo
   #@regresion
   Escenario: [CP22] Cliente afiliado sin cuenta sin saldo / Pago web con Niubiz
     Dado que la web este disponible
     Cuando seleccione el Tipo de Documento "DNI"
-    E ingrese el Numero de Documento "35181065"
+    E ingrese el Numero de Documento "16330665"
     Cuando se muestre un campo nuevo de ingreso "Clave web"
     Entonces ingresar la Clave web "1234"
     Y dar clic en el boton Empezar a invertir
@@ -404,7 +419,7 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Y se mostrara la pantalla "Datos de inversión"
     Y seleccionar un Fondo a invertir "Fondo 1 - Conservador"
     E ingresar el Monto a invertir "20000"
-    Y seleccionar la Frecuencia de inversion
+    Y seleccionar la Frecuencia de inversion Unica
     Y dar clic en el boton Aceptar y firmar
     Entonces se mostrara un popup de "Confirma tu solicitud"
     Y dar clic en el boton Confirmar solicitud
@@ -421,11 +436,12 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     E ingresar el Correo del cliente
     Y dar clic en el boton "Pagar"
 
+    # No llega a este flujo
   #@regresion
   Escenario: [CP23] Cliente afiliado sin cuenta sin saldo / Solicitud de inversión exitoso
     Dado que la web este disponible
     Cuando seleccione el Tipo de Documento "DNI"
-    E ingrese el Numero de Documento "35181065"
+    E ingrese el Numero de Documento "16330665"
     Cuando se muestre un campo nuevo de ingreso "Clave web"
     Entonces ingresar la Clave web "1234"
     Y dar clic en el boton Empezar a invertir
@@ -434,7 +450,7 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Y se mostrara la pantalla "Datos de inversión"
     Y seleccionar un Fondo a invertir "Fondo 1 - Conservador"
     E ingresar el Monto a invertir "20000"
-    Y seleccionar la Frecuencia de inversion
+    Y seleccionar la Frecuencia de inversion Unica
     Y dar clic en el boton Aceptar y firmar
     Entonces se mostrara un popup de "Confirma tu solicitud"
     Y dar clic en el boton Confirmar solicitud
@@ -453,11 +469,12 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Y se mostrara una pantalla "Tu solicitud de inversión fue registrada correctamente"
     Y validar el Numero de solicitud generado junto a la Constancia de pago
 
+    # No llega a este flujo
   #@regresion
   Escenario: [CP24] Cliente afiliado sin cuenta sin saldo / Descarga de constancia de pago
     Dado que la web este disponible
     Cuando seleccione el Tipo de Documento "DNI"
-    E ingrese el Numero de Documento "35181065"
+    E ingrese el Numero de Documento "16330665"
     Cuando se muestre un campo nuevo de ingreso "Clave web"
     Entonces ingresar la Clave web "1234"
     Y dar clic en el boton Empezar a invertir
@@ -466,7 +483,7 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Y se mostrara la pantalla "Datos de inversión"
     Y seleccionar un Fondo a invertir "Fondo 1 - Conservador"
     E ingresar el Monto a invertir "20000"
-    Y seleccionar la Frecuencia de inversion
+    Y seleccionar la Frecuencia de inversion Unica
     Y dar clic en el boton Aceptar y firmar
     Entonces se mostrara un popup de "Confirma tu solicitud"
     Y dar clic en el boton Confirmar solicitud
@@ -487,26 +504,28 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Y dar clic en el boton Descargar comprobante
     Entonces se mostrara el Comprobante de pago
 
+    # Validado OK
   #@regresion
   Escenario: [CP25] Cliente afiliado con cuenta sin saldo / Validar los Datos de inversión del cliente
     Dado que la web este disponible
     Cuando seleccione el Tipo de Documento "DNI"
-    E ingrese el Numero de Documento "16330665"
+    E ingrese el Numero de Documento "32662805"
     Cuando se muestre un campo nuevo de ingreso "Clave web"
-    Entonces ingresar la Clave web "1234"
+    Entonces ingresar la Clave web "4321"
     Y dar clic en el boton Empezar a invertir
     Entonces se mostrara un popup de "¿Tienes residencia fiscal fuera de Perú?"
     Y seleccione el boton No tengo
     Y se mostrara la pantalla "Datos de inversión"
     Y validar el Tipo de fondo del cliente
 
+    # Observado (Boton Aplicar cambios no funciona)
   #@regresion
   Escenario: [CP26] Cliente afiliado con cuenta sin saldo / Cambio tipo de fondo
     Dado que la web este disponible
     Cuando seleccione el Tipo de Documento "DNI"
-    E ingrese el Numero de Documento "16330665"
+    E ingrese el Numero de Documento "32662805"
     Cuando se muestre un campo nuevo de ingreso "Clave web"
-    Entonces ingresar la Clave web "1234"
+    Entonces ingresar la Clave web "4321"
     Y dar clic en el boton Empezar a invertir
     Entonces se mostrara un popup de "¿Tienes residencia fiscal fuera de Perú?"
     Y seleccione el boton No tengo
@@ -521,13 +540,14 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Y dar clic en el boton Aplicar cambios
     Y validar el nuevo Fondo a invertir
 
+    # Observado (Boton Aplicar cambios no funciona)
   #@regresion
   Escenario: [CP27] Cliente afiliado con cuenta sin saldo / Declaración de origen de fondos por monto de inversión mayor a S/25,000.00
     Dado que la web este disponible
     Cuando seleccione el Tipo de Documento "DNI"
-    E ingrese el Numero de Documento "35181065"
+    E ingrese el Numero de Documento "32662805"
     Cuando se muestre un campo nuevo de ingreso "Clave web"
-    Entonces ingresar la Clave web "1234"
+    Entonces ingresar la Clave web "4321"
     Y dar clic en el boton Empezar a invertir
     Entonces se mostrara un popup de "¿Tienes residencia fiscal fuera de Perú?"
     Y seleccione el boton No tengo
@@ -560,13 +580,14 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Y dar clic en el boton Aceptar y firmar
     Entonces se mostrara un popup de "Confirma tu solicitud"
 
+    # Observado (Boton Aplicar cambios no funciona)
   #@regresion
   Escenario: [CP28] Cliente afiliado con cuenta sin saldo / Aceptar y firmar inversión
     Dado que la web este disponible
     Cuando seleccione el Tipo de Documento "DNI"
-    E ingrese el Numero de Documento "16330665"
+    E ingrese el Numero de Documento "32662805"
     Cuando se muestre un campo nuevo de ingreso "Clave web"
-    Entonces ingresar la Clave web "1234"
+    Entonces ingresar la Clave web "4321"
     Y dar clic en el boton Empezar a invertir
     Entonces se mostrara un popup de "¿Tienes residencia fiscal fuera de Perú?"
     Y seleccione el boton No tengo
@@ -585,13 +606,14 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Y dar clic en el boton Aceptar y firmar
     Entonces se mostrara un popup de "Confirma tu solicitud"
 
+    # Observado (Boton Aplicar cambios no funciona y no llega hasta el paso del Token Digital)
   #@regresion
   Escenario: [CP29] Cliente afiliado con cuenta sin saldo / Confirmar solicitud
     Dado que la web este disponible
     Cuando seleccione el Tipo de Documento "DNI"
-    E ingrese el Numero de Documento "35181065"
+    E ingrese el Numero de Documento "32662805"
     Cuando se muestre un campo nuevo de ingreso "Clave web"
-    Entonces ingresar la Clave web "1234"
+    Entonces ingresar la Clave web "4321"
     Y dar clic en el boton Empezar a invertir
     Entonces se mostrara un popup de "¿Tienes residencia fiscal fuera de Perú?"
     Y seleccione el boton No tengo
@@ -616,13 +638,14 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Y dar clic en el boton Confirmar operacion
     Entonces se mostrara un popup de "Pago web"
 
+    # Observado (Boton Aplicar cambios no funciona y no llega hasta el paso del Token Digital)
   #@regresion
   Escenario: [CP30] Cliente afiliado con cuenta sin saldo / Pago web con Niubiz
     Dado que la web este disponible
     Cuando seleccione el Tipo de Documento "DNI"
-    E ingrese el Numero de Documento "35181065"
+    E ingrese el Numero de Documento "32662805"
     Cuando se muestre un campo nuevo de ingreso "Clave web"
-    Entonces ingresar la Clave web "1234"
+    Entonces ingresar la Clave web "4321"
     Y dar clic en el boton Empezar a invertir
     Entonces se mostrara un popup de "¿Tienes residencia fiscal fuera de Perú?"
     Y seleccione el boton No tengo
@@ -637,7 +660,7 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Y dar clic en el boton Aplicar cambios
     Y validar el nuevo Fondo a invertir
     E ingresar el Monto a invertir "20000"
-    Y seleccionar la Frecuencia de inversion
+    Y seleccionar la Frecuencia de inversion Unica
     Y dar clic en el boton Aceptar y firmar
     Entonces se mostrara un popup de "Confirma tu solicitud"
     Y dar clic en el boton Confirmar solicitud
@@ -654,13 +677,14 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     E ingresar el Correo del cliente
     Y dar clic en el boton "Pagar"
 
+    # Observado (Boton Aplicar cambios no funciona y no llega hasta el paso del Token Digital)
   #@regresion
   Escenario: [CP31] Cliente afiliado con cuenta sin saldo / Solicitud de inversión exitoso
     Dado que la web este disponible
     Cuando seleccione el Tipo de Documento "DNI"
-    E ingrese el Numero de Documento "35181065"
+    E ingrese el Numero de Documento "32662805"
     Cuando se muestre un campo nuevo de ingreso "Clave web"
-    Entonces ingresar la Clave web "1234"
+    Entonces ingresar la Clave web "4321"
     Y dar clic en el boton Empezar a invertir
     Entonces se mostrara un popup de "¿Tienes residencia fiscal fuera de Perú?"
     Y seleccione el boton No tengo
@@ -675,7 +699,7 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Y dar clic en el boton Aplicar cambios
     Y validar el nuevo Fondo a invertir
     E ingresar el Monto a invertir "20000"
-    Y seleccionar la Frecuencia de inversion
+    Y seleccionar la Frecuencia de inversion Unica
     Y dar clic en el boton Aceptar y firmar
     Entonces se mostrara un popup de "Confirma tu solicitud"
     Y dar clic en el boton Confirmar solicitud
@@ -694,13 +718,14 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Y se mostrara una pantalla "Tu solicitud de inversión fue registrada correctamente"
     Y validar el Numero de solicitud generado junto a la Constancia de pago
 
+    # Observado (Boton Aplicar cambios no funciona y no llega hasta el paso del Token Digital)
   #@regresion
   Escenario: [CP32] Cliente afiliado con cuenta sin saldo / Descarga de constancia de pago
     Dado que la web este disponible
     Cuando seleccione el Tipo de Documento "DNI"
-    E ingrese el Numero de Documento "35181065"
+    E ingrese el Numero de Documento "32662805"
     Cuando se muestre un campo nuevo de ingreso "Clave web"
-    Entonces ingresar la Clave web "1234"
+    Entonces ingresar la Clave web "4321"
     Y dar clic en el boton Empezar a invertir
     Entonces se mostrara un popup de "¿Tienes residencia fiscal fuera de Perú?"
     Y seleccione el boton No tengo
@@ -715,7 +740,7 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Y dar clic en el boton Aplicar cambios
     Y validar el nuevo Fondo a invertir
     E ingresar el Monto a invertir "20000"
-    Y seleccionar la Frecuencia de inversion
+    Y seleccionar la Frecuencia de inversion Unica
     Y dar clic en el boton Aceptar y firmar
     Entonces se mostrara un popup de "Confirma tu solicitud"
     Y dar clic en el boton Confirmar solicitud
@@ -736,11 +761,12 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Y dar clic en el boton Descargar comprobante
     Entonces se mostrara el Comprobante de pago
 
+    # Validado OK
   #@regresion
   Escenario: [CP33] Cliente no afiliado identificado con DNI / Selección y validación de datos correctos
     Dado que la web este disponible
     Cuando seleccione el Tipo de Documento "DNI"
-    E ingrese el Numero de Documento "72174876"
+    E ingrese el Numero de Documento "41561789"
     Y seleccionar Acepto los terminos y comisiones asociados a la apertura y debitos para el fondo libre habitat mostrado aqui
     Y seleccionar Autorizo el uso de mis datos personales para fines publicitarios conforme a la Politica de Privacidad
     Y seleccionar Autorizo a AFP Habitat a compartir mis datos con Prudentialsaf SAC para fines informativos comerciales segun la Politica de Privacidad
@@ -751,17 +777,17 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
       | Selecciona tu primer nombre   |
       | Selecciona tu primer apellido |
       | Fecha de emisión de tu DNI    |
-    Y seleccionar el primer nombre correcto del cliente "SLEDGE"
-    Y seleccionar el primer apellido correcto del cliente "LUYO"
-    Y seleccionar la Fecha de emision correcta del DNI del cliente "22/11/2022"
+    Y seleccionar el primer nombre correcto del cliente "JORGE"
+    Y seleccionar el primer apellido correcto del cliente "BAUTISTA"
+    Y seleccionar la Fecha de emision correcta del DNI del cliente "10/11/2023"
     Y dar clic en el boton Siguiente
     Entonces mostrara el formulario "Datos personales" de llenado de los demas datos del cliente
 
-  #@regresion
+  @regresion
   Escenario: [CP34] Cliente no afiliado identificado con DNI / Usar la dirección de mi DNI
     Dado que la web este disponible
     Cuando seleccione el Tipo de Documento "DNI"
-    E ingrese el Numero de Documento "72174876"
+    E ingrese el Numero de Documento "41561789"
     Y seleccionar Acepto los terminos y comisiones asociados a la apertura y debitos para el fondo libre habitat mostrado aqui
     Y seleccionar Autorizo el uso de mis datos personales para fines publicitarios conforme a la Politica de Privacidad
     Y seleccionar Autorizo a AFP Habitat a compartir mis datos con Prudentialsaf SAC para fines informativos comerciales segun la Politica de Privacidad
@@ -772,9 +798,9 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
       | Selecciona tu primer nombre   |
       | Selecciona tu primer apellido |
       | Fecha de emisión de tu DNI    |
-    Y seleccionar el primer nombre correcto del cliente "SLEDGE"
-    Y seleccionar el primer apellido correcto del cliente "LUYO"
-    Y seleccionar la Fecha de emision correcta del DNI del cliente "22/11/2022"
+    Y seleccionar el primer nombre correcto del cliente "JORGE"
+    Y seleccionar el primer apellido correcto del cliente "BAUTISTA"
+    Y seleccionar la Fecha de emision correcta del DNI del cliente "10/11/2023"
     Y dar clic en el boton Siguiente
     Entonces mostrara el formulario "Datos personales" de llenado de los demas datos del cliente
     Y seleccionar el Pais de residencia "Perú"
@@ -1003,7 +1029,7 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
       | Fecha de emisión |
     Y seleccionar el primer nombre correcto del cliente "SLEDGE"
     Y seleccionar el primer apellido correcto del cliente "LUYO"
-    Y seleccionar la fecha de emision correcta del DNI del cliente "22/11/2022"
+    Y seleccionar la Fecha de emision correcta del DNI del cliente "22/11/2022"
     Y dar clic en el boton Siguiente
     Entonces mostrara el formulario "Datos personales" de llenado de los demas datos del cliente
     Y seleccionar el Pais de residencia ""
@@ -1108,22 +1134,22 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
       | Fecha de emisión |
     Y seleccionar el primer nombre correcto del cliente "SLEDGE"
     Y seleccionar el primer apellido correcto del cliente "LUYO"
-    Y seleccionar la fecha de emision correcta del DNI del cliente "22/11/2022"
+    Y seleccionar la Fecha de emision correcta del DNI del cliente "22/11/2022"
     Y dar clic en el boton Siguiente
     Entonces mostrara el formulario "Datos personales" de llenado de los demas datos del cliente
-    Y seleccionar el pais de residencia ""
-    Y seleccionar la Nacionalidad ""
-    Y seleccionar la Fecha de nacimiento ""
-    Cuando seleccione Usar la direccion de mi DNI ""
-    Y seleccionar la Profesion ""
-    Y seleccionar el prefijo del celular ""
-    Y ingresar el Numero de celular ""
-    Y ingresar el Correo electronico ""
-    Y seleccionar el Tipo de trabajador "Independiente"
-    Y ingresar el Centro de labores ""
-    Y ingresar el Numero de RUC ""
-    Y seleccionar el Cargo ""
-    Y seleccionar el Ingreso promedio mensual "NO INGRESAR NADA"
+    Y seleccionar el Pais de residencia "Perú"
+    E ingresar la Nacionalidad "Peruana"
+    Y seleccionar la Fecha de nacimiento "06/06/1996"
+    Cuando seleccione Usar la direccion de mi DNI
+    Y seleccionar la Profesion "ADMINISTRADOR"
+    Y seleccionar el Prefijo del celular "51"
+    Y ingresar el Numero de celular "974563214"
+    Y ingresar el Correo electronico "fernando.luyo@gestionysistemas.com"
+    Y seleccionar el Tipo de trabajador "Dependiente"
+    Y ingresar el Centro de labores "GYS"
+    Y ingresar el Numero de RUC "20852369811"
+    Y seleccionar el Cargo "Comerciante"
+    Y seleccionar el Ingreso promedio mensual "500000"
     Y dar clic en el boton Siguiente
     Entonces se mostrara la pantalla de "Datos de inversión"
     Y seleccionar un Fondo a invertir "Fondo 1 - Conservador"
@@ -1161,24 +1187,24 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Y seleccionar la fecha de emision correcta del DNI del cliente "22/11/2022"
     Y dar clic en el boton Siguiente
     Entonces mostrara el formulario "Datos personales" de llenado de los demas datos del cliente
-    Y seleccionar el pais de residencia ""
-    Y seleccionar la Nacionalidad ""
-    Y seleccionar la Fecha de nacimiento ""
-    Cuando seleccione Usar la direccion de mi DNI ""
-    Y seleccionar la Profesion ""
-    Y seleccionar el prefijo del celular ""
-    Y ingresar el Numero de celular ""
-    Y ingresar el Correo electronico ""
-    Y seleccionar el Tipo de trabajador "Independiente"
-    Y ingresar el Centro de labores ""
-    Y ingresar el Numero de RUC ""
-    Y seleccionar el Cargo ""
-    Y seleccionar el Ingreso promedio mensual "NO INGRESAR NADA"
+    Y seleccionar el Pais de residencia "Perú"
+    E ingresar la Nacionalidad "Peruana"
+    Y seleccionar la Fecha de nacimiento "06/06/1996"
+    Cuando seleccione Usar la direccion de mi DNI
+    Y seleccionar la Profesion "ADMINISTRADOR"
+    Y seleccionar el Prefijo del celular "51"
+    Y ingresar el Numero de celular "974563214"
+    Y ingresar el Correo electronico "fernando.luyo@gestionysistemas.com"
+    Y seleccionar el Tipo de trabajador "Dependiente"
+    Y ingresar el Centro de labores "GYS"
+    Y ingresar el Numero de RUC "20852369811"
+    Y seleccionar el Cargo "Comerciante"
+    Y seleccionar el Ingreso promedio mensual "500000"
     Y dar clic en el boton Siguiente
     Entonces se mostrara la pantalla de "Datos de inversión"
     Y seleccionar un Fondo a invertir "Fondo 1 - Conservador"
     Y ingresar el Monto a invertir "15000"
-    Y seleccionar la Frecuencia de inversion
+    Y seleccionar la Frecuencia de inversion Unica
     Y dar clic en el boton Aceptar y firmar
     Entonces se mostrara un popup de "Confirma tu solicitud"
     Y dar clic en el boton Confirmar solicitud
@@ -1218,24 +1244,24 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Y seleccionar la fecha de emision correcta del DNI del cliente "22/11/2022"
     Y dar clic en el boton Siguiente
     Entonces mostrara el formulario "Datos personales" de llenado de los demas datos del cliente
-    Y seleccionar el pais de residencia ""
-    Y seleccionar la Nacionalidad ""
-    Y seleccionar la Fecha de nacimiento ""
-    Cuando seleccione Usar la direccion de mi DNI ""
-    Y seleccionar la Profesion ""
-    Y seleccionar el prefijo del celular ""
-    Y ingresar el Numero de celular ""
-    Y ingresar el Correo electronico ""
-    Y seleccionar el Tipo de trabajador "Independiente"
-    Y ingresar el Centro de labores ""
-    Y ingresar el Numero de RUC ""
-    Y seleccionar el Cargo ""
-    Y seleccionar el Ingreso promedio mensual "NO INGRESAR NADA"
+    Y seleccionar el Pais de residencia "Perú"
+    E ingresar la Nacionalidad "Peruana"
+    Y seleccionar la Fecha de nacimiento "06/06/1996"
+    Cuando seleccione Usar la direccion de mi DNI
+    Y seleccionar la Profesion "ADMINISTRADOR"
+    Y seleccionar el Prefijo del celular "51"
+    Y ingresar el Numero de celular "974563214"
+    Y ingresar el Correo electronico "fernando.luyo@gestionysistemas.com"
+    Y seleccionar el Tipo de trabajador "Dependiente"
+    Y ingresar el Centro de labores "GYS"
+    Y ingresar el Numero de RUC "20852369811"
+    Y seleccionar el Cargo "Comerciante"
+    Y seleccionar el Ingreso promedio mensual "500000"
     Y dar clic en el boton Siguiente
     Entonces se mostrara la pantalla de "Datos de inversión"
     Y seleccionar un Fondo a invertir "Fondo 1 - Conservador"
     Y ingresar el Monto a invertir "15000"
-    Y seleccionar la Frecuencia de inversion
+    Y seleccionar la Frecuencia de inversion Unica
     Y dar clic en el boton Aceptar y firmar
     Entonces se mostrara un popup de "Confirma tu solicitud"
     Y dar clic en el boton Confirmar solicitud
@@ -1277,24 +1303,24 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Y seleccionar la fecha de emision correcta del DNI del cliente "22/11/2022"
     Y dar clic en el boton Siguiente
     Entonces mostrara el formulario "Datos personales" de llenado de los demas datos del cliente
-    Y seleccionar el pais de residencia ""
-    Y seleccionar la Nacionalidad ""
-    Y seleccionar la Fecha de nacimiento ""
-    Cuando seleccione Usar la direccion de mi DNI ""
-    Y seleccionar la Profesion ""
-    Y seleccionar el prefijo del celular ""
-    Y ingresar el Numero de celular ""
-    Y ingresar el Correo electronico ""
-    Y seleccionar el Tipo de trabajador "Independiente"
-    Y ingresar el Centro de labores ""
-    Y ingresar el Numero de RUC ""
-    Y seleccionar el Cargo ""
-    Y seleccionar el Ingreso promedio mensual "NO INGRESAR NADA"
+    Y seleccionar el Pais de residencia "Perú"
+    E ingresar la Nacionalidad "Peruana"
+    Y seleccionar la Fecha de nacimiento "06/06/1996"
+    Cuando seleccione Usar la direccion de mi DNI
+    Y seleccionar la Profesion "ADMINISTRADOR"
+    Y seleccionar el Prefijo del celular "51"
+    Y ingresar el Numero de celular "974563214"
+    Y ingresar el Correo electronico "fernando.luyo@gestionysistemas.com"
+    Y seleccionar el Tipo de trabajador "Dependiente"
+    Y ingresar el Centro de labores "GYS"
+    Y ingresar el Numero de RUC "20852369811"
+    Y seleccionar el Cargo "Comerciante"
+    Y seleccionar el Ingreso promedio mensual "500000"
     Y dar clic en el boton Siguiente
     Entonces se mostrara la pantalla de "Datos de inversión"
     Y seleccionar un Fondo a invertir "Fondo 1 - Conservador"
     Y ingresar el Monto a invertir "15000"
-    Y seleccionar la Frecuencia de inversion
+    Y seleccionar la Frecuencia de inversion Unica
     Y dar clic en el boton Aceptar y firmar
     Entonces se mostrara un popup de "Confirma tu solicitud"
     Y dar clic en el boton Confirmar solicitud
@@ -1506,32 +1532,32 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Entonces se mostrara un popup de "¿Tienes residencia fiscal fuera de Perú?"
     Y seleccione el boton No tengo
     Entonces mostrara el formulario "Datos personales" de llenado de los demas datos del cliente
-    E ingresar el Primer nombre ""
-    E ingresar el Segundo nombre ""
-    Y seleccionar la Nacionalidad ""
-    Y seleccionar el pais de residencia ""
-    Y seleccionar la Fecha de nacimiento ""
-    Y seleccionar el Sexo ""
-    Y seleccionar el Estado civil ""
-    Y seleccionar el Departamento ""
-    Y seleccionar la Provincia ""
-    Y seleccionar el Distrito ""
-    Y seleccionar el Tipo de vía ""
-    Y ingresar la Direccion ""
-    Y seleccionar la Profesion ""
-    Y seleccionar el prefijo del celular ""
-    Y ingresar el Numero de celular ""
-    Y ingresar el Correo electronico ""
-    Y seleccionar el Tipo de trabajador "Independiente"
-    Y ingresar el Centro de labores ""
-    Y ingresar el Numero de RUC ""
-    Y seleccionar el Cargo ""
-    Y seleccionar el Ingreso promedio mensual ""
+    E ingresar el Primer nombre "CARLOS"
+    E ingresar el Segundo nombre "PEDRO"
+    Y seleccionar la Nacionalidad "Peruana"
+    Y seleccionar el Pais de residencia "Perú"
+    Y seleccionar la Fecha de nacimiento "11/06/1990"
+    Y seleccionar el Sexo "Masculino"
+    Y seleccionar el Estado civil "Casado"
+    Y seleccionar el Departamento "LIMA"
+    Y seleccionar la Provincia "CAÑETE"
+    Y seleccionar el Distrito "IMPERIAL"
+    Y seleccionar el Tipo de via "Avenida"
+    E ingresar la Direccion "Av. 28 de Julio 999"
+    Y seleccionar la Profesion "ADMINISTRADOR"
+    Y seleccionar el Prefijo del celular "51"
+    E ingresar el Numero de celular "987789854"
+    E ingresar el Correo electronico "fernando.luyo@gestionysistemas.com"
+    Y seleccionar el Tipo de trabajador "Dependiente"
+    Y ingresar el Centro de labores "GYS"
+    Y ingresar el Numero de RUC "20852369811"
+    Y seleccionar el Cargo "Comerciante"
+    E ingresar el Ingreso promedio mensual "60000"
     Y dar clic en el boton Siguiente
     Entonces se mostrara la pantalla de "Datos de inversión"
     Y seleccionar un Fondo a invertir "Fondo 1 - Conservador"
-    E ingresar el Monto a invertir ""
-    Y seleccionar la Frecuencia de inversión
+    E ingresar el Monto a invertir "12000"
+    Y seleccionar la Frecuencia de inversion Unica
     Y dar clic en el boton Aceptar y firmar
     Entonces se mostrara un popup de "Confirma tu solicitud"
     Y dar clic en el boton Confirmar solicitud
@@ -1548,27 +1574,27 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Entonces se mostrara un popup de "¿Tienes residencia fiscal fuera de Perú?"
     Y seleccione el boton No tengo
     Entonces mostrara el formulario "Datos personales" de llenado de los demas datos del cliente
-    E ingresar el Primer nombre ""
-    E ingresar el Segundo nombre ""
-    Y seleccionar la Nacionalidad ""
-    Y seleccionar el Pais de residencia ""
-    Y seleccionar la Fecha de nacimiento ""
-    Y seleccionar el Sexo ""
-    Y seleccionar el Estado civil ""
-    Y seleccionar el Departamento ""
-    Y seleccionar la Provincia ""
-    Y seleccionar el Distrito ""
-    Y seleccionar el Tipo de via ""
-    Y ingresar la Direccion ""
-    Y seleccionar la Profesion ""
-    Y seleccionar el Prefijo del celular ""
-    Y ingresar el Numero de celular ""
-    Y ingresar el Correo electronico ""
-    Y seleccionar el Tipo de trabajador "Independiente"
-    Y ingresar el Centro de labores ""
-    Y ingresar el Numero de RUC ""
-    Y seleccionar el Cargo ""
-    Y seleccionar el Ingreso promedio mensual ""
+    E ingresar el Primer nombre "CARLOS"
+    E ingresar el Segundo nombre "PEDRO"
+    Y seleccionar la Nacionalidad "Peruana"
+    Y seleccionar el Pais de residencia "Perú"
+    Y seleccionar la Fecha de nacimiento "11/06/1990"
+    Y seleccionar el Sexo "Masculino"
+    Y seleccionar el Estado civil "Casado"
+    Y seleccionar el Departamento "LIMA"
+    Y seleccionar la Provincia "CAÑETE"
+    Y seleccionar el Distrito "IMPERIAL"
+    Y seleccionar el Tipo de via "Avenida"
+    E ingresar la Direccion "Av. 28 de Julio 999"
+    Y seleccionar la Profesion "ADMINISTRADOR"
+    Y seleccionar el Prefijo del celular "51"
+    E ingresar el Numero de celular "987789854"
+    E ingresar el Correo electronico "fernando.luyo@gestionysistemas.com"
+    Y seleccionar el Tipo de trabajador "Dependiente"
+    Y ingresar el Centro de labores "GYS"
+    Y ingresar el Numero de RUC "20852369811"
+    Y seleccionar el Cargo "Comerciante"
+    E ingresar el Ingreso promedio mensual "60000"
     Y dar clic en el boton Siguiente
     Entonces se mostrara la pantalla de "Datos de inversión"
     Y seleccionar un Fondo a invertir "Fondo 1 - Conservador"
@@ -1615,14 +1641,14 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Y seleccionar la Provincia "CAÑETE"
     Y seleccionar el Distrito "IMPERIAL"
     Y seleccionar el Tipo de via "Avenida"
-    Y ingresar la Direccion "Av. Los Eucaliptos 123"
+    E ingresar la Direccion "Av. Los Eucaliptos 123"
     Y seleccionar la Profesion "ABOGADO"
     Y seleccionar el Prefijo del celular "51"
-    Y ingresar el Numero de celular "974123658"
-    Y ingresar el Correo electronico "fernando.luyo@gestionysistemas.com"
+    E ingresar el Numero de celular "974123658"
+    E ingresar el Correo electronico "fernando.luyo@gestionysistemas.com"
     Y seleccionar el Tipo de trabajador "Independiente"
-    Y ingresar el Centro de labores "GYS"
-    Y ingresar el Numero de RUC "20741896578"
+    E ingresar el Centro de labores "GYS"
+    E ingresar el Numero de RUC "20741896578"
     Y seleccionar el Cargo "Comerciante"
     Y seleccionar el Ingreso promedio mensual "600000"
     Y dar clic en el boton Siguiente
@@ -1647,32 +1673,32 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Entonces se mostrara un popup de "¿Tienes residencia fiscal fuera de Perú?"
     Y seleccione el boton No tengo
     Entonces mostrara el formulario "Datos personales" de llenado de los demas datos del cliente
-    E ingresar el Primer nombre ""
-    E ingresar el Segundo nombre ""
-    Y seleccionar la Nacionalidad ""
-    Y seleccionar el pais de residencia ""
-    Y seleccionar la Fecha de nacimiento ""
-    Y seleccionar el Sexo ""
-    Y seleccionar el Estado civil ""
-    Y seleccionar el Departamento ""
-    Y seleccionar la Provincia ""
-    Y seleccionar el Distrito ""
-    Y seleccionar el Tipo de vía ""
-    Y ingresar la Direccion ""
-    Y seleccionar la Profesion ""
-    Y seleccionar el prefijo del celular ""
-    Y ingresar el Numero de celular ""
-    Y ingresar el Correo electronico ""
+    E ingresar el Primer nombre "FERNANFLOO"
+    E ingresar el Segundo nombre "LUIS"
+    E ingresar la Nacionalidad "Peruana"
+    Y seleccionar el Pais de residencia "Perú"
+    Y seleccionar la Fecha de nacimiento "11/07/1998"
+    Y seleccionar el Sexo "Masculino"
+    Y seleccionar el Estado civil "Casado"
+    Y seleccionar el Departamento "LIMA"
+    Y seleccionar la Provincia "CAÑETE"
+    Y seleccionar el Distrito "IMPERIAL"
+    Y seleccionar el Tipo de via "Avenida"
+    E ingresar la Direccion "Av. Los Eucaliptos 123"
+    Y seleccionar la Profesion "ABOGADO"
+    Y seleccionar el Prefijo del celular "51"
+    E ingresar el Numero de celular "974123658"
+    E ingresar el Correo electronico "fernando.luyo@gestionysistemas.com"
     Y seleccionar el Tipo de trabajador "Independiente"
-    Y ingresar el Centro de labores ""
-    Y ingresar el Numero de RUC ""
-    Y seleccionar el Cargo ""
-    Y seleccionar el Ingreso promedio mensual ""
+    E ingresar el Centro de labores "GYS"
+    E ingresar el Numero de RUC "20741896578"
+    Y seleccionar el Cargo "Comerciante"
+    Y seleccionar el Ingreso promedio mensual "600000"
     Y dar clic en el boton Siguiente
     Entonces se mostrara la pantalla de "Datos de inversión"
     Y seleccionar un Fondo a invertir "Fondo 1 - Conservador"
     E ingresar el Monto a invertir "9000"
-    Y seleccionar la Frecuencia de inversión
+    Y seleccionar la Frecuencia de inversion Unica
     Y dar clic en el boton Aceptar y firmar
     Entonces se mostrara un popup de "Confirma tu solicitud"
     Y dar clic en el boton Confirmar solicitud
@@ -1694,32 +1720,32 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Entonces se mostrara un popup de "¿Tienes residencia fiscal fuera de Perú?"
     Y seleccione el boton No tengo
     Entonces mostrara el formulario "Datos personales" de llenado de los demas datos del cliente
-    E ingresar el Primer nombre ""
-    E ingresar el Segundo nombre ""
-    Y seleccionar la Nacionalidad ""
-    Y seleccionar el pais de residencia ""
-    Y seleccionar la Fecha de nacimiento ""
-    Y seleccionar el Sexo ""
-    Y seleccionar el Estado civil ""
-    Y seleccionar el Departamento ""
-    Y seleccionar la Provincia ""
-    Y seleccionar el Distrito ""
-    Y seleccionar el Tipo de vía ""
-    Y ingresar la Direccion ""
-    Y seleccionar la Profesion ""
-    Y seleccionar el prefijo del celular ""
-    Y ingresar el Numero de celular ""
-    Y ingresar el Correo electronico ""
+    E ingresar el Primer nombre "FERNANFLOO"
+    E ingresar el Segundo nombre "LUIS"
+    E ingresar la Nacionalidad "Peruana"
+    Y seleccionar el Pais de residencia "Perú"
+    Y seleccionar la Fecha de nacimiento "11/07/1998"
+    Y seleccionar el Sexo "Masculino"
+    Y seleccionar el Estado civil "Casado"
+    Y seleccionar el Departamento "LIMA"
+    Y seleccionar la Provincia "CAÑETE"
+    Y seleccionar el Distrito "IMPERIAL"
+    Y seleccionar el Tipo de via "Avenida"
+    E ingresar la Direccion "Av. Los Eucaliptos 123"
+    Y seleccionar la Profesion "ABOGADO"
+    Y seleccionar el Prefijo del celular "51"
+    E ingresar el Numero de celular "974123658"
+    E ingresar el Correo electronico "fernando.luyo@gestionysistemas.com"
     Y seleccionar el Tipo de trabajador "Independiente"
-    Y ingresar el Centro de labores ""
-    Y ingresar el Numero de RUC ""
-    Y seleccionar el Cargo ""
-    Y seleccionar el Ingreso promedio mensual ""
+    E ingresar el Centro de labores "GYS"
+    E ingresar el Numero de RUC "20741896578"
+    Y seleccionar el Cargo "Comerciante"
+    Y seleccionar el Ingreso promedio mensual "600000"
     Y dar clic en el boton Siguiente
     Entonces se mostrara la pantalla de "Datos de inversión"
     Y seleccionar un Fondo a invertir "Fondo 1 - Conservador"
     E ingresar el Monto a invertir "9000"
-    Y seleccionar la Frecuencia de inversión
+    Y seleccionar la Frecuencia de inversion Unica
     Y dar clic en el boton Aceptar y firmar
     Entonces se mostrara un popup de "Confirma tu solicitud"
     Y dar clic en el boton Confirmar solicitud
@@ -1748,32 +1774,32 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Entonces se mostrara un popup de "¿Tienes residencia fiscal fuera de Perú?"
     Y seleccione el boton No tengo
     Entonces mostrara el formulario "Datos personales" de llenado de los demas datos del cliente
-    E ingresar el Primer nombre ""
-    E ingresar el Segundo nombre ""
-    Y seleccionar la Nacionalidad ""
-    Y seleccionar el pais de residencia ""
-    Y seleccionar la Fecha de nacimiento ""
-    Y seleccionar el Sexo ""
-    Y seleccionar el Estado civil ""
-    Y seleccionar el Departamento ""
-    Y seleccionar la Provincia ""
-    Y seleccionar el Distrito ""
-    Y seleccionar el Tipo de vía ""
-    Y ingresar la Direccion ""
-    Y seleccionar la Profesion ""
-    Y seleccionar el prefijo del celular ""
-    Y ingresar el Numero de celular ""
-    Y ingresar el Correo electronico ""
+    E ingresar el Primer nombre "FERNANFLOO"
+    E ingresar el Segundo nombre "LUIS"
+    E ingresar la Nacionalidad "Peruana"
+    Y seleccionar el Pais de residencia "Perú"
+    Y seleccionar la Fecha de nacimiento "11/07/1998"
+    Y seleccionar el Sexo "Masculino"
+    Y seleccionar el Estado civil "Casado"
+    Y seleccionar el Departamento "LIMA"
+    Y seleccionar la Provincia "CAÑETE"
+    Y seleccionar el Distrito "IMPERIAL"
+    Y seleccionar el Tipo de via "Avenida"
+    E ingresar la Direccion "Av. Los Eucaliptos 123"
+    Y seleccionar la Profesion "ABOGADO"
+    Y seleccionar el Prefijo del celular "51"
+    E ingresar el Numero de celular "974123658"
+    E ingresar el Correo electronico "fernando.luyo@gestionysistemas.com"
     Y seleccionar el Tipo de trabajador "Independiente"
-    Y ingresar el Centro de labores ""
-    Y ingresar el Numero de RUC ""
-    Y seleccionar el Cargo ""
-    Y seleccionar el Ingreso promedio mensual ""
+    E ingresar el Centro de labores "GYS"
+    E ingresar el Numero de RUC "20741896578"
+    Y seleccionar el Cargo "Comerciante"
+    Y seleccionar el Ingreso promedio mensual "600000"
     Y dar clic en el boton Siguiente
     Entonces se mostrara la pantalla de "Datos de inversión"
     Y seleccionar un Fondo a invertir "Fondo 1 - Conservador"
     E ingresar el Monto a invertir "9000"
-    Y seleccionar la Frecuencia de inversión
+    Y seleccionar la Frecuencia de inversion Unica
     Y dar clic en el boton Aceptar y firmar
     Entonces se mostrara un popup de "Confirma tu solicitud"
     Y dar clic en el boton Confirmar solicitud
@@ -1804,32 +1830,32 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Entonces se mostrara un popup de "¿Tienes residencia fiscal fuera de Perú?"
     Y seleccione el boton No tengo
     Entonces mostrara el formulario "Datos personales" de llenado de los demas datos del cliente
-    E ingresar el Primer nombre ""
-    E ingresar el Segundo nombre ""
-    Y seleccionar la Nacionalidad ""
-    Y seleccionar el pais de residencia ""
-    Y seleccionar la Fecha de nacimiento ""
-    Y seleccionar el Sexo ""
-    Y seleccionar el Estado civil ""
-    Y seleccionar el Departamento ""
-    Y seleccionar la Provincia ""
-    Y seleccionar el Distrito ""
-    Y seleccionar el Tipo de vía ""
-    Y ingresar la Direccion ""
-    Y seleccionar la Profesion ""
-    Y seleccionar el prefijo del celular ""
-    Y ingresar el Numero de celular ""
-    Y ingresar el Correo electronico ""
+    E ingresar el Primer nombre "FERNANFLOO"
+    E ingresar el Segundo nombre "LUIS"
+    E ingresar la Nacionalidad "Peruana"
+    Y seleccionar el Pais de residencia "Perú"
+    Y seleccionar la Fecha de nacimiento "11/07/1998"
+    Y seleccionar el Sexo "Masculino"
+    Y seleccionar el Estado civil "Casado"
+    Y seleccionar el Departamento "LIMA"
+    Y seleccionar la Provincia "CAÑETE"
+    Y seleccionar el Distrito "IMPERIAL"
+    Y seleccionar el Tipo de via "Avenida"
+    E ingresar la Direccion "Av. Los Eucaliptos 123"
+    Y seleccionar la Profesion "ABOGADO"
+    Y seleccionar el Prefijo del celular "51"
+    E ingresar el Numero de celular "974123658"
+    E ingresar el Correo electronico "fernando.luyo@gestionysistemas.com"
     Y seleccionar el Tipo de trabajador "Independiente"
-    Y ingresar el Centro de labores ""
-    Y ingresar el Numero de RUC ""
-    Y seleccionar el Cargo ""
-    Y seleccionar el Ingreso promedio mensual ""
+    E ingresar el Centro de labores "GYS"
+    E ingresar el Numero de RUC "20741896578"
+    Y seleccionar el Cargo "Comerciante"
+    Y seleccionar el Ingreso promedio mensual "600000"
     Y dar clic en el boton Siguiente
     Entonces se mostrara la pantalla de "Datos de inversión"
     Y seleccionar un Fondo a invertir "Fondo 1 - Conservador"
     E ingresar el Monto a invertir "9000"
-    Y seleccionar la Frecuencia de inversión
+    Y seleccionar la Frecuencia de inversion Unica
     Y dar clic en el boton Aceptar y firmar
     Entonces se mostrara un popup de "Confirma tu solicitud"
     Y dar clic en el boton Confirmar solicitud
@@ -1862,27 +1888,27 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Entonces se mostrara un popup de "¿Tienes residencia fiscal fuera de Perú?"
     Y seleccione el boton No tengo
     Entonces mostrara el formulario "Datos personales" de llenado de los demas datos del cliente
-    E ingresar el Primer nombre ""
-    E ingresar el Segundo nombre ""
-    Y seleccionar la Nacionalidad ""
-    Y seleccionar el Pais de residencia ""
-    Y seleccionar la Fecha de nacimiento ""
-    Y seleccionar el Sexo ""
-    Y seleccionar el Estado civil ""
-    Y seleccionar el Departamento ""
-    Y seleccionar la Provincia ""
-    Y seleccionar el Distrito ""
-    Y seleccionar el Tipo de via ""
-    Y ingresar la Direccion ""
-    Y seleccionar la Profesion ""
+    E ingresar el Primer nombre "FERNANFLOO"
+    E ingresar el Segundo nombre "LUIS"
+    E ingresar la Nacionalidad "Peruana"
+    Y seleccionar el Pais de residencia "Perú"
+    Y seleccionar la Fecha de nacimiento "11/07/1998"
+    Y seleccionar el Sexo "Masculino"
+    Y seleccionar el Estado civil "Casado"
+    Y seleccionar el Departamento "LIMA"
+    Y seleccionar la Provincia "CAÑETE"
+    Y seleccionar el Distrito "IMPERIAL"
+    Y seleccionar el Tipo de via "Avenida"
+    E ingresar la Direccion "Av. Los Eucaliptos 123"
+    Y seleccionar la Profesion "ABOGADO"
     Y seleccionar el Prefijo del celular "51"
-    Y ingresar el Numero de celular "974555222"
-    Y ingresar el Correo electronico "random@gmail.com"
-    Y seleccionar el Tipo de trabajador "Dependiente"
-    Y ingresar el Centro de labores "GYS"
-    Y ingresar el Numero de RUC "20123456789"
+    E ingresar el Numero de celular "974123658"
+    E ingresar el Correo electronico "fernando.luyo@gestionysistemas.com"
+    Y seleccionar el Tipo de trabajador "Independiente"
+    E ingresar el Centro de labores "GYS"
+    E ingresar el Numero de RUC "20741896578"
     Y seleccionar el Cargo "Comerciante"
-    Y seleccionar el Ingreso promedio mensual "16000"
+    Y seleccionar el Ingreso promedio mensual "600000"
     Y dar clic en el boton Siguiente
     Entonces se mostrara la pantalla de "Datos de inversión"
     Y seleccionar un Fondo a invertir "Fondo 1 - Conservador"

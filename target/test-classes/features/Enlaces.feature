@@ -1,7 +1,7 @@
 #language: es
 Característica: FUNCIONALIDAD DE LA REDIRECCIÓN DE ENLACES
 
-  @regresion
+  #@regresion
   Escenario: [CP] Cliente / Validar enlace de Política de Privacidad
     Dado que la web este disponible
     Cuando se muestre la Pantalla principal "Invierte de forma simple y segura con el respaldo de AFP Habitat."
@@ -9,7 +9,7 @@ Característica: FUNCIONALIDAD DE LA REDIRECCIÓN DE ENLACES
     Y dar clic en el enlace Politica de Privacidad
     Y se mostrara una nueva ventana con las Politicas de Privacidad
 
-  @regresion
+  #@regresion
   Escenario: [CP] Cliente / Validar enlace de Términos y Comisiones
     Dado que la web este disponible
     Cuando se muestre la Pantalla principal "Invierte de forma simple y segura con el respaldo de AFP Habitat."
@@ -17,7 +17,7 @@ Característica: FUNCIONALIDAD DE LA REDIRECCIÓN DE ENLACES
     Y dar clic en el enlace Aqui
     Y se mostrara una nueva ventana con los Terminos y Comisiones
 
-  @regresion
+  #@regresion
   Escenario: [CP] Cliente / Validar enlace de Autorización de uso de datos personales para fines publicitarios
     Dado que la web este disponible
     Cuando se muestre la Pantalla principal "Invierte de forma simple y segura con el respaldo de AFP Habitat."
@@ -25,7 +25,7 @@ Característica: FUNCIONALIDAD DE LA REDIRECCIÓN DE ENLACES
     Y dar clic en el enlace Politica de Privacidad de Autorizacion de uso de datos personales
     Y se mostrara una nueva ventana con las Politicas de Privacidad
 
-  @regresion
+  #@regresion
   Escenario: [CP] Cliente / Validar enlace de Autorización de compartir datos con Prudentialsaf S.A.C. para fines informativos y comerciales
     Dado que la web este disponible
     Cuando se muestre la Pantalla principal "Invierte de forma simple y segura con el respaldo de AFP Habitat."

@@ -6,10 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import support.Captura;
 import support.util;
-
-import java.util.List;
 
 public class EnlacesPage extends util {
     @FindBy(xpath = "//p[contains(@class,'login-page__terms-intro')]") private WebElement lblPoliticaPrivacidad;
@@ -21,33 +18,12 @@ public class EnlacesPage extends util {
     public EnlacesPage() {
         PageFactory.initElements(driver,this);
     }
-    //public void validarLabelPoliticaPrivacidad(String textoEsperado) {
-    //    wait.until(ExpectedConditions.visibilityOf(lblPoliticaPrivacidad));
-    //    String textoReal = lblPoliticaPrivacidad.getText()
-    //            .replace("\n", " ")
-    //            .trim();
-    //    Assert.assertEquals(textoReal, textoEsperado);
-    //}
     public void validarLabelPoliticaPrivacidad(String textoEsperado) {
-
         By contenedor = By.className("login-page__terms");
-
-        WebElement bloque = wait.until(
-                ExpectedConditions.visibilityOfElementLocated(contenedor)
-        );
-
-        String textoCompleto = bloque.getText()
-                .replaceAll("\\s+", " ")
-                .trim();
-
-        String esperadoNormalizado = textoEsperado
-                .replaceAll("\\s+", " ")
-                .trim();
-
-        Assert.assertTrue(
-                "No se encontró el texto esperado.",
-                textoCompleto.contains(esperadoNormalizado)
-        );
+        WebElement bloque = wait.until(ExpectedConditions.visibilityOfElementLocated(contenedor));
+        String textoCompleto = bloque.getText().replaceAll("\\s+", " ").trim();
+        String esperadoNormalizado = textoEsperado.replaceAll("\\s+", " ").trim();
+        Assert.assertTrue("No se encontró el texto esperado.", textoCompleto.contains(esperadoNormalizado));
     }
     public void clicEnlacePoliticaPrivacidad_1() {
         wait.until(ExpectedConditions.elementToBeClickable(enlacePoliticaPrivacidad));

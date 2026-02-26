@@ -43,6 +43,7 @@ public class FondoPage extends util {
                 esperadoNormalizado,
                 textoReal
         );
+        System.out.println("Paso: '" + pasoFondoInversion.getText() + "'");
     }
     public String validarSaldoVisible() {
         wait.until(ExpectedConditions.visibilityOf(lblSaldo));
@@ -61,6 +62,7 @@ public class FondoPage extends util {
     public String obtenerTipoFondo() {
         wait.until(ExpectedConditions.visibilityOf(lblTipoFondo));
         String tipoFondo = lblTipoFondo.getText().trim();
+        System.out.println("Fondo del cliente: '" + tipoFondo + "'");
         Assert.assertFalse("El tipo de fondo está vacío.", tipoFondo.isEmpty());
         return tipoFondo;
     }
@@ -74,6 +76,7 @@ public class FondoPage extends util {
         txtMontoInversion.sendKeys(monto);
     }
     public void seleccionarFrecuenciaUnica() {
+        wait.until(ExpectedConditions.elementToBeClickable(rdFrecuenciaUnica));
         wait.until(ExpectedConditions.visibilityOf(rdFrecuenciaUnica));
         rdFrecuenciaUnica.click();
     }
@@ -99,6 +102,7 @@ public class FondoPage extends util {
                 "[.//div[normalize-space()='" + nombreFondo + "']]" +
                 "//input[@type='radio']";
         WebElement radio = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(xpathRadio)));
+        System.out.println("Fondo: '" + nombreFondo + "'");
         radio.click();
     }
     public void validarNombreFondo(String fondo) {
@@ -107,6 +111,7 @@ public class FondoPage extends util {
 
         try {
             WebElement fondoElemento = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+            System.out.println("Fondos: '" + fondoElemento.getText() + "'");
             if (fondoElemento.isDisplayed() && fondoElemento.getText().equals(fondo.trim())) {
                 fondoValido = true;
             }

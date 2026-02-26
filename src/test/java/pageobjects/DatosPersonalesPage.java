@@ -38,6 +38,7 @@ public class DatosPersonalesPage extends util {
         Thread.sleep(3000);
         try {
             WebElement tituloElemento = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+            System.out.println("Titulo validado: '" + tituloElemento.getText() + "'");
             if (tituloElemento.isDisplayed() && tituloElemento.getText().equals(titulo.trim())) {
                 tituloValido = true;
             }
@@ -47,19 +48,19 @@ public class DatosPersonalesPage extends util {
         Assert.assertTrue("El label " + titulo.trim() + " no es igual o no se encontró.", tituloValido);
     }
     public void seleccionarPrimerNombre(String valor) {
-        WebElement opcion = driver.findElement(
-                By.xpath("//input[@name='primerNombre' and @value='" + valor + "']/following-sibling::span"));
+        WebElement opcion = driver.findElement(By.xpath("//input[@name='primerNombre' and @value='" + valor + "']/following-sibling::span"));
         opcion.click();
+        System.out.println("Primer nombre seleccionado: " + opcion.getText());
     }
     public void seleccionarPrimerApellido(String valor) {
-        WebElement opcion = driver.findElement(
-                By.xpath("//input[@name='primerApellido' and @value='" + valor + "']/following-sibling::span"));
+        WebElement opcion = driver.findElement(By.xpath("//input[@name='primerApellido' and @value='" + valor + "']/following-sibling::span"));
         opcion.click();
+        System.out.println("Primer apellido seleccionado: " + opcion.getText());
     }
     public void seleccionarFechaEmisionDni(String valor) {
-        WebElement opcion = driver.findElement(
-                By.xpath("//input[@name='fechaEmision' and @value='" + valor + "']/following-sibling::span"));
+        WebElement opcion = driver.findElement(By.xpath("//input[@name='fechaEmision' and @value='" + valor + "']/following-sibling::span"));
         opcion.click();
+        System.out.println("Fecha emision seleccionada: " + opcion.getText());
     }
     public void validarCamposPantalla(DataTable tabla) {
         List<String> campos = tabla.asList(String.class);

@@ -1,0 +1,5 @@
+# Created at 2026-02-25T23:07:24.336
+Boot Manifest-JAR contains absolute paths in classpath 'D:\PROYECTOS GYS\HABITAT FONDO LIBRE\Codigo\HabitatTest2026\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+

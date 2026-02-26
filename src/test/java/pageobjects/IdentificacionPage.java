@@ -29,24 +29,29 @@ public class IdentificacionPage extends util {
         wait.until(ExpectedConditions.visibilityOf(cmbTipoDocumento));
         Select select = new Select(cmbTipoDocumento);
         select.selectByVisibleText(tipoDocumento);
+        System.out.println("Seleccionando tipo de documento: " + tipoDocumento);
     }
     public void ingresarNumeroDocumento(String numeroDocumento) throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(txtNumeroDocumento));
         txtNumeroDocumento.sendKeys(numeroDocumento);
+        System.out.println("Ingresando numero de documento: " + numeroDocumento);
         Thread.sleep(5000);
     }
     public void autorizarTerminosCondiciones() throws InterruptedException {
         wait.until(ExpectedConditions.elementToBeClickable(chkTerminos));
         Thread.sleep(3000);
         chkTerminos.click();
+        System.out.println("Se hizo clic en la Autorizacion Terminos y condiciones");
     }
     public void autorizarDatosPersonales() throws InterruptedException {
         wait.until(ExpectedConditions.elementToBeClickable(chkDatosPersonales));
         chkDatosPersonales.click();
+        System.out.println("Se hizo clic en la Autorizacion de datos personales");
     }
     public void autorizarCompartirDatos() {
         wait.until(ExpectedConditions.elementToBeClickable(chkCompartirDatos));
         chkCompartirDatos.click();
+        System.out.println("Se hizo clic en Compartir datos personales");
     }
     public void ingresarClaveWeb(String clave) throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(btnClaveWeb));
@@ -65,6 +70,7 @@ public class IdentificacionPage extends util {
 
         try {
             WebElement labelElemento = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+            System.out.println("Label encontrado: '" + labelElemento.getText() + "'");
             if (labelElemento.isDisplayed() && labelElemento.getText().equals(label.trim())) {
                 labelValido = true;
             }

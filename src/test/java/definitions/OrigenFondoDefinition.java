@@ -44,6 +44,7 @@ public class OrigenFondoDefinition {
     @Y("dar clic en el boton Aceptar del popup")
     public void darClicEnElBotonAceptarDelPopup() {
         boton.clicBotonAceptar();
+        screenshot.capturarPaso(driver, "Screenshot");
     }
 
     @Entonces("seleccionar el Origen de los fondos {string}")

@@ -34,6 +34,7 @@ public class ResidenciaPage extends util {
 
         try {
             WebElement h2Elemento = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+            System.out.println("Titulo encontrado: '" + h2Elemento.getText() + "'");
             if (h2Elemento.isDisplayed() && h2Elemento.getText().equals(h2.trim())) {
                 h2Valido = true;
             }
