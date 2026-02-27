@@ -13,7 +13,7 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
   Escenario: [CP02] Validar cliente afiliado con DNI
     Dado que la web este disponible
     Cuando seleccione el Tipo de Documento "DNI"
-    E ingrese el Numero de Documento "35181065"
+    E ingrese el Numero de Documento "22109225"
     Cuando se muestre un campo nuevo de ingreso "Clave web"
     Entonces ingresar la Clave web "1234"
     Y dar clic en el boton Empezar a invertir
