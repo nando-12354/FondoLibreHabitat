@@ -1,6 +1,5 @@
 package pageobjects;
 
-import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -39,32 +38,22 @@ public class FormularioPage extends util {
     @FindBy(xpath = "//input[@placeholder='Ingrese segundo nombre']") protected WebElement txtSegundoNombre;
     @FindBy(xpath = "//input[@placeholder='Ingrese primer apellido']") protected WebElement txtPrimerApellido;
     @FindBy(xpath = "//input[@placeholder='Ingrese segundo apellido']") protected WebElement txtSegundoApellido;
-    //@FindBy(xpath = "//label[contains(text(),'Dirección')]/following::input[1]") protected WebElement txtDireccion;
     @FindBy(xpath = "//label[contains(text(),'Número de celular')]/following::input[1]") protected WebElement txtCelular;
     @FindBy(xpath = "//label[contains(text(),'Correo electrónico')]/following::input[1]") protected WebElement txtCorreo;
     @FindBy(xpath = "//label[contains(text(),'RUC')]/following::input[1]") protected WebElement txtRuc;
-
     @FindBy(xpath = "//span[contains(text(),'No tengo segundo nombre')]") protected WebElement chkNoSegundoNombre;
     @FindBy(xpath = "//span[contains(text(),'No tengo segundo apellido')]") protected WebElement chkNoSegundoApellido;
-
     @FindBy(xpath = "//label[contains(text(),'Nacionalidad')]/following::select[1]") protected WebElement cmbNacionalidad;
     @FindBy(xpath = "//label[contains(text(),'País de residencia')]/following::select[1]") protected WebElement cmbPaisResidencia;
     @FindBy(xpath = "//label[contains(text(),'Sexo')]/following::select[1]") protected WebElement cmbSexo;
     @FindBy(xpath = "//label[contains(text(),'Estado civil')]/following::select[1]") protected WebElement cmbEstadoCivil;
-    //@FindBy(xpath = "//label[contains(text(),'Departamento')]/following::select[1]") protected WebElement cmbDepartamento;
-    //@FindBy(xpath = "//label[contains(text(),'Provincia')]/following::select[1]") protected WebElement cmbProvincia;
-    //@FindBy(xpath = "//label[contains(text(),'Distrito')]/following::select[1]") protected WebElement cmbDistrito;
-    //@FindBy(xpath = "//label[contains(text(),'Tipo de vía')]/following::select[1]") protected WebElement cmbTipoVia;
     @FindBy(xpath = "//label[contains(text(),'Profesión')]/following::select[1]") protected WebElement cmbProfesion;
-    //@FindBy(xpath = "//label[contains(text(),'Tipo de trabajador')]/following::select[1]") protected WebElement cmbTipoTrabajador;
     @FindBy(xpath = "//label[contains(text(),'Cargo')]/following::select[1]") protected WebElement cmbCargo;
     @FindBy(xpath = "//label[contains(text(),'Ingreso promedio mensual')]/following::select[1]") protected WebElement cmbIngresoPromedioMensual;
     @FindBy(xpath = "//label[contains(text(),'Ingreso promedio mensual')]/following::input[1]") protected WebElement txtIngresoPromedioMensual;
     @FindBy(xpath = "//label[contains(text(),'Número de celular')]/following::select[1]") protected WebElement cmbPrefijoCelular;
     @FindBy(xpath = "//label[contains(text(),'Dirección')]/following::input[1]") protected WebElement txtDireccionManual;
-
     @FindBy(xpath = "//input[@placeholder='Peruana']") protected WebElement txtNacionalidad;
-    //@FindBy(xpath = "//h3[contains(text(),'Datos generales')]/following::input[1]") protected WebElement txtCentroLabores;
     @FindBy(xpath = "(//input[@type='radio'])[1]") protected WebElement rdUsarDireccionDni;
     @FindBy(xpath = "(//input[@type='radio'])[2]") protected WebElement rdNuevaDireccion;
 
@@ -87,10 +76,6 @@ public class FormularioPage extends util {
         wait.until(ExpectedConditions.visibilityOf(txtSegundoApellido));
         txtSegundoApellido.sendKeys(segundoApellido);
     }
-    //public void ingresarDireccion(String direccion) {
-    //    wait.until(ExpectedConditions.visibilityOf(txtDireccion));
-    //    txtDireccion.sendKeys(direccion);
-    //}
     public void ingresarDireccion(String direccion) {
         WebElement campo = wait.until(ExpectedConditions.visibilityOfElementLocated(txtDireccion));
         campo.clear();
@@ -123,11 +108,16 @@ public class FormularioPage extends util {
         Select select = new Select(cmbPaisResidencia);
         select.selectByVisibleText(residencia);
     }
+    //public void seleccionarFechaNacimiento(String fecha) {
+    //    WebElement campoFecha = driver.findElement(By.xpath("//input[@type='date']"));
+    //    String fechaFormateada = convertirFormatoFecha(fecha);
+    //    JavascriptExecutor js = (JavascriptExecutor) driver;
+    //    js.executeScript("arguments[0].value = arguments[1];", campoFecha, fechaFormateada);
+    //}
     public void seleccionarFechaNacimiento(String fecha) {
-        WebElement campoFecha = driver.findElement(By.xpath("//input[@type='date']"));
-        String fechaFormateada = convertirFormatoFecha(fecha);
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].value = arguments[1];", campoFecha, fechaFormateada);
+        WebElement campoFecha = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("input[type='date']")));
+        campoFecha.click();
+        campoFecha.sendKeys(fecha); // <-- usar directamente dd/MM/yyyy
     }
     public void seleccionarSexo(String sexo) {
         wait.until(ExpectedConditions.visibilityOf(cmbSexo));
@@ -139,41 +129,21 @@ public class FormularioPage extends util {
         Select select = new Select(cmbEstadoCivil);
         select.selectByVisibleText(estadoCivil);
     }
-    //public void seleccionarDepartamento(String departamento) {
-    //    wait.until(ExpectedConditions.visibilityOf(cmbDepartamento));
-    //    Select select = new Select(cmbDepartamento);
-    //    select.selectByVisibleText(departamento);
-    //}
     public void seleccionarDepartamento(String departamento) {
         WebElement combo = wait.until(ExpectedConditions.visibilityOfElementLocated(cmbDepartamento));
         Select select = new Select(combo);
         select.selectByVisibleText(departamento);
     }
-    //public void seleccionarProvincia(String provincia) {
-    //    wait.until(ExpectedConditions.visibilityOf(cmbProvincia));
-    //    Select select = new Select(cmbProvincia);
-    //    select.selectByVisibleText(provincia);
-    //}
     public void seleccionarProvincia(String provincia) {
         WebElement combo = wait.until(ExpectedConditions.visibilityOfElementLocated(cmbProvincia));
         Select select = new Select(combo);
         select.selectByVisibleText(provincia);
     }
-    //public void seleccionarDistrito(String distrito) {
-    //    wait.until(ExpectedConditions.visibilityOf(cmbDistrito));
-    //    Select select = new Select(cmbDistrito);
-    //    select.selectByVisibleText(distrito);
-    //}
     public void seleccionarDistrito(String distrito) {
         WebElement combo = wait.until(ExpectedConditions.visibilityOfElementLocated(cmbDistrito));
         Select select = new Select(combo);
         select.selectByVisibleText(distrito);
     }
-    //public void seleccionarTipoVia(String tipoVia) {
-    //    wait.until(ExpectedConditions.visibilityOf(cmbTipoVia));
-    //    Select select = new Select(cmbTipoVia);
-    //    select.selectByVisibleText(tipoVia);
-    //}
     public void seleccionarTipoVia(String tipoVia) {
         WebElement combo = wait.until(ExpectedConditions.visibilityOfElementLocated(cmbTipoVia));
         Select select = new Select(combo);
@@ -184,11 +154,6 @@ public class FormularioPage extends util {
         Select select = new Select(cmbProfesion);
         select.selectByVisibleText(profesion);
     }
-    //public void seleccionarTipoTrabajador(String tipoTrabajador) {
-    //    wait.until(ExpectedConditions.visibilityOf(cmbTipoTrabajador));
-    //    Select select = new Select(cmbTipoTrabajador);
-    //    select.selectByVisibleText(tipoTrabajador);
-    //}
     public void seleccionarTipoTrabajador(String tipoTrabajador) {
         WebElement combo = wait.until(ExpectedConditions.visibilityOfElementLocated(cmbTipoTrabajador));
         Select select = new Select(combo);

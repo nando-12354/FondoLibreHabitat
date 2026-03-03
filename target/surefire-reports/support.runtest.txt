@@ -1,10 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: support.runtest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 33.55 s <<< FAILURE! -- in support.runtest
-FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT.[CP34] Cliente no afiliado identificado con DNI / Usar la dirección de mi DNI -- Time elapsed: 33.19 s <<< FAILURE!
-org.junit.ComparisonFailure: El texto del stepper no coincide. expected:<Datos [de inversión]> but was:<Datos [personales]>
-	at pageobjects.FondoPage.validarPasoFondoInversion(FondoPage.java:41)
-	at definitions.ResidenciaDefinition.seMostraraLaPantallaDe(ResidenciaDefinition.java:60)
-	at ✽.se mostrara la pantalla de "Datos de inversión"(file:///D:/PROYECTOS%20GYS/HABITAT%20FONDO%20LIBRE/Codigo/HabitatTest2026/src/test/resources/features/Escenarios.feature:820)
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 43.92 s -- in support.runtest

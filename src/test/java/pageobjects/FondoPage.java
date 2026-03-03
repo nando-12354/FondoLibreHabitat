@@ -13,7 +13,7 @@ import support.util;
 import java.util.List;
 
 public class FondoPage extends util {
-    @FindBy (xpath = "//div[contains(@class,'stepper-label')]") protected WebElement pasoFondoInversion;
+    @FindBy (xpath = "//li[.//button[@aria-current='step']]//div[contains(@class,'stepper-label')]") protected WebElement pasoFondoInversion;
     @FindBy (xpath = "//p[contains(@class,'datos-inversion__saldo-valor')]") protected WebElement lblSaldo;
     @FindBy (xpath = "//button[contains(@class,'datos-inversion__saldo-toggle')]") protected WebElement btnToggleSaldo;
     @FindBy (xpath = "//p[contains(@class,'datos-inversion__tipo-fondo-valor')]") protected WebElement lblTipoFondo;

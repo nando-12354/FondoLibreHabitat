@@ -28,19 +28,17 @@ public class ResidenciaPage extends util {
         }
         Assert.assertTrue("El h1 " + h1.trim() + " no es igual o no se encontró.", h1Valido);
     }
-    public void validarTitulo(String h2) {
-        boolean h2Valido = false;
-        String xpath = "//h2[text()='" + h2.trim() + "']";
-
+    public void validarTitulo(String textoEsperado) {
+        String texto = textoEsperado.trim();
+        String xpath = "//h2[normalize-space()='" + texto + "']" + " | " + "//p[normalize-space()='" + texto + "']";
+        System.out.println("Buscando título con texto: '" + texto + "'");
         try {
-            WebElement h2Elemento = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
-            System.out.println("Titulo encontrado: '" + h2Elemento.getText() + "'");
-            if (h2Elemento.isDisplayed() && h2Elemento.getText().equals(h2.trim())) {
-                h2Valido = true;
-            }
-        } catch (TimeoutException | NoSuchElementException e) {
-
+            WebElement elemento = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+            String textoReal = elemento.getText().trim();
+            System.out.println("Elemento encontrado (" + elemento.getTagName() + "): '" + textoReal + "'");
+            Assert.assertEquals("El texto del título no coincide.", texto, textoReal);
+        } catch (TimeoutException e) {
+            Assert.fail("No se encontró el título: " + texto);
         }
-        Assert.assertTrue("El h2 " + h2.trim() + " no es igual o no se encontró.", h2Valido);
     }
 }

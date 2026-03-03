@@ -24,6 +24,8 @@ public class BotonPage extends util {
     @FindBy(xpath = "//button[text()='Cambiar tipo de fondo']") protected WebElement btnCambiarTipoFondo;
     @FindBy(xpath = "//button[text()='Aplicar cambio']") protected WebElement btnAplicarCambio;
     @FindBy(xpath = "//button[text()='Aceptar y firmar']") protected WebElement btnAceptarFirmar;
+    @FindBy(xpath = "//button[text()='Enviar token']") protected WebElement btnEnviarToken;
+    @FindBy(xpath = "//button[text()='Entendido']") protected WebElement btnEntendido;
 
     public BotonPage() {
         PageFactory.initElements(driver,this);
@@ -45,14 +47,17 @@ public class BotonPage extends util {
     public void clicBotonCerrar() {
         wait.until(ExpectedConditions.elementToBeClickable(btnCerrar));
         btnCerrar.click();
+        System.out.println("Se hizo clic en el boton Cerrar");
     }
     public void clicBotonDescargar() {
         wait.until(ExpectedConditions.elementToBeClickable(btnDescargar));
         btnDescargar.click();
+        System.out.println("Se hizo clic en el boton Descargar");
     }
     public void clicBotonVolver(){
         wait.until(ExpectedConditions.elementToBeClickable(btnVolver));
         btnVolver.click();
+        System.out.println("Se hizo clic en el boton Volver");
     }
     public void clicBotonSiguiente(){
         wait.until(ExpectedConditions.elementToBeClickable(btnSiguiente));
@@ -87,6 +92,17 @@ public class BotonPage extends util {
     public void clicBotonAceptarFirmar(){
         wait.until(ExpectedConditions.elementToBeClickable(btnAceptarFirmar));
         btnAceptarFirmar.click();
+        System.out.println("Se hizo clic en el boton Aceptar firmar");
+    }
+    public void clicBotonEnviarToken(){
+        wait.until(ExpectedConditions.elementToBeClickable(btnEnviarToken));
+        btnEnviarToken.click();
+        System.out.println("Se hizo clic en el boton Enviar token");
+    }
+    public void clicBotonEntendido(){
+        wait.until(ExpectedConditions.elementToBeClickable(btnEntendido));
+        btnEntendido.click();
+        System.out.println("Se hizo clic en el boton Entendido");
     }
     public void clicBotonAceptarFirmarContinuar() {
         if (isElementPresent(btnAceptarFirmarLocator)) {

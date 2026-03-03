@@ -1,0 +1,1803 @@
+
+    <!--
+    Copyright 2019 trivago N.V.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+    -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <base href="../..">
+    <head title="Reporte de pruebas web - Scenario Detail">
+        <title>Reporte de pruebas web - Scenario Detail</title>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta http-equiv="Content-Security-Policy" content="default-src *  data: blob: 'unsafe-inline' 'unsafe-eval';
+script-src * data: blob: 'unsafe-inline' 'unsafe-eval';
+connect-src * data: blob: 'unsafe-inline';
+img-src * data: blob: 'unsafe-inline';
+frame-src * data: blob: ;
+style-src * data: blob: 'unsafe-inline';
+font-src * data: blob: 'unsafe-inline';"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="Reporte de pruebas web">
+<meta name="author" content="Cluecumber Report Plugin version 2.9.4">
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="css/datatables.min.css">
+<link rel="stylesheet" href="css/dataTables.bootstrap4.min.css">
+<link rel="stylesheet" href="css/jquery.fancybox.min.css"/>
+<link rel="stylesheet" href="css/cluecumber.css" type="text/css">
+<link rel="stylesheet" href="css/cluecumber-custom.css"/>
+<link rel="stylesheet" href="css/cluecumber-additional.css"/>
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/datatables.min.js"></script>
+<script src="js/jquery.fancybox.min.js"></script>
+<script src="js/Chart.bundle.min.js"></script>
+
+<script>
+    $(document).ready(function () {
+            // Data tables
+            $('.renderAsDataTable').on('draw.dt', function () {
+                $('[data-toggle="tooltip"]').tooltip();
+            }).DataTable({
+                "oLanguage": {
+                    "sSearch": "Search:"
+                },
+                "pageLength": 25,
+                "responsive": true
+            });
+
+            $('.collapse').on('shown.bs.collapse', function (e) {
+                $(e.target).find("iframe").each(function (index, iframe) {
+                    resizeIframe(iframe);
+                })
+            });
+
+            // Lightbox
+            $("a.grouped_elements").fancybox();
+
+            // Tool tips
+            $('[data-toggle="tooltip"]').tooltip();
+
+            // Chart
+            var canvas = document.getElementById('chart-area');
+            var ctx = canvas.getContext("2d");
+            var chart = new Chart(ctx, {
+  "data": {
+    "labels": [
+      "definitions.hooks.setUp(io.cucumber.java.Scenario)",
+      "que la web este disponible",
+      "seleccione el Tipo de Documento \"DNI\"",
+      "ingrese el Numero de Documento \"72174876\"",
+      "seleccionar Acepto los terminos y comisiones asociados a la apertura y debitos para el fondo libre habitat mostrado aqui",
+      "seleccionar Autorizo el uso de mis datos personales para fines publicitarios conforme a la Politica de Privacidad",
+      "seleccionar Autorizo a AFP Habitat a compartir mis datos con Prudentialsaf SAC para fines informativos comerciales segun la Politica de Privacidad",
+      "dar clic en el boton Empezar a invertir",
+      "se mostrara un popup de \"¿Tienes residencia fiscal fuera de Perú?\"",
+      "seleccione el boton No tengo",
+      "se mostrara la pantalla de \"Datos personales\" con los siguientes campos",
+      "seleccionar el primer nombre correcto del cliente \"SLEDGE\"",
+      "seleccionar el primer apellido correcto del cliente \"LUYO\"",
+      "seleccionar la Fecha de emision correcta del DNI del cliente \"22/11/2022\"",
+      "dar clic en el boton Siguiente",
+      "mostrara el formulario \"Datos personales\" de llenado de los demas datos del cliente",
+      "seleccionar el Pais de residencia \"Perú\"",
+      "ingresar la Nacionalidad \"Peruana\"",
+      "seleccionar la Fecha de nacimiento \"15/08/1995\"",
+      "seleccione Ingresar una nueva direccion",
+      "seleccionar el Departamento \"LIMA\"",
+      "seleccionar la Provincia \"YAUYOS\"",
+      "seleccionar el Distrito \"ALIS\"",
+      "seleccionar el Tipo de via \"Avenida\"",
+      "ingresar la Nueva direccion \"Av. Los Incas 1234\"",
+      "seleccionar la Profesion \"ABOGADO\"",
+      "seleccionar el Prefijo del celular \"51\"",
+      "ingresar el Numero de celular \"987852444\"",
+      "ingresar el Correo electronico \"dev@gmail.com\"",
+      "seleccionar el Tipo de trabajador \" Dependiente\"",
+      "ingresar el Centro de labores \"GYS\"",
+      "ingresar el Numero de RUC \"20741458745\"",
+      "seleccionar el Cargo \"Subgerente\"",
+      "ingresar el Ingreso promedio mensual \"100000\"",
+      "dar clic en el boton Siguiente",
+      "se mostrara la pantalla de \"Datos de inversión\"",
+      "definitions.hooks.tearDown(io.cucumber.java.Scenario)"
+    ],
+    "datasets": [
+      {
+        "data": [
+          2.043,
+          2.812,
+          2.349,
+          5.47,
+          3.446,
+          2.9,
+          0.352,
+          0.417,
+          1.348,
+          0.381,
+          4.772,
+          0.41,
+          0.376,
+          0.338,
+          0.431,
+          3.264,
+          0.517,
+          0.412,
+          0.526,
+          0.414,
+          0.361,
+          0.292,
+          0.283,
+          0.308,
+          0.367,
+          1.529,
+          0.471,
+          0.363,
+          0.326,
+          0.336,
+          0.317,
+          0.342,
+          0.368,
+          0.4,
+          0.481,
+          3.238,
+          0.399
+        ],
+        "backgroundColor": [
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)",
+          "rgba(96, 204, 121, 1.000)"
+        ],
+        "label": "passed",
+        "stack": "complete"
+      },
+      {
+        "data": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "backgroundColor": [
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)",
+          "rgba(252, 113, 128, 1.000)"
+        ],
+        "label": "failed",
+        "stack": "complete"
+      },
+      {
+        "data": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "backgroundColor": [
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)",
+          "rgba(247, 196, 43, 1.000)"
+        ],
+        "label": "skipped",
+        "stack": "complete"
+      }
+    ]
+  },
+  "options": {
+    "scales": {
+      "xAxes": [
+        {
+          "ticks": {
+            "min": 0,
+            "stepSize": 0.0,
+            "display": false
+          },
+          "stacked": true,
+          "scaleLabel": {
+            "display": true,
+            "labelString": "Steps"
+          },
+          "stepSize": 0.0
+        }
+      ],
+      "yAxes": [
+        {
+          "ticks": {
+            "min": 0,
+            "stepSize": 5.47,
+            "display": true
+          },
+          "stacked": true,
+          "scaleLabel": {
+            "display": true,
+            "labelString": "Step Runtime (seconds)"
+          },
+          "stepSize": 0.0
+        }
+      ]
+    },
+    "events": [
+      "click",
+      "mousemove"
+    ]
+  },
+  "type": "bar"
+});
+
+            var original;
+            if (chart.config.type === "pie") {
+                original = Chart.defaults.pie.legend.onClick;
+            } else {
+                original = Chart.defaults.global.legend.onClick;
+            }
+
+            chart.options.onClick = function (evt, elements) {
+                if (chart.config.type !== "pie") return;
+                chartArea = elements[0];
+                if (chartArea === undefined) return;
+                chartArea.hidden = !chartArea.hidden;
+                chart.update();
+                toggleVisibilityByStatus(chartArea._model.label, !chartArea.hidden)
+            };
+
+            chart.options.legend.onClick = function (evt, label) {
+                original.call(this, evt, label);
+                toggleVisibilityByStatus(label.text, label.hidden);
+            };
+
+            function toggleVisibilityByStatus(statusText, show) {
+                var card = $("#card_" + statusText);
+                if (card !== undefined) {
+                    if (show) {
+                        card.show();
+                    } else {
+                        card.hide();
+                    }
+                }
+
+                var row = $(".table-row-" + statusText);
+                if (row !== undefined) {
+                    if (show) {
+                        row.show();
+                    } else {
+                        row.hide();
+                    }
+                }
+            }
+
+
+            if (true) {
+                $(".btn-outline-secondary[data-cluecumber-item='before-after-hooks-button']").click();
+            }
+            if (true) {
+                $(".btn-outline-secondary[data-cluecumber-item='step-hooks-button']").click();
+            }
+            if (true) {
+                $(".btn-outline-secondary[data-cluecumber-item='doc-strings-button']").click();
+            }
+        }
+    );
+
+    function resizeIframe(iframe) {
+        iframe.style.height = (iframe.contentWindow.document.body.scrollHeight + 25) + 'px';
+    }
+</script>    </head>
+    <body>
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                        <a class="nav-link " href="pages/scenario-summary.html">All Scenarios</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link " href="pages/scenario-sequence.html">Scenario Sequence</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link " href="pages/tag-summary.html">All Tags</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link " href="pages/step-summary.html">All Steps</a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link " href="pages/feature-summary.html">All Features</a>
+                </li>
+            </ul>
+            <span class="text-light">2026-03-03 14:48:15</span>
+        </div>
+    </nav>
+    <main role="main" class="container">
+        <div class="cluecumber-template">
+            <div class="pb-2 mt-4 mb-2">
+                    <h5>
+                            <a href="pages/feature-scenarios/feature_0.html">FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT</a>
+                        <span class="small">file:src/test/resources/features/Escenarios.feature</span>
+                    </h5>
+                    <h3>[CP35] Cliente no afiliado identificado con DNI / Ingreso de nueva dirección</h3>
+            </div>
+
+
+    <div class="row" id="scenario-detail">
+    <div class="col-sm-6  h-auto" data-cluecumber-item="card">
+        <div class="card h-100">
+                <div class="card-header">Step Results</div>
+            <div class="card-body">
+    <div id="canvas-holder" class="w-100 text-center" style="min-height: 15rem;" data-cluecumber-item="chart">
+        <canvas id="chart-area" class="w-100"></canvas>
+    </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3  h-auto" data-cluecumber-item="card">
+        <div class="card h-100">
+                <div class="card-header">Scenario Info</div>
+            <div class="card-body">
+                <li class="list-group-item">Started on:<br>2026-03-03 14:47:29</li>
+                <li class="list-group-item">Ended on:<br>2026-03-03 14:48:12</li>
+            <li class="list-group-item">Test Runtime:<br>0m 43s 177ms</li>
+            <li class="list-group-item">
+                    <a href="pages/tag-scenarios/tag_regresion.html">@regresion</a>            </li>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3  h-auto" data-cluecumber-item="card">
+        <div class="card h-100">
+                <div class="card-header">Step Summary</div>
+            <div class="card-body">
+            <ul class="list-group list-group-flush">
+                <li class="list-group-item">
+                    35         Steps
+
+                </li>
+                <li class="list-group-item">
+                    35 passed     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+
+                    <br>
+                    0 failed     <i class="color-failed cluecumber-icon icon-failed" data-toggle="tooltip"
+       title="failed"><span style="display:none">failed</span></i>
+
+                    <br>
+                    0 skipped     <i class="color-skipped cluecumber-icon icon-skipped" data-toggle="tooltip"
+       title="skipped"><span style="display:none">skipped</span></i>
+
+                </li>
+            </ul>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <ul class="list-group list-group-flush">
+
+
+    <div class="col-sm-12  h-auto" data-cluecumber-item="card">
+        <div class="card h-100">
+                <div class="card-header">Steps</div>
+            <div class="card-body">
+                <li class="list-group-item">
+
+
+                        <div class="row row_passed table-row-passed">
+                            <div class="col-9 text-left">
+                                <span class="text-left">1.</span>
+                                <span data-toggle="tooltip" title="definitions.HabitatDefinition.queLaWebEsteDisponible()">
+                                    <a href="pages/step-scenarios/step_1552970578.html"><span
+                                                class="keyword">Dado </span> que la web este disponible</a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 02s 812ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                            </div>
+
+                        </div>
+
+
+                        <div class="row row_passed table-row-passed">
+                            <div class="col-9 text-left">
+                                <span class="text-left">2.</span>
+                                <span data-toggle="tooltip" title="definitions.IdentificacionDefinition.seleccioneElTipoDeDocumento(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_01985463971.html"><span
+                                                class="keyword">Cuando </span> seleccione el Tipo de Documento <span class="parameter">"DNI"</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 02s 349ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                            </div>
+
+            <div class="row w-100 p-3 m-0 scenarioAttachment">
+                <div class="w-100 p-1 m-0 border-bottom small text-left">
+                    <a class="btn-link" data-toggle="collapse" href="#expandable1771486148" role="button"
+                       aria-expanded="false" aria-controls="expandable1771486148">Toggle</a> |
+                        Screenshot:_DNI (PNG attachment)
+                </div>
+                <div class="w-100 text-left m-auto">
+                    <div class="w-100 text-left m-auto collapse " id="expandable1771486148">
+                            <a class="grouped_elements" rel="images" href="attachments/attachment001.png">
+                                <img src="attachments/attachment001.png" class="embedded-image"
+                                     style="max-width: 45%; border: grey solid 1px; margin: 10px;"
+                                     alt="Attachment attachment001.png"/>
+                            </a>
+                    </div>
+                </div>
+            </div>
+                        </div>
+
+
+                        <div class="row row_passed table-row-passed">
+                            <div class="col-9 text-left">
+                                <span class="text-left">3.</span>
+                                <span data-toggle="tooltip" title="definitions.IdentificacionDefinition.ingreseElNumeroDeDocumento(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_698501138.html"><span
+                                                class="keyword">E </span> ingrese el Numero de Documento <span class="parameter">"72174876"</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 05s 470ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                            </div>
+
+            <div class="row w-100 p-3 m-0 scenarioAttachment">
+                <div class="w-100 p-1 m-0 border-bottom small text-left">
+                    <a class="btn-link" data-toggle="collapse" href="#expandable100380224" role="button"
+                       aria-expanded="false" aria-controls="expandable100380224">Toggle</a> |
+                        Screenshot:_72174876 (PNG attachment)
+                </div>
+                <div class="w-100 text-left m-auto">
+                    <div class="w-100 text-left m-auto collapse " id="expandable100380224">
+                            <a class="grouped_elements" rel="images" href="attachments/attachment002.png">
+                                <img src="attachments/attachment002.png" class="embedded-image"
+                                     style="max-width: 45%; border: grey solid 1px; margin: 10px;"
+                                     alt="Attachment attachment002.png"/>
+                            </a>
+                    </div>
+                </div>
+            </div>
+                        </div>
+
+
+                        <div class="row row_passed table-row-passed">
+                            <div class="col-9 text-left">
+                                <span class="text-left">4.</span>
+                                <span data-toggle="tooltip" title="definitions.IdentificacionDefinition.seleccionarAceptoLosTerminosYComisionesAsociadosALaAperturaYDebitosParaElFondoLibreHabitatMostradoAqui()">
+                                    <a href="pages/step-scenarios/step_01897637981.html"><span
+                                                class="keyword">Y </span> seleccionar Acepto los terminos y comisiones asociados a la apertura y debitos para el fondo libre habitat mostrado aqui</a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 03s 446ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                            </div>
+
+            <div class="row w-100 p-3 m-0 scenarioAttachment">
+                <div class="w-100 p-1 m-0 border-bottom small text-left">
+                    <a class="btn-link" data-toggle="collapse" href="#expandable738772871" role="button"
+                       aria-expanded="false" aria-controls="expandable738772871">Toggle</a> |
+                        Screenshot (PNG attachment)
+                </div>
+                <div class="w-100 text-left m-auto">
+                    <div class="w-100 text-left m-auto collapse " id="expandable738772871">
+                            <a class="grouped_elements" rel="images" href="attachments/attachment003.png">
+                                <img src="attachments/attachment003.png" class="embedded-image"
+                                     style="max-width: 45%; border: grey solid 1px; margin: 10px;"
+                                     alt="Attachment attachment003.png"/>
+                            </a>
+                    </div>
+                </div>
+            </div>
+                        </div>
+
+
+                        <div class="row row_passed table-row-passed">
+                            <div class="col-9 text-left">
+                                <span class="text-left">5.</span>
+                                <span data-toggle="tooltip" title="definitions.IdentificacionDefinition.seleccionarAutorizoElUsoDeMisDatosPersonalesParaFinesPublicitariosConformeALaPoliticaDePrivacidad()">
+                                    <a href="pages/step-scenarios/step_1729810021.html"><span
+                                                class="keyword">Y </span> seleccionar Autorizo el uso de mis datos personales para fines publicitarios conforme a la Politica de Privacidad</a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 02s 900ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                            </div>
+
+            <div class="row w-100 p-3 m-0 scenarioAttachment">
+                <div class="w-100 p-1 m-0 border-bottom small text-left">
+                    <a class="btn-link" data-toggle="collapse" href="#expandable1744146882" role="button"
+                       aria-expanded="false" aria-controls="expandable1744146882">Toggle</a> |
+                        Screenshot (PNG attachment)
+                </div>
+                <div class="w-100 text-left m-auto">
+                    <div class="w-100 text-left m-auto collapse " id="expandable1744146882">
+                            <a class="grouped_elements" rel="images" href="attachments/attachment004.png">
+                                <img src="attachments/attachment004.png" class="embedded-image"
+                                     style="max-width: 45%; border: grey solid 1px; margin: 10px;"
+                                     alt="Attachment attachment004.png"/>
+                            </a>
+                    </div>
+                </div>
+            </div>
+                        </div>
+
+
+                        <div class="row row_passed table-row-passed">
+                            <div class="col-9 text-left">
+                                <span class="text-left">6.</span>
+                                <span data-toggle="tooltip" title="definitions.IdentificacionDefinition.seleccionarAutorizoAAFPHabitatACompartirMisDatosConPrudentialsafSACParaFinesInformativosComercialesSegunLaPoliticaDePrivacidad()">
+                                    <a href="pages/step-scenarios/step_0635074332.html"><span
+                                                class="keyword">Y </span> seleccionar Autorizo a AFP Habitat a compartir mis datos con Prudentialsaf SAC para fines informativos comerciales segun la Politica de Privacidad</a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 352ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                            </div>
+
+            <div class="row w-100 p-3 m-0 scenarioAttachment">
+                <div class="w-100 p-1 m-0 border-bottom small text-left">
+                    <a class="btn-link" data-toggle="collapse" href="#expandable676089602" role="button"
+                       aria-expanded="false" aria-controls="expandable676089602">Toggle</a> |
+                        Screenshot (PNG attachment)
+                </div>
+                <div class="w-100 text-left m-auto">
+                    <div class="w-100 text-left m-auto collapse " id="expandable676089602">
+                            <a class="grouped_elements" rel="images" href="attachments/attachment005.png">
+                                <img src="attachments/attachment005.png" class="embedded-image"
+                                     style="max-width: 45%; border: grey solid 1px; margin: 10px;"
+                                     alt="Attachment attachment005.png"/>
+                            </a>
+                    </div>
+                </div>
+            </div>
+                        </div>
+
+
+                        <div class="row row_passed table-row-passed">
+                            <div class="col-9 text-left">
+                                <span class="text-left">7.</span>
+                                <span data-toggle="tooltip" title="definitions.IdentificacionDefinition.darClicEnElBotonEmpezarAInvertir()">
+                                    <a href="pages/step-scenarios/step_1987969918.html"><span
+                                                class="keyword">Y </span> dar clic en el boton Empezar a invertir</a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 417ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                            </div>
+
+            <div class="row w-100 p-3 m-0 scenarioAttachment">
+                <div class="w-100 p-1 m-0 border-bottom small text-left">
+                    <a class="btn-link" data-toggle="collapse" href="#expandable1889365477" role="button"
+                       aria-expanded="false" aria-controls="expandable1889365477">Toggle</a> |
+                        Screenshot (PNG attachment)
+                </div>
+                <div class="w-100 text-left m-auto">
+                    <div class="w-100 text-left m-auto collapse " id="expandable1889365477">
+                            <a class="grouped_elements" rel="images" href="attachments/attachment006.png">
+                                <img src="attachments/attachment006.png" class="embedded-image"
+                                     style="max-width: 45%; border: grey solid 1px; margin: 10px;"
+                                     alt="Attachment attachment006.png"/>
+                            </a>
+                    </div>
+                </div>
+            </div>
+                        </div>
+
+
+                        <div class="row row_passed table-row-passed">
+                            <div class="col-9 text-left">
+                                <span class="text-left">8.</span>
+                                <span data-toggle="tooltip" title="definitions.IdentificacionDefinition.seMostraraUnPopupDe(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_1158345966.html"><span
+                                                class="keyword">Entonces </span> se mostrara un popup de <span class="parameter">"¿Tienes residencia fiscal fuera de Perú?"</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 01s 348ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                            </div>
+
+            <div class="row w-100 p-3 m-0 scenarioAttachment">
+                <div class="w-100 p-1 m-0 border-bottom small text-left">
+                    <a class="btn-link" data-toggle="collapse" href="#expandable440641678" role="button"
+                       aria-expanded="false" aria-controls="expandable440641678">Toggle</a> |
+                        Screenshot (PNG attachment)
+                </div>
+                <div class="w-100 text-left m-auto">
+                    <div class="w-100 text-left m-auto collapse " id="expandable440641678">
+                            <a class="grouped_elements" rel="images" href="attachments/attachment007.png">
+                                <img src="attachments/attachment007.png" class="embedded-image"
+                                     style="max-width: 45%; border: grey solid 1px; margin: 10px;"
+                                     alt="Attachment attachment007.png"/>
+                            </a>
+                    </div>
+                </div>
+            </div>
+                        </div>
+
+
+                        <div class="row row_passed table-row-passed">
+                            <div class="col-9 text-left">
+                                <span class="text-left">9.</span>
+                                <span data-toggle="tooltip" title="definitions.ResidenciaDefinition.seleccioneElBotonNoTengo()">
+                                    <a href="pages/step-scenarios/step_1534155619.html"><span
+                                                class="keyword">Y </span> seleccione el boton No tengo</a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 381ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                            </div>
+
+            <div class="row w-100 p-3 m-0 scenarioAttachment">
+                <div class="w-100 p-1 m-0 border-bottom small text-left">
+                    <a class="btn-link" data-toggle="collapse" href="#expandable1374896517" role="button"
+                       aria-expanded="false" aria-controls="expandable1374896517">Toggle</a> |
+                        Screenshot (PNG attachment)
+                </div>
+                <div class="w-100 text-left m-auto">
+                    <div class="w-100 text-left m-auto collapse " id="expandable1374896517">
+                            <a class="grouped_elements" rel="images" href="attachments/attachment008.png">
+                                <img src="attachments/attachment008.png" class="embedded-image"
+                                     style="max-width: 45%; border: grey solid 1px; margin: 10px;"
+                                     alt="Attachment attachment008.png"/>
+                            </a>
+                    </div>
+                </div>
+            </div>
+                        </div>
+
+
+                        <div class="row row_passed table-row-passed">
+                            <div class="col-9 text-left">
+                                <span class="text-left">10.</span>
+                                <span data-toggle="tooltip" title="definitions.DatosPersonalesDefinition.seMostraraLaPantallaDeConLosSiguientesCampos(java.lang.String,io.cucumber.datatable.DataTable)">
+                                    <a href="pages/step-scenarios/step_889984756.html"><span
+                                                class="keyword">Y </span> se mostrara la pantalla de <span class="parameter">"Datos personales"</span> con los siguientes campos</a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 04s 772ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                            </div>
+
+                                <div class="row w-100 p-3 m-0 scenarioDataTable">
+                                    <div class="w-100 text-left border border-dark table-responsive">
+                                        <table class="table table-hover small table-striped text-left pb-0">
+                                                <tr>
+                                                        <td>Selecciona tu primer nombre</td>
+                                                </tr>
+                                                <tr>
+                                                        <td>Selecciona tu primer apellido</td>
+                                                </tr>
+                                                <tr>
+                                                        <td>Fecha de emisión de tu DNI</td>
+                                                </tr>
+                                        </table>
+                                    </div>
+                                </div>
+            <div class="row w-100 p-3 m-0 scenarioAttachment">
+                <div class="w-100 p-1 m-0 border-bottom small text-left">
+                    <a class="btn-link" data-toggle="collapse" href="#expandable124017533" role="button"
+                       aria-expanded="false" aria-controls="expandable124017533">Toggle</a> |
+                        Screenshot (PNG attachment)
+                </div>
+                <div class="w-100 text-left m-auto">
+                    <div class="w-100 text-left m-auto collapse " id="expandable124017533">
+                            <a class="grouped_elements" rel="images" href="attachments/attachment009.png">
+                                <img src="attachments/attachment009.png" class="embedded-image"
+                                     style="max-width: 45%; border: grey solid 1px; margin: 10px;"
+                                     alt="Attachment attachment009.png"/>
+                            </a>
+                    </div>
+                </div>
+            </div>
+                        </div>
+
+
+                        <div class="row row_passed table-row-passed">
+                            <div class="col-9 text-left">
+                                <span class="text-left">11.</span>
+                                <span data-toggle="tooltip" title="definitions.DatosPersonalesDefinition.seleccionarElPrimerNombreCorrectoDelCliente(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_0490739616.html"><span
+                                                class="keyword">Y </span> seleccionar el primer nombre correcto del cliente <span class="parameter">"SLEDGE"</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 410ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                            </div>
+
+            <div class="row w-100 p-3 m-0 scenarioAttachment">
+                <div class="w-100 p-1 m-0 border-bottom small text-left">
+                    <a class="btn-link" data-toggle="collapse" href="#expandable1280363901" role="button"
+                       aria-expanded="false" aria-controls="expandable1280363901">Toggle</a> |
+                        Screenshot (PNG attachment)
+                </div>
+                <div class="w-100 text-left m-auto">
+                    <div class="w-100 text-left m-auto collapse " id="expandable1280363901">
+                            <a class="grouped_elements" rel="images" href="attachments/attachment010.png">
+                                <img src="attachments/attachment010.png" class="embedded-image"
+                                     style="max-width: 45%; border: grey solid 1px; margin: 10px;"
+                                     alt="Attachment attachment010.png"/>
+                            </a>
+                    </div>
+                </div>
+            </div>
+                        </div>
+
+
+                        <div class="row row_passed table-row-passed">
+                            <div class="col-9 text-left">
+                                <span class="text-left">12.</span>
+                                <span data-toggle="tooltip" title="definitions.DatosPersonalesDefinition.seleccionarElPrimerApellidoCorrectoDelCliente(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_0872706827.html"><span
+                                                class="keyword">Y </span> seleccionar el primer apellido correcto del cliente <span class="parameter">"LUYO"</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 376ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                            </div>
+
+            <div class="row w-100 p-3 m-0 scenarioAttachment">
+                <div class="w-100 p-1 m-0 border-bottom small text-left">
+                    <a class="btn-link" data-toggle="collapse" href="#expandable1051217409" role="button"
+                       aria-expanded="false" aria-controls="expandable1051217409">Toggle</a> |
+                        Screenshot (PNG attachment)
+                </div>
+                <div class="w-100 text-left m-auto">
+                    <div class="w-100 text-left m-auto collapse " id="expandable1051217409">
+                            <a class="grouped_elements" rel="images" href="attachments/attachment011.png">
+                                <img src="attachments/attachment011.png" class="embedded-image"
+                                     style="max-width: 45%; border: grey solid 1px; margin: 10px;"
+                                     alt="Attachment attachment011.png"/>
+                            </a>
+                    </div>
+                </div>
+            </div>
+                        </div>
+
+
+                        <div class="row row_passed table-row-passed">
+                            <div class="col-9 text-left">
+                                <span class="text-left">13.</span>
+                                <span data-toggle="tooltip" title="definitions.DatosPersonalesDefinition.seleccionarLaFechaDeEmisionCorrectaDelDNIDelCliente(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_0642107952.html"><span
+                                                class="keyword">Y </span> seleccionar la Fecha de emision correcta del DNI del cliente <span class="parameter">"22/11/2022"</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 338ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                            </div>
+
+            <div class="row w-100 p-3 m-0 scenarioAttachment">
+                <div class="w-100 p-1 m-0 border-bottom small text-left">
+                    <a class="btn-link" data-toggle="collapse" href="#expandable441004239" role="button"
+                       aria-expanded="false" aria-controls="expandable441004239">Toggle</a> |
+                        Screenshot (PNG attachment)
+                </div>
+                <div class="w-100 text-left m-auto">
+                    <div class="w-100 text-left m-auto collapse " id="expandable441004239">
+                            <a class="grouped_elements" rel="images" href="attachments/attachment012.png">
+                                <img src="attachments/attachment012.png" class="embedded-image"
+                                     style="max-width: 45%; border: grey solid 1px; margin: 10px;"
+                                     alt="Attachment attachment012.png"/>
+                            </a>
+                    </div>
+                </div>
+            </div>
+                        </div>
+
+
+                        <div class="row row_passed table-row-passed">
+                            <div class="col-9 text-left">
+                                <span class="text-left">14.</span>
+                                <span data-toggle="tooltip" title="definitions.DatosPersonalesDefinition.darClicEnElBotonSiguiente()">
+                                    <a href="pages/step-scenarios/step_1276058433.html"><span
+                                                class="keyword">Y </span> dar clic en el boton Siguiente</a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 431ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                            </div>
+
+            <div class="row w-100 p-3 m-0 scenarioAttachment">
+                <div class="w-100 p-1 m-0 border-bottom small text-left">
+                    <a class="btn-link" data-toggle="collapse" href="#expandable1070808904" role="button"
+                       aria-expanded="false" aria-controls="expandable1070808904">Toggle</a> |
+                        Screenshot (PNG attachment)
+                </div>
+                <div class="w-100 text-left m-auto">
+                    <div class="w-100 text-left m-auto collapse " id="expandable1070808904">
+                            <a class="grouped_elements" rel="images" href="attachments/attachment013.png">
+                                <img src="attachments/attachment013.png" class="embedded-image"
+                                     style="max-width: 45%; border: grey solid 1px; margin: 10px;"
+                                     alt="Attachment attachment013.png"/>
+                            </a>
+                    </div>
+                </div>
+            </div>
+                        </div>
+
+
+                        <div class="row row_passed table-row-passed">
+                            <div class="col-9 text-left">
+                                <span class="text-left">15.</span>
+                                <span data-toggle="tooltip" title="definitions.DatosPersonalesDefinition.mostraraElFormularioDeLlenadoDeLosDemasDatosDelCliente(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_1734181198.html"><span
+                                                class="keyword">Entonces </span> mostrara el formulario <span class="parameter">"Datos personales"</span> de llenado de los demas datos del cliente</a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 03s 264ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                            </div>
+
+            <div class="row w-100 p-3 m-0 scenarioAttachment">
+                <div class="w-100 p-1 m-0 border-bottom small text-left">
+                    <a class="btn-link" data-toggle="collapse" href="#expandable1973561066" role="button"
+                       aria-expanded="false" aria-controls="expandable1973561066">Toggle</a> |
+                        Screenshot (PNG attachment)
+                </div>
+                <div class="w-100 text-left m-auto">
+                    <div class="w-100 text-left m-auto collapse " id="expandable1973561066">
+                            <a class="grouped_elements" rel="images" href="attachments/attachment014.png">
+                                <img src="attachments/attachment014.png" class="embedded-image"
+                                     style="max-width: 45%; border: grey solid 1px; margin: 10px;"
+                                     alt="Attachment attachment014.png"/>
+                            </a>
+                    </div>
+                </div>
+            </div>
+                        </div>
+
+
+                        <div class="row row_passed table-row-passed">
+                            <div class="col-9 text-left">
+                                <span class="text-left">16.</span>
+                                <span data-toggle="tooltip" title="definitions.FormularioDefinition.seleccionarElPaisDeResidencia(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_0196044248.html"><span
+                                                class="keyword">Y </span> seleccionar el Pais de residencia <span class="parameter">"Perú"</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 517ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                            </div>
+
+            <div class="row w-100 p-3 m-0 scenarioAttachment">
+                <div class="w-100 p-1 m-0 border-bottom small text-left">
+                    <a class="btn-link" data-toggle="collapse" href="#expandable159823385" role="button"
+                       aria-expanded="false" aria-controls="expandable159823385">Toggle</a> |
+                        Screenshot (PNG attachment)
+                </div>
+                <div class="w-100 text-left m-auto">
+                    <div class="w-100 text-left m-auto collapse " id="expandable159823385">
+                            <a class="grouped_elements" rel="images" href="attachments/attachment015.png">
+                                <img src="attachments/attachment015.png" class="embedded-image"
+                                     style="max-width: 45%; border: grey solid 1px; margin: 10px;"
+                                     alt="Attachment attachment015.png"/>
+                            </a>
+                    </div>
+                </div>
+            </div>
+                        </div>
+
+
+                        <div class="row row_passed table-row-passed">
+                            <div class="col-9 text-left">
+                                <span class="text-left">17.</span>
+                                <span data-toggle="tooltip" title="definitions.FormularioDefinition.ingresarLaNacionalidad(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_560982331.html"><span
+                                                class="keyword">E </span> ingresar la Nacionalidad <span class="parameter">"Peruana"</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 412ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                            </div>
+
+            <div class="row w-100 p-3 m-0 scenarioAttachment">
+                <div class="w-100 p-1 m-0 border-bottom small text-left">
+                    <a class="btn-link" data-toggle="collapse" href="#expandable1511661742" role="button"
+                       aria-expanded="false" aria-controls="expandable1511661742">Toggle</a> |
+                        Screenshot (PNG attachment)
+                </div>
+                <div class="w-100 text-left m-auto">
+                    <div class="w-100 text-left m-auto collapse " id="expandable1511661742">
+                            <a class="grouped_elements" rel="images" href="attachments/attachment016.png">
+                                <img src="attachments/attachment016.png" class="embedded-image"
+                                     style="max-width: 45%; border: grey solid 1px; margin: 10px;"
+                                     alt="Attachment attachment016.png"/>
+                            </a>
+                    </div>
+                </div>
+            </div>
+                        </div>
+
+
+                        <div class="row row_passed table-row-passed">
+                            <div class="col-9 text-left">
+                                <span class="text-left">18.</span>
+                                <span data-toggle="tooltip" title="definitions.FormularioDefinition.seleccionarLaFechaDeNacimiento(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_1461461194.html"><span
+                                                class="keyword">Y </span> seleccionar la Fecha de nacimiento <span class="parameter">"15/08/1995"</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 526ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                            </div>
+
+            <div class="row w-100 p-3 m-0 scenarioAttachment">
+                <div class="w-100 p-1 m-0 border-bottom small text-left">
+                    <a class="btn-link" data-toggle="collapse" href="#expandable2090167770" role="button"
+                       aria-expanded="false" aria-controls="expandable2090167770">Toggle</a> |
+                        Screenshot (PNG attachment)
+                </div>
+                <div class="w-100 text-left m-auto">
+                    <div class="w-100 text-left m-auto collapse " id="expandable2090167770">
+                            <a class="grouped_elements" rel="images" href="attachments/attachment017.png">
+                                <img src="attachments/attachment017.png" class="embedded-image"
+                                     style="max-width: 45%; border: grey solid 1px; margin: 10px;"
+                                     alt="Attachment attachment017.png"/>
+                            </a>
+                    </div>
+                </div>
+            </div>
+                        </div>
+
+
+                        <div class="row row_passed table-row-passed">
+                            <div class="col-9 text-left">
+                                <span class="text-left">19.</span>
+                                <span data-toggle="tooltip" title="definitions.FormularioDefinition.seleccioneIngresarUnaNuevaDireccion()">
+                                    <a href="pages/step-scenarios/step_1187921757.html"><span
+                                                class="keyword">Cuando </span> seleccione Ingresar una nueva direccion</a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 414ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                            </div>
+
+            <div class="row w-100 p-3 m-0 scenarioAttachment">
+                <div class="w-100 p-1 m-0 border-bottom small text-left">
+                    <a class="btn-link" data-toggle="collapse" href="#expandable409240020" role="button"
+                       aria-expanded="false" aria-controls="expandable409240020">Toggle</a> |
+                        Screenshot (PNG attachment)
+                </div>
+                <div class="w-100 text-left m-auto">
+                    <div class="w-100 text-left m-auto collapse " id="expandable409240020">
+                            <a class="grouped_elements" rel="images" href="attachments/attachment018.png">
+                                <img src="attachments/attachment018.png" class="embedded-image"
+                                     style="max-width: 45%; border: grey solid 1px; margin: 10px;"
+                                     alt="Attachment attachment018.png"/>
+                            </a>
+                    </div>
+                </div>
+            </div>
+                        </div>
+
+
+                        <div class="row row_passed table-row-passed">
+                            <div class="col-9 text-left">
+                                <span class="text-left">20.</span>
+                                <span data-toggle="tooltip" title="definitions.FormularioDefinition.seleccionarElDepartamento(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_1412806777.html"><span
+                                                class="keyword">Entonces </span> seleccionar el Departamento <span class="parameter">"LIMA"</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 361ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                            </div>
+
+            <div class="row w-100 p-3 m-0 scenarioAttachment">
+                <div class="w-100 p-1 m-0 border-bottom small text-left">
+                    <a class="btn-link" data-toggle="collapse" href="#expandable619629247" role="button"
+                       aria-expanded="false" aria-controls="expandable619629247">Toggle</a> |
+                        Screenshot (PNG attachment)
+                </div>
+                <div class="w-100 text-left m-auto">
+                    <div class="w-100 text-left m-auto collapse " id="expandable619629247">
+                            <a class="grouped_elements" rel="images" href="attachments/attachment019.png">
+                                <img src="attachments/attachment019.png" class="embedded-image"
+                                     style="max-width: 45%; border: grey solid 1px; margin: 10px;"
+                                     alt="Attachment attachment019.png"/>
+                            </a>
+                    </div>
+                </div>
+            </div>
+                        </div>
+
+
+                        <div class="row row_passed table-row-passed">
+                            <div class="col-9 text-left">
+                                <span class="text-left">21.</span>
+                                <span data-toggle="tooltip" title="definitions.FormularioDefinition.seleccionarLaProvincia(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_02012737440.html"><span
+                                                class="keyword">Y </span> seleccionar la Provincia <span class="parameter">"YAUYOS"</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 292ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                            </div>
+
+            <div class="row w-100 p-3 m-0 scenarioAttachment">
+                <div class="w-100 p-1 m-0 border-bottom small text-left">
+                    <a class="btn-link" data-toggle="collapse" href="#expandable804950492" role="button"
+                       aria-expanded="false" aria-controls="expandable804950492">Toggle</a> |
+                        Screenshot (PNG attachment)
+                </div>
+                <div class="w-100 text-left m-auto">
+                    <div class="w-100 text-left m-auto collapse " id="expandable804950492">
+                            <a class="grouped_elements" rel="images" href="attachments/attachment020.png">
+                                <img src="attachments/attachment020.png" class="embedded-image"
+                                     style="max-width: 45%; border: grey solid 1px; margin: 10px;"
+                                     alt="Attachment attachment020.png"/>
+                            </a>
+                    </div>
+                </div>
+            </div>
+                        </div>
+
+
+                        <div class="row row_passed table-row-passed">
+                            <div class="col-9 text-left">
+                                <span class="text-left">22.</span>
+                                <span data-toggle="tooltip" title="definitions.FormularioDefinition.seleccionarElDistrito(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_1197941261.html"><span
+                                                class="keyword">Y </span> seleccionar el Distrito <span class="parameter">"ALIS"</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 283ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                            </div>
+
+            <div class="row w-100 p-3 m-0 scenarioAttachment">
+                <div class="w-100 p-1 m-0 border-bottom small text-left">
+                    <a class="btn-link" data-toggle="collapse" href="#expandable2027340356" role="button"
+                       aria-expanded="false" aria-controls="expandable2027340356">Toggle</a> |
+                        Screenshot (PNG attachment)
+                </div>
+                <div class="w-100 text-left m-auto">
+                    <div class="w-100 text-left m-auto collapse " id="expandable2027340356">
+                            <a class="grouped_elements" rel="images" href="attachments/attachment021.png">
+                                <img src="attachments/attachment021.png" class="embedded-image"
+                                     style="max-width: 45%; border: grey solid 1px; margin: 10px;"
+                                     alt="Attachment attachment021.png"/>
+                            </a>
+                    </div>
+                </div>
+            </div>
+                        </div>
+
+
+                        <div class="row row_passed table-row-passed">
+                            <div class="col-9 text-left">
+                                <span class="text-left">23.</span>
+                                <span data-toggle="tooltip" title="definitions.FormularioDefinition.seleccionarElTipoDeVia(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_485929018.html"><span
+                                                class="keyword">Y </span> seleccionar el Tipo de via <span class="parameter">"Avenida"</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 308ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                            </div>
+
+            <div class="row w-100 p-3 m-0 scenarioAttachment">
+                <div class="w-100 p-1 m-0 border-bottom small text-left">
+                    <a class="btn-link" data-toggle="collapse" href="#expandable1149273771" role="button"
+                       aria-expanded="false" aria-controls="expandable1149273771">Toggle</a> |
+                        Screenshot (PNG attachment)
+                </div>
+                <div class="w-100 text-left m-auto">
+                    <div class="w-100 text-left m-auto collapse " id="expandable1149273771">
+                            <a class="grouped_elements" rel="images" href="attachments/attachment022.png">
+                                <img src="attachments/attachment022.png" class="embedded-image"
+                                     style="max-width: 45%; border: grey solid 1px; margin: 10px;"
+                                     alt="Attachment attachment022.png"/>
+                            </a>
+                    </div>
+                </div>
+            </div>
+                        </div>
+
+
+                        <div class="row row_passed table-row-passed">
+                            <div class="col-9 text-left">
+                                <span class="text-left">24.</span>
+                                <span data-toggle="tooltip" title="definitions.FormularioDefinition.ingresarLaNuevaDireccion(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_1013131361.html"><span
+                                                class="keyword">Y </span> ingresar la Nueva direccion <span class="parameter">"Av. Los Incas 1234"</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 367ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                            </div>
+
+            <div class="row w-100 p-3 m-0 scenarioAttachment">
+                <div class="w-100 p-1 m-0 border-bottom small text-left">
+                    <a class="btn-link" data-toggle="collapse" href="#expandable384370614" role="button"
+                       aria-expanded="false" aria-controls="expandable384370614">Toggle</a> |
+                        Screenshot (PNG attachment)
+                </div>
+                <div class="w-100 text-left m-auto">
+                    <div class="w-100 text-left m-auto collapse " id="expandable384370614">
+                            <a class="grouped_elements" rel="images" href="attachments/attachment023.png">
+                                <img src="attachments/attachment023.png" class="embedded-image"
+                                     style="max-width: 45%; border: grey solid 1px; margin: 10px;"
+                                     alt="Attachment attachment023.png"/>
+                            </a>
+                    </div>
+                </div>
+            </div>
+                        </div>
+
+
+                        <div class="row row_passed table-row-passed">
+                            <div class="col-9 text-left">
+                                <span class="text-left">25.</span>
+                                <span data-toggle="tooltip" title="definitions.FormularioDefinition.seleccionarLaProfesion(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_1791828116.html"><span
+                                                class="keyword">Y </span> seleccionar la Profesion <span class="parameter">"ABOGADO"</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 01s 529ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                            </div>
+
+            <div class="row w-100 p-3 m-0 scenarioAttachment">
+                <div class="w-100 p-1 m-0 border-bottom small text-left">
+                    <a class="btn-link" data-toggle="collapse" href="#expandable1843794118" role="button"
+                       aria-expanded="false" aria-controls="expandable1843794118">Toggle</a> |
+                        Screenshot (PNG attachment)
+                </div>
+                <div class="w-100 text-left m-auto">
+                    <div class="w-100 text-left m-auto collapse " id="expandable1843794118">
+                            <a class="grouped_elements" rel="images" href="attachments/attachment024.png">
+                                <img src="attachments/attachment024.png" class="embedded-image"
+                                     style="max-width: 45%; border: grey solid 1px; margin: 10px;"
+                                     alt="Attachment attachment024.png"/>
+                            </a>
+                    </div>
+                </div>
+            </div>
+                        </div>
+
+
+                        <div class="row row_passed table-row-passed">
+                            <div class="col-9 text-left">
+                                <span class="text-left">26.</span>
+                                <span data-toggle="tooltip" title="definitions.FormularioDefinition.seleccionarElPrefijoDelCelular(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_01461215341.html"><span
+                                                class="keyword">Y </span> seleccionar el Prefijo del celular <span class="parameter">"51"</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 471ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                            </div>
+
+            <div class="row w-100 p-3 m-0 scenarioAttachment">
+                <div class="w-100 p-1 m-0 border-bottom small text-left">
+                    <a class="btn-link" data-toggle="collapse" href="#expandable602680284" role="button"
+                       aria-expanded="false" aria-controls="expandable602680284">Toggle</a> |
+                        Screenshot (PNG attachment)
+                </div>
+                <div class="w-100 text-left m-auto">
+                    <div class="w-100 text-left m-auto collapse " id="expandable602680284">
+                            <a class="grouped_elements" rel="images" href="attachments/attachment025.png">
+                                <img src="attachments/attachment025.png" class="embedded-image"
+                                     style="max-width: 45%; border: grey solid 1px; margin: 10px;"
+                                     alt="Attachment attachment025.png"/>
+                            </a>
+                    </div>
+                </div>
+            </div>
+                        </div>
+
+
+                        <div class="row row_passed table-row-passed">
+                            <div class="col-9 text-left">
+                                <span class="text-left">27.</span>
+                                <span data-toggle="tooltip" title="definitions.FormularioDefinition.ingresarElNumeroDeCelular(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_1368255135.html"><span
+                                                class="keyword">Y </span> ingresar el Numero de celular <span class="parameter">"987852444"</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 363ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                            </div>
+
+            <div class="row w-100 p-3 m-0 scenarioAttachment">
+                <div class="w-100 p-1 m-0 border-bottom small text-left">
+                    <a class="btn-link" data-toggle="collapse" href="#expandable1662600404" role="button"
+                       aria-expanded="false" aria-controls="expandable1662600404">Toggle</a> |
+                        Screenshot (PNG attachment)
+                </div>
+                <div class="w-100 text-left m-auto">
+                    <div class="w-100 text-left m-auto collapse " id="expandable1662600404">
+                            <a class="grouped_elements" rel="images" href="attachments/attachment026.png">
+                                <img src="attachments/attachment026.png" class="embedded-image"
+                                     style="max-width: 45%; border: grey solid 1px; margin: 10px;"
+                                     alt="Attachment attachment026.png"/>
+                            </a>
+                    </div>
+                </div>
+            </div>
+                        </div>
+
+
+                        <div class="row row_passed table-row-passed">
+                            <div class="col-9 text-left">
+                                <span class="text-left">28.</span>
+                                <span data-toggle="tooltip" title="definitions.FormularioDefinition.ingresarElCorreoElectronico(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_01461754041.html"><span
+                                                class="keyword">Y </span> ingresar el Correo electronico <span class="parameter">"dev@gmail.com"</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 326ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                            </div>
+
+            <div class="row w-100 p-3 m-0 scenarioAttachment">
+                <div class="w-100 p-1 m-0 border-bottom small text-left">
+                    <a class="btn-link" data-toggle="collapse" href="#expandable1024666550" role="button"
+                       aria-expanded="false" aria-controls="expandable1024666550">Toggle</a> |
+                        Screenshot (PNG attachment)
+                </div>
+                <div class="w-100 text-left m-auto">
+                    <div class="w-100 text-left m-auto collapse " id="expandable1024666550">
+                            <a class="grouped_elements" rel="images" href="attachments/attachment027.png">
+                                <img src="attachments/attachment027.png" class="embedded-image"
+                                     style="max-width: 45%; border: grey solid 1px; margin: 10px;"
+                                     alt="Attachment attachment027.png"/>
+                            </a>
+                    </div>
+                </div>
+            </div>
+                        </div>
+
+
+                        <div class="row row_passed table-row-passed">
+                            <div class="col-9 text-left">
+                                <span class="text-left">29.</span>
+                                <span data-toggle="tooltip" title="definitions.FormularioDefinition.seleccionarElTipoDeTrabajador(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_373255992.html"><span
+                                                class="keyword">Y </span> seleccionar el Tipo de trabajador <span class="parameter">" Dependiente"</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 336ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                            </div>
+
+            <div class="row w-100 p-3 m-0 scenarioAttachment">
+                <div class="w-100 p-1 m-0 border-bottom small text-left">
+                    <a class="btn-link" data-toggle="collapse" href="#expandable1622047986" role="button"
+                       aria-expanded="false" aria-controls="expandable1622047986">Toggle</a> |
+                        Screenshot (PNG attachment)
+                </div>
+                <div class="w-100 text-left m-auto">
+                    <div class="w-100 text-left m-auto collapse " id="expandable1622047986">
+                            <a class="grouped_elements" rel="images" href="attachments/attachment028.png">
+                                <img src="attachments/attachment028.png" class="embedded-image"
+                                     style="max-width: 45%; border: grey solid 1px; margin: 10px;"
+                                     alt="Attachment attachment028.png"/>
+                            </a>
+                    </div>
+                </div>
+            </div>
+                        </div>
+
+
+                        <div class="row row_passed table-row-passed">
+                            <div class="col-9 text-left">
+                                <span class="text-left">30.</span>
+                                <span data-toggle="tooltip" title="definitions.FormularioDefinition.ingresarElCentroDeLabores(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_0441628478.html"><span
+                                                class="keyword">Y </span> ingresar el Centro de labores <span class="parameter">"GYS"</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 317ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                            </div>
+
+            <div class="row w-100 p-3 m-0 scenarioAttachment">
+                <div class="w-100 p-1 m-0 border-bottom small text-left">
+                    <a class="btn-link" data-toggle="collapse" href="#expandable576588272" role="button"
+                       aria-expanded="false" aria-controls="expandable576588272">Toggle</a> |
+                        Screenshot (PNG attachment)
+                </div>
+                <div class="w-100 text-left m-auto">
+                    <div class="w-100 text-left m-auto collapse " id="expandable576588272">
+                            <a class="grouped_elements" rel="images" href="attachments/attachment029.png">
+                                <img src="attachments/attachment029.png" class="embedded-image"
+                                     style="max-width: 45%; border: grey solid 1px; margin: 10px;"
+                                     alt="Attachment attachment029.png"/>
+                            </a>
+                    </div>
+                </div>
+            </div>
+                        </div>
+
+
+                        <div class="row row_passed table-row-passed">
+                            <div class="col-9 text-left">
+                                <span class="text-left">31.</span>
+                                <span data-toggle="tooltip" title="definitions.FormularioDefinition.ingresarElNumeroDeRUC(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_01810424243.html"><span
+                                                class="keyword">Y </span> ingresar el Numero de RUC <span class="parameter">"20741458745"</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 342ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                            </div>
+
+            <div class="row w-100 p-3 m-0 scenarioAttachment">
+                <div class="w-100 p-1 m-0 border-bottom small text-left">
+                    <a class="btn-link" data-toggle="collapse" href="#expandable197711499" role="button"
+                       aria-expanded="false" aria-controls="expandable197711499">Toggle</a> |
+                        Screenshot (PNG attachment)
+                </div>
+                <div class="w-100 text-left m-auto">
+                    <div class="w-100 text-left m-auto collapse " id="expandable197711499">
+                            <a class="grouped_elements" rel="images" href="attachments/attachment030.png">
+                                <img src="attachments/attachment030.png" class="embedded-image"
+                                     style="max-width: 45%; border: grey solid 1px; margin: 10px;"
+                                     alt="Attachment attachment030.png"/>
+                            </a>
+                    </div>
+                </div>
+            </div>
+                        </div>
+
+
+                        <div class="row row_passed table-row-passed">
+                            <div class="col-9 text-left">
+                                <span class="text-left">32.</span>
+                                <span data-toggle="tooltip" title="definitions.FormularioDefinition.seleccionarElCargo(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_1414826813.html"><span
+                                                class="keyword">Y </span> seleccionar el Cargo <span class="parameter">"Subgerente"</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 368ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                            </div>
+
+            <div class="row w-100 p-3 m-0 scenarioAttachment">
+                <div class="w-100 p-1 m-0 border-bottom small text-left">
+                    <a class="btn-link" data-toggle="collapse" href="#expandable799150815" role="button"
+                       aria-expanded="false" aria-controls="expandable799150815">Toggle</a> |
+                        Screenshot (PNG attachment)
+                </div>
+                <div class="w-100 text-left m-auto">
+                    <div class="w-100 text-left m-auto collapse " id="expandable799150815">
+                            <a class="grouped_elements" rel="images" href="attachments/attachment031.png">
+                                <img src="attachments/attachment031.png" class="embedded-image"
+                                     style="max-width: 45%; border: grey solid 1px; margin: 10px;"
+                                     alt="Attachment attachment031.png"/>
+                            </a>
+                    </div>
+                </div>
+            </div>
+                        </div>
+
+
+                        <div class="row row_passed table-row-passed">
+                            <div class="col-9 text-left">
+                                <span class="text-left">33.</span>
+                                <span data-toggle="tooltip" title="definitions.FormularioDefinition.ingresarElIngresoPromedioMensual(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_1845517657.html"><span
+                                                class="keyword">E </span> ingresar el Ingreso promedio mensual <span class="parameter">"100000"</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 400ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                            </div>
+
+            <div class="row w-100 p-3 m-0 scenarioAttachment">
+                <div class="w-100 p-1 m-0 border-bottom small text-left">
+                    <a class="btn-link" data-toggle="collapse" href="#expandable1022927413" role="button"
+                       aria-expanded="false" aria-controls="expandable1022927413">Toggle</a> |
+                        Screenshot (PNG attachment)
+                </div>
+                <div class="w-100 text-left m-auto">
+                    <div class="w-100 text-left m-auto collapse " id="expandable1022927413">
+                            <a class="grouped_elements" rel="images" href="attachments/attachment032.png">
+                                <img src="attachments/attachment032.png" class="embedded-image"
+                                     style="max-width: 45%; border: grey solid 1px; margin: 10px;"
+                                     alt="Attachment attachment032.png"/>
+                            </a>
+                    </div>
+                </div>
+            </div>
+                        </div>
+
+
+                        <div class="row row_passed table-row-passed">
+                            <div class="col-9 text-left">
+                                <span class="text-left">34.</span>
+                                <span data-toggle="tooltip" title="definitions.DatosPersonalesDefinition.darClicEnElBotonSiguiente()">
+                                    <a href="pages/step-scenarios/step_1276058433.html"><span
+                                                class="keyword">Y </span> dar clic en el boton Siguiente</a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 00s 481ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                            </div>
+
+            <div class="row w-100 p-3 m-0 scenarioAttachment">
+                <div class="w-100 p-1 m-0 border-bottom small text-left">
+                    <a class="btn-link" data-toggle="collapse" href="#expandable1849372115" role="button"
+                       aria-expanded="false" aria-controls="expandable1849372115">Toggle</a> |
+                        Screenshot (PNG attachment)
+                </div>
+                <div class="w-100 text-left m-auto">
+                    <div class="w-100 text-left m-auto collapse " id="expandable1849372115">
+                            <a class="grouped_elements" rel="images" href="attachments/attachment033.png">
+                                <img src="attachments/attachment033.png" class="embedded-image"
+                                     style="max-width: 45%; border: grey solid 1px; margin: 10px;"
+                                     alt="Attachment attachment033.png"/>
+                            </a>
+                    </div>
+                </div>
+            </div>
+                        </div>
+
+
+                        <div class="row row_passed table-row-passed">
+                            <div class="col-9 text-left">
+                                <span class="text-left">35.</span>
+                                <span data-toggle="tooltip" title="definitions.ResidenciaDefinition.seMostraraLaPantallaDe(java.lang.String)">
+                                    <a href="pages/step-scenarios/step_1482109233.html"><span
+                                                class="keyword">Entonces </span> se mostrara la pantalla de <span class="parameter">"Datos de inversión"</span></a>
+                                </span>
+                            </div>
+                            <div class="col-2 text-left small">
+                                0m 03s 238ms
+                            </div>
+                            <div class="col-1 text-right">
+    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+       title="passed"><span style="display:none">passed</span></i>
+                            </div>
+
+            <div class="row w-100 p-3 m-0 scenarioAttachment">
+                <div class="w-100 p-1 m-0 border-bottom small text-left">
+                    <a class="btn-link" data-toggle="collapse" href="#expandable596300305" role="button"
+                       aria-expanded="false" aria-controls="expandable596300305">Toggle</a> |
+                        Screenshot (PNG attachment)
+                </div>
+                <div class="w-100 text-left m-auto">
+                    <div class="w-100 text-left m-auto collapse " id="expandable596300305">
+                            <a class="grouped_elements" rel="images" href="attachments/attachment034.png">
+                                <img src="attachments/attachment034.png" class="embedded-image"
+                                     style="max-width: 45%; border: grey solid 1px; margin: 10px;"
+                                     alt="Attachment attachment034.png"/>
+                            </a>
+                    </div>
+                </div>
+            </div>
+                        </div>
+                </li>
+            </div>
+        </div>
+    </div>
+
+    </ul>
+        </div>
+    </main>
+
+<footer class="footer navbar-dark">
+    <div class="container-fluid">
+        <span><a href="https://github.com/trivago/cluecumber-report-plugin" target="_blank" class="text-white">Cluecumber Report Plugin version 2.9.4</a> - Report generated on 2026-03-03 14:48:15.</span>
+    </div>
+</footer>    </body>
+    </html>
+

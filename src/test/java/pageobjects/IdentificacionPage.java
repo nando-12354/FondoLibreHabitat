@@ -45,6 +45,7 @@ public class IdentificacionPage extends util {
     }
     public void autorizarDatosPersonales() throws InterruptedException {
         wait.until(ExpectedConditions.elementToBeClickable(chkDatosPersonales));
+        Thread.sleep(2500);
         chkDatosPersonales.click();
         System.out.println("Se hizo clic en la Autorizacion de datos personales");
     }

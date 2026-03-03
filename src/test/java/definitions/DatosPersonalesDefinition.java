@@ -57,4 +57,35 @@ public class DatosPersonalesDefinition {
         datos.validarTituloFormulario(titulo);
         screenshot.capturarPaso(driver, "Screenshot");
     }
+
+    @Y("seleccionar el Primer nombre incorrecto {string}")
+    public void seleccionarElPrimerNombreIncorrecto(String primerNombre) {
+        datos.seleccionarPrimerNombre(primerNombre);
+        screenshot.capturarPaso(driver, "Screenshot");
+    }
+
+    @Y("seleccionar el Primer apellido incorrecto {string}")
+    public void seleccionarElPrimerApellidoIncorrecto(String primerApellido) {
+        datos.seleccionarPrimerApellido(primerApellido);
+        screenshot.capturarPaso(driver, "Screenshot");
+    }
+
+    @Y("seleccionar la Fecha de emision incorrecta del DNI {string}")
+    public void seleccionarLaFechaDeEmisionIncorrectaDelDNI(String fechaEmision) {
+        datos.seleccionarFechaEmisionDni(fechaEmision);
+        screenshot.capturarPaso(driver, "Screenshot");
+    }
+
+    @Y("dar clic en el boton Entendido y Siguiente secuencialmente")
+    public void darClicEnElBotonEntendidoYSiguienteSecuencialmente() {
+        boton.clicBotonEntendido();
+        screenshot.capturarPaso(driver, "Screenshot");
+        boton.clicBotonSiguiente();
+    }
+
+    @Y("dar clic en el boton Ententido")
+    public void darClicEnElBotonEntentido() {
+        boton.clicBotonEntendido();
+        screenshot.capturarPaso(driver, "Screenshot");
+    }
 }
