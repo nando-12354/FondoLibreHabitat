@@ -5,6 +5,7 @@ pageobjects\DatosPersonalesPage.class
 pageobjects\ResidenciaPage.class
 pageobjects\IdentificacionPage.class
 pageobjects\ConfirmaSolicitudPage.class
+pageobjects\BiometriaPage.class
 definitions\TokenDefinition.class
 pageobjects\FormularioPage.class
 definitions\HabitatDefinition.class
@@ -18,3 +19,4 @@ definitions\FondoDefinition.class
 pageobjects\TokenPage.class
 definitions\ConfirmaSolicitudDefinition.class
 definitions\EnlacesDefinition.class
+definitions\BiometriaDefinition.class

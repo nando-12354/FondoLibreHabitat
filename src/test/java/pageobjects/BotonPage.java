@@ -26,6 +26,7 @@ public class BotonPage extends util {
     @FindBy(xpath = "//button[text()='Aceptar y firmar']") protected WebElement btnAceptarFirmar;
     @FindBy(xpath = "//button[text()='Enviar token']") protected WebElement btnEnviarToken;
     @FindBy(xpath = "//button[text()='Entendido']") protected WebElement btnEntendido;
+    @FindBy(xpath = "//button[text()='Tomar selfie']") protected WebElement btnTomarSelfie;
 
     public BotonPage() {
         PageFactory.initElements(driver,this);
@@ -103,6 +104,11 @@ public class BotonPage extends util {
         wait.until(ExpectedConditions.elementToBeClickable(btnEntendido));
         btnEntendido.click();
         System.out.println("Se hizo clic en el boton Entendido");
+    }
+    public void clicBotonTomarSelfie(){
+        wait.until(ExpectedConditions.elementToBeClickable(btnTomarSelfie));
+        btnTomarSelfie.click();
+        System.out.println("Se hizo clic en el boton Tomar selfie");
     }
     public void clicBotonAceptarFirmarContinuar() {
         if (isElementPresent(btnAceptarFirmarLocator)) {

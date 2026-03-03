@@ -14,9 +14,9 @@ public class ResidenciaPage extends util {
     public ResidenciaPage() {
         PageFactory.initElements(driver,this);
     }
-    public void validarTituloH1(String h1) {
+    public void validarTitulo_h1(String h1) {
         boolean h1Valido = false;
-        String xpath = "//h1[text()='" + h1.trim() + "']";
+        String xpath = "//h1[normalize-space(text())='" + h1.trim() + "']";
 
         try {
             WebElement h1Elemento = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));

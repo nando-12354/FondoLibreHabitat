@@ -1,4 +1,9 @@
 -------------------------------------------------------------------------------
 Test set: support.runtest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 43.92 s -- in support.runtest
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 38.38 s <<< FAILURE! -- in support.runtest
+FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT.[CP41] Cliente no afiliado identificado con DNI / Confirmar solicitud -- Time elapsed: 38.04 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "pageobjects.ResidenciaPage.validarTitulo(String)" because "this.residencia" is null
+	at definitions.BiometriaDefinition.seMostraraUnaPantalla(BiometriaDefinition.java:22)
+	at ✽.se mostrara una pantalla "Confirma tu solicitud con un selfie"(file:///D:/PROYECTOS%20GYS/HABITAT%20FONDO%20LIBRE/Codigo/HabitatTest2026/src/test/resources/features/Escenarios.feature:1102)
+
