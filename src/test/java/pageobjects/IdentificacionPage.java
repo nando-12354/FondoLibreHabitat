@@ -30,6 +30,9 @@ public class IdentificacionPage extends util {
         Select select = new Select(cmbTipoDocumento);
         select.selectByVisibleText(tipoDocumento);
         System.out.println("Seleccionando tipo de documento: " + tipoDocumento);
+        System.out.println("Encoding JVM: " + System.getProperty("file.encoding"));
+        System.out.println("Encoding JVM: " + System.getProperty("file.encoding"));
+        System.out.println("áéíóú????...!!¿?: " + tipoDocumento);
     }
     public void ingresarNumeroDocumento(String numeroDocumento) throws InterruptedException {
         wait.until(ExpectedConditions.visibilityOf(txtNumeroDocumento));

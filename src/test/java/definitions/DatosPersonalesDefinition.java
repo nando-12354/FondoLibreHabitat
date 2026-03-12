@@ -6,24 +6,27 @@ import io.cucumber.java.es.Entonces;
 import io.cucumber.java.es.Y;
 import pageobjects.BotonPage;
 import pageobjects.DatosPersonalesPage;
+import pageobjects.TituloPage;
 import support.Captura;
 
 import static definitions.hooks.driver;
 
 public class DatosPersonalesDefinition {
+    DatosPersonalesPage datos;
     BotonPage boton;
     Captura screenshot;
-    DatosPersonalesPage datos;
+    TituloPage titulo;
 
     public DatosPersonalesDefinition() {
+        datos = new DatosPersonalesPage();
         boton = new BotonPage();
         screenshot = new Captura();
-        datos = new DatosPersonalesPage();
+        titulo = new TituloPage();
     }
 
     @Y("se mostrara la pantalla de {string} con los siguientes campos")
-    public void seMostraraLaPantallaDeConLosSiguientesCampos(String titulo, DataTable tabla) {
-        datos.validarTituloPantalla(titulo);
+    public void seMostraraLaPantallaDeConLosSiguientesCampos(String texto, DataTable tabla) {
+        titulo.validarTituloPantalla(texto);
         datos.validarCamposPantalla(tabla);
         screenshot.capturarPaso(driver, "Screenshot");
     }
@@ -53,8 +56,8 @@ public class DatosPersonalesDefinition {
     }
 
     @Entonces("mostrara el formulario {string} de llenado de los demas datos del cliente")
-    public void mostraraElFormularioDeLlenadoDeLosDemasDatosDelCliente(String titulo) throws InterruptedException{
-        datos.validarTituloFormulario(titulo);
+    public void mostraraElFormularioDeLlenadoDeLosDemasDatosDelCliente(String texto) throws InterruptedException{
+        titulo.validarTituloFormulario(texto);
         screenshot.capturarPaso(driver, "Screenshot");
     }
 

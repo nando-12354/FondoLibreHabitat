@@ -1,26 +1,30 @@
 package definitions;
 
-import io.cucumber.java.PendingException;
 import io.cucumber.java.es.Entonces;
 import io.cucumber.java.es.Y;
 import pageobjects.BotonPage;
-import pageobjects.ConfirmaSolicitudPage;
 import pageobjects.ResidenciaPage;
+import pageobjects.TituloPage;
 import support.Captura;
 
 import static definitions.hooks.driver;
 
 public class BiometriaDefinition {
+    ResidenciaPage residencia;
     Captura screenshot;
     BotonPage boton;
-    ResidenciaPage residencia;
+    TituloPage titulo;
 
     public BiometriaDefinition() {
+        residencia = new ResidenciaPage();
+        screenshot = new Captura();
+        boton = new BotonPage();
+        titulo = new TituloPage();
     }
 
     @Y("se mostrara una pantalla {string}")
     public void seMostraraUnaPantalla(String h1) {
-        residencia.validarTitulo_h1(h1);
+        titulo.validarTitulo_h1(h1);
         screenshot.capturarPaso(driver, "Screenshot");
     }
 
@@ -32,13 +36,13 @@ public class BiometriaDefinition {
 
     @Y("se mostrara Cinco popups de {string} a seguir")
     public void seMostraraCincoPopupsDeASeguir(String considerancion) {
-        residencia.validarTitulo(considerancion);
+        titulo.validarTitulo(considerancion);
         screenshot.capturarPaso(driver, "Screenshot");
     }
 
     @Entonces("validar el popup {string}")
     public void validarElPopup(String considerancion) {
-        residencia.validarTitulo(considerancion);
+        titulo.validarTitulo(considerancion);
         screenshot.capturarPaso(driver, "Screenshot");
         boton.clicBotonSiguiente();
     }

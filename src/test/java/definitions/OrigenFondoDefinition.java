@@ -1,31 +1,29 @@
 package definitions;
 
-import io.cucumber.java.PendingException;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.E;
 import io.cucumber.java.es.Entonces;
 import io.cucumber.java.es.Y;
-import pageobjects.BotonPage;
-import pageobjects.FondoPage;
-import pageobjects.OrigenFondoPage;
-import pageobjects.ResidenciaPage;
+import pageobjects.*;
 import support.Captura;
 
 import static definitions.hooks.driver;
 
 public class OrigenFondoDefinition {
-    Captura screenshot;
     FondoPage fondo;
     ResidenciaPage residencia;
+    Captura screenshot;
     BotonPage boton;
     OrigenFondoPage origen;
+    TituloPage titulo;
 
     public OrigenFondoDefinition() {
-        screenshot = new Captura();
         fondo = new FondoPage();
         residencia = new ResidenciaPage();
+        screenshot = new Captura();
         boton = new BotonPage();
         origen = new OrigenFondoPage();
+        titulo = new TituloPage();
     }
 
     @E("ingresar el Monto a invertir mayor a {string}")
@@ -36,8 +34,8 @@ public class OrigenFondoDefinition {
     }
 
     @Cuando("se muestre un popup de {string}")
-    public void seMuestreUnPopupDe(String titulo) {
-        residencia.validarTitulo(titulo);
+    public void seMuestreUnPopupDe(String texto) {
+        titulo.validarTitulo(texto);
         screenshot.capturarPaso(driver, "Screenshot");
     }
 

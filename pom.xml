@@ -125,18 +125,18 @@
             <artifactId>json</artifactId>
             <version>20250517</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core -->
+        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-core</artifactId>
             <version>2.25.1</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api -->
+        </dependency>-->
+        <!-- https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-api</artifactId>
             <version>2.25.1</version>
-        </dependency>
+        </dependency>-->
     </dependencies>
     <build>
         <resources>
@@ -161,9 +161,9 @@
                 <version>3.2.3</version>
                 <configuration>
                     <testFailureIgnore>true</testFailureIgnore>
+                    <argLine>-Dfile.encoding=UTF-8</argLine>
                     <includes>
                         <include>**/*runtest.java</include>
-                        include>
                     </includes>
                 </configuration>
             </plugin>
@@ -237,7 +237,7 @@
                     <generatedHtmlReportDirectory>${project.build.directory}/reporte-html/${buildNumber}</generatedHtmlReportDirectory>
                     <customParameters>
                         <Custom_Parameter>Reporte de Ejecución</Custom_Parameter>
-                        <Custom_URL>https://apolodesa01.afphabitat.com.pe</Custom_URL>
+                        <Custom_URL>https://kind-smoke-086c8780f.2.azurestaticapps.net/</Custom_URL>
                         <_Text>Automatización web - Casos de Pruebas</_Text>
                     </customParameters>
                     <expandBeforeAfterHooks>true</expandBeforeAfterHooks>

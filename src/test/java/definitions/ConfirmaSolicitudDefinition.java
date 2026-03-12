@@ -1,28 +1,30 @@
 package definitions;
 
-import io.cucumber.java.PendingException;
 import io.cucumber.java.es.Entonces;
 import io.cucumber.java.es.Y;
 import pageobjects.BotonPage;
 import pageobjects.ConfirmaSolicitudPage;
+import pageobjects.TituloPage;
 import support.Captura;
 
 import static definitions.hooks.driver;
 
 public class ConfirmaSolicitudDefinition {
+    ConfirmaSolicitudPage confirmaSolicitud;
     Captura screenshot;
     BotonPage boton;
-    ConfirmaSolicitudPage confirmaSolicitud;
+    TituloPage titulo;
 
     public ConfirmaSolicitudDefinition() {
+        confirmaSolicitud = new ConfirmaSolicitudPage();
         screenshot = new Captura();
         boton = new BotonPage();
-        confirmaSolicitud = new ConfirmaSolicitudPage();
+        titulo = new TituloPage();
     }
 
     @Entonces("se mostrara una pantalla de {string}")
-    public void seMostraraUnaPantallaDe(String titulo){
-        confirmaSolicitud.validarTitulo_h1(titulo);
+    public void seMostraraUnaPantallaDe(String h1){
+        titulo.validarTitulo_h1(h1);
         screenshot.capturarPaso(driver, "Screenshot");
     }
 

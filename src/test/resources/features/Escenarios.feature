@@ -9,17 +9,16 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Entonces se mostrara un popup de advertencia "No perteneces al SPP"
     Y dar clic en el boton Cerrar del popup
 
-  #@regresion
+  @regresion
   Escenario: [CP02] Validar cliente afiliado con DNI
     Dado que la web este disponible
     Cuando seleccione el Tipo de Documento "DNI"
-    E ingrese el Numero de Documento "22109225"
-    Cuando se muestre un campo nuevo de ingreso "Clave web"
-    Entonces ingresar la Clave web "1234"
-    Y dar clic en el boton Empezar a invertir
-    Y se mostrara un popup de "¿Tienes residencia fiscal fuera de Perú?"
+    #E ingrese el Numero de Documento "22109225"
+    #Cuando se muestre un campo nuevo de ingreso "Clave web"
+    #Entonces ingresar la Clave web "1234"
+    #Y dar clic en el boton Empezar a invertir
+    #Y se mostrara un popup de "¿Tienes residencia fiscal fuera de Perú?"
 
-  #Se necesita un cliente afiliado con CE para validar
   #@regresion
   Escenario: [CP03] Validar cliente afiliado con CE
     Dado que la web este disponible
@@ -30,7 +29,6 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Y dar clic en el boton Empezar a invertir
     Y se mostrara un popup de "¿Tienes residencia fiscal fuera de Perú?"
 
-  #Se necesita un cliente afiliado con Pasaporte para validar
   #@regresion
   Escenario: [CP04] Validar cliente afiliado con Pasaporte
     Dado que la web este disponible
@@ -119,7 +117,7 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Entonces se mostrara una pantalla de "Datos personales"
 
   #@regresion
-  Escenario: [CP11] Cliente afiliado con cuenta y saldo / Validar los Datos de inversión del cliente
+  Escenario: [CP11] Cliente afiliado con cuenta con saldo / Validar los Datos de inversión del cliente
     Dado que la web este disponible
     Cuando seleccione el Tipo de Documento "DNI"
     E ingrese el Numero de Documento "22109225"
@@ -165,7 +163,7 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Entonces se mostrara un popup de "Confirma tu solicitud"
 
   #@regresion
-  Escenario: [CP13] Cliente afiliado con cuenta y saldo / Aceptar y firmar inversión
+  Escenario: [CP13] Cliente afiliado con cuenta con saldo / Aceptar y firmar inversión
     Dado que la web este disponible
     Cuando seleccione el Tipo de Documento "DNI"
     E ingrese el Numero de Documento "22109225"
@@ -184,7 +182,7 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
 
   # Caso de prueba Manual
   #@regresion
-  Escenario: [CP14] Cliente afiliado con cuenta y saldo / Confirmar solicitud
+  Escenario: [CP14] Cliente afiliado con cuenta con saldo / Confirmar solicitud
     Dado que la web este disponible
     Cuando seleccione el Tipo de Documento "DNI"
     E ingrese el Numero de Documento "22109225"
@@ -210,7 +208,7 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
 
   # Caso de prueba Manual
   #@regresion
-  Escenario: [CP15] Cliente afiliado con cuenta y saldo / Pago web con Niubiz
+  Escenario: [CP15] Cliente afiliado con cuenta con saldo / Pago por transferencia bancaria
     Dado que la web este disponible
     Cuando seleccione el Tipo de Documento "DNI"
     E ingrese el Numero de Documento "35181065"
@@ -232,18 +230,25 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Y dar clic en el boton Enviar token
     E ingresar el Codigo de confirmacion
     Y dar clic en el boton Confirmar operacion
-    Entonces se mostrara un popup de "Pago web"
-    E ingresar el Numero de la tarjeta
-    E ingresar la Fecha de vencimiento
-    E ingresar el Codigo de seguridad o CVV
-    E ingresar el Nombre del titular de la tarjeta
-    E ingresar el Apellido del titular de la tarjeta
-    E ingresar el Correo del cliente
-    Y dar clic en el boton "Pagar"
+    Entonces se mostrara un popup de "Elige tu Banco"
+    Y seleccionar un Banco "BCP"
+    Y dar clic en el boton Continuar
+    Y se mostrara un popup de "Realiza tu transferencia desde tu PC o celular:" y sus Cinco pasos a seguir
+      | 1. Ingresa a tu app o banca por internet.                                                                                                          |
+      | 2. Selecciona Operaciones y luego Pago de servicios.                                                                                               |
+      | 3. Busca o escribe: AFP Habitat Inversiones.                                                                                                       |
+      | 4. Ingresa tu número de DNI.                                                                                                                       |
+      | 5. Ingresa el monto de la inversión, que debe coincidir con el monto registrado en tu solicitud. Veritifca la información y confirma la operación. |
+    Y seleccionar Confirmo haber seleccionado la transferencia
+    Y dar clic en el boton Continuar
+    Entonces se mostrara un popup de "Verifica tu operación"
+    E ingresar el Numero de operacion "852147"
+    Y dar clic en el boton Invertir
+
 
   # Caso de prueba Manual
   #@regresion
-  Escenario: [CP16] Cliente afiliado con cuenta y saldo / Solicitud de inversión exitoso
+  Escenario: [CP16] Cliente afiliado con cuenta con saldo / Solicitud de inversión exitoso
     Dado que la web este disponible
     Cuando seleccione el Tipo de Documento "DNI"
     E ingrese el Numero de Documento "35181065"
@@ -278,7 +283,7 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
 
   # Caso de prueba Manual
   #@regresion
-  Escenario: [CP17] Cliente afiliado con cuenta y saldo / Descarga de constancia de pago
+  Escenario: [CP17] Cliente afiliado con cuenta con saldo / Descarga de constancia de pago
     Dado que la web este disponible
     Cuando seleccione el Tipo de Documento "DNI"
     E ingrese el Numero de Documento "35181065"
@@ -405,7 +410,7 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
 
   # Caso de prueba Manual
   #@regresion
-  Escenario: [CP22] Cliente afiliado sin cuenta sin saldo / Pago web con Niubiz
+  Escenario: [CP22] Cliente afiliado sin cuenta sin saldo / Pago por transferencia bancaria
     Dado que la web este disponible
     Cuando seleccione el Tipo de Documento "DNI"
     E ingrese el Numero de Documento "31220355"
@@ -425,14 +430,20 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Y seleccionar el medio por el cual desea recibir su token digital
     Y ingresar el Codigo de confirmacion
     Y dar clic en el boton Confirmar operacion
-    Entonces se mostrara un popup de "Pago web"
-    E ingresar el Numero de la tarjeta
-    E ingresar la Fecha de vencimiento
-    E ingresar el Codigo de seguridad o CVV
-    E ingresar el Nombre del titular de la tarjeta
-    E ingresar el Apellido del titular de la tarjeta
-    E ingresar el Correo del cliente
-    Y dar clic en el boton "Pagar"
+    Entonces se mostrara un popup de "Elige tu Banco"
+    Y seleccionar un Banco "BCP"
+    Y dar clic en el boton Continuar
+    Y se mostrara un popup de "Realiza tu transferencia desde tu PC o celular:" y sus Cinco pasos a seguir
+      | 1. Ingresa a tu app o banca por internet.                                                                                                          |
+      | 2. Selecciona Operaciones y luego Pago de servicios.                                                                                               |
+      | 3. Busca o escribe: AFP Habitat Inversiones.                                                                                                       |
+      | 4. Ingresa tu número de DNI.                                                                                                                       |
+      | 5. Ingresa el monto de la inversión, que debe coincidir con el monto registrado en tu solicitud. Veritifca la información y confirma la operación. |
+    Y seleccionar Confirmo haber seleccionado la transferencia
+    Y dar clic en el boton Continuar
+    Entonces se mostrara un popup de "Verifica tu operación"
+    E ingresar el Numero de operacion "852147"
+    Y dar clic en el boton Invertir
 
   # Caso de prueba Manual
   #@regresion
@@ -1681,6 +1692,7 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
     Entonces se mostrara un popup de advertencia "Has superado el límite diario de intentos"
     Y con el mensaje "Inténtalo nuevamente mañana. Gracias por tu compresión."
 
+  # Caso de prueba Manual
   #@regresion
   Escenario: [CP58] Sesión expirada por tiempo de espera en una pantalla
     Dado que la web este disponible
@@ -1787,7 +1799,7 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
 
   # Caso de prueba Manual
   #@regresion
-  Escenario: [CP61] Cliente no afiliado identificado con DNI / Selfie no coincide con la foto del DNI
+  Escenario: [CP61] Cliente no afiliado identificado con DNI / Selfie no coincide con la foto del documento de identidad
     Dado que la web este disponible
     Cuando seleccione el Tipo de Documento "DNI"
     E ingrese el Numero de Documento "72174876"
@@ -1937,7 +1949,7 @@ Característica: FUNCIONALIDAD DEL SISTEMA FONDO LIBRE HABITAT
 
   # Caso de prueba Manual
   #@regresion
-  Escenario: [CP64] Cliente no afiliado identificado con DNI / Sesisón expirada por tiempo de espera en validación biométrica
+  Escenario: [CP64] Cliente no afiliado identificado con DNI / Sesión expirada por tiempo de espera en validación biométrica
     Dado que la web este disponible
     Cuando seleccione el Tipo de Documento "DNI"
     E ingrese el Numero de Documento "72174876"

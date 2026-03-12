@@ -108,12 +108,6 @@ public class FormularioPage extends util {
         Select select = new Select(cmbPaisResidencia);
         select.selectByVisibleText(residencia);
     }
-    //public void seleccionarFechaNacimiento(String fecha) {
-    //    WebElement campoFecha = driver.findElement(By.xpath("//input[@type='date']"));
-    //    String fechaFormateada = convertirFormatoFecha(fecha);
-    //    JavascriptExecutor js = (JavascriptExecutor) driver;
-    //    js.executeScript("arguments[0].value = arguments[1];", campoFecha, fechaFormateada);
-    //}
     public void seleccionarFechaNacimiento(String fecha) {
         WebElement campoFecha = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("input[type='date']")));
         campoFecha.click();

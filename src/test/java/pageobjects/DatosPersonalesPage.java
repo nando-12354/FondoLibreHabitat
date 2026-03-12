@@ -3,49 +3,16 @@ package pageobjects;
 import io.cucumber.datatable.DataTable;
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
-import org.openqa.selenium.TimeoutException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import support.util;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class DatosPersonalesPage extends util {
 
     public DatosPersonalesPage() {
         PageFactory.initElements(driver,this);
-    }
-    public void validarTituloPantalla(String titulo) {
-        boolean tituloValido = false;
-        String xpath = "//h1[normalize-space()='" + titulo + "']";
-        try {
-            WebElement tituloElemento = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
-            if (tituloElemento.isDisplayed() && tituloElemento.getText().equals(titulo.trim())) {
-                tituloValido = true;
-            }
-        } catch (TimeoutException | NoSuchElementException e) {
-
-        }
-        Assert.assertTrue("El label " + titulo.trim() + " no es igual o no se encontró.", tituloValido);
-    }
-    public void validarTituloFormulario(String titulo) throws InterruptedException {
-        boolean tituloValido = false;
-        String xpath = "//h1[normalize-space()='" + titulo + "']";
-        Thread.sleep(3000);
-        try {
-            WebElement tituloElemento = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
-            System.out.println("Titulo validado: '" + tituloElemento.getText() + "'");
-            if (tituloElemento.isDisplayed() && tituloElemento.getText().equals(titulo.trim())) {
-                tituloValido = true;
-            }
-        } catch (TimeoutException | NoSuchElementException e) {
-
-        }
-        Assert.assertTrue("El label " + titulo.trim() + " no es igual o no se encontró.", tituloValido);
     }
     public void seleccionarPrimerNombre(String valor) {
         WebElement opcion = driver.findElement(By.xpath("//input[@name='primerNombre' and @value='" + valor + "']/following-sibling::span"));

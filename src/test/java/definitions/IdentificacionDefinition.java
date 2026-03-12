@@ -8,21 +8,24 @@ import io.cucumber.java.es.Y;
 import pageobjects.BotonPage;
 import pageobjects.IdentificacionPage;
 import pageobjects.ResidenciaPage;
+import pageobjects.TituloPage;
 import support.Captura;
 
 import static definitions.hooks.driver;
 
 public class IdentificacionDefinition {
-    BotonPage boton;
     IdentificacionPage identificacion;
     ResidenciaPage residencia;
     Captura screenshot;
+    BotonPage boton;
+    TituloPage titulo;
 
     public IdentificacionDefinition() {
-        boton = new BotonPage();
         identificacion = new IdentificacionPage();
         residencia = new ResidenciaPage();
         screenshot = new Captura();
+        boton = new BotonPage();
+        titulo = new TituloPage();
     }
 
     @Cuando("seleccione el Tipo de Documento {string}")
@@ -57,7 +60,7 @@ public class IdentificacionDefinition {
 
     @Entonces("se mostrara un popup de {string}")
     public void seMostraraUnPopupDe(String residenciaFiscal) {
-        residencia.validarTitulo(residenciaFiscal);
+        titulo.validarTitulo(residenciaFiscal);
         screenshot.capturarPaso(driver, "Screenshot");
     }
 
@@ -69,7 +72,7 @@ public class IdentificacionDefinition {
 
     @Entonces("se mostrara un popup de advertencia {string}")
     public void seMostraraUnPopupDeAdvertencia(String spp) {
-        residencia.validarTitulo(spp);
+        titulo.validarTitulo(spp);
         screenshot.capturarPaso(driver, "Screenshot");
     }
 
